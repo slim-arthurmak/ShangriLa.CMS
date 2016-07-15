@@ -286,6 +286,7 @@
     <Compile Include="Models\Blocks\CityBlock.cs" />
     <Compile Include="Models\Blocks\CountryBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepageContentBlockData.cs" />
+    <Compile Include="Models\Blocks\RestaurantBlock.cs" />
     <Compile Include="Models\Blocks\RoomContentBlock.cs" />
     <Compile Include="Models\Blocks\RoomGroupBlock.cs" />
     <Compile Include="Models\Blocks\RoomSuiteBlock.cs" />
