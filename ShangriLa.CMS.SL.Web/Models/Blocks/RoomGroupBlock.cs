@@ -70,14 +70,5 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
                   Order = 5)]
         [UIHint(UIHint.Image)]
         public virtual ContentReference HeaderImage { get; set; }
-
-        [AllowedTypes(new[] { typeof(RoomGroupBlock)})]
-        [Display(
-                  Name = "Room Group Content Area",
-                  Description = "Room Group Blocks",
-                  GroupName = SystemTabNames.Content,
-                  Order = 10)]
-        public virtual ContentArea RoomGroupContentArea { get; set; }
-
     }
 }

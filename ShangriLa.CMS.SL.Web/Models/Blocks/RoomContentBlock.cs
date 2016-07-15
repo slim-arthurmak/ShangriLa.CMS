@@ -27,5 +27,21 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
            GroupName = SystemTabNames.Content,
            Order = 1)]
         public virtual string Name { get; set; }
+
+        [AllowedTypes(new[] { typeof(RoomGroupBlock) })]
+        [Display(
+          Name = "Room Group Content Area",
+          Description = "Room Group Blocks",
+          GroupName = SystemTabNames.Content,
+          Order = 10)]
+        public virtual ContentArea RoomGroupContentArea { get; set; }
+
+        [AllowedTypes(new[] { typeof(RoomSuiteBlock) })]
+        [Display(
+         Name = "Feature Rooms Content Area",
+         Description = "Feature Rooms",
+         GroupName = SystemTabNames.Content,
+         Order = 10)]
+        public virtual ContentArea FeatureRoomsContentArea { get; set; }
     }
 }
