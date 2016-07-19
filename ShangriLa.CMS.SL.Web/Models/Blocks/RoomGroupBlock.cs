@@ -21,12 +21,13 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
         [CultureSpecific]
         [Display(
            Name = "Teaser",
-           Description = "Teaser (Homepage)",
+           Description = "Teaser",
            GroupName = SystemTabNames.Content,
            Order = 2)]
         [UIHint(UIHint.Textarea)]
         public virtual string Teaser { get; set; }
 
+        /*
         [CultureSpecific]
         [Display(
           Name = "Teaser2",
@@ -45,7 +46,7 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
 
             set { this["Teaser"] = value; }
         }
-
+        */
         [CultureSpecific]
         [Display(
             Name = "Short Description",

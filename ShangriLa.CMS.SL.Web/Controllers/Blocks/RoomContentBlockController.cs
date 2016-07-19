@@ -10,6 +10,7 @@ using EPiServer.Web.Mvc;
 
 
 using ShangriLa.CMS.SL.Web.Models.Blocks;
+using ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage;
 using ShangriLa.CMS.SL.Web.Business;
 
 namespace ShangriLa.CMS.SL.Web.Controllers.Blocks

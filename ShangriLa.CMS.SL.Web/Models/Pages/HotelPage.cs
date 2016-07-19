@@ -9,6 +9,7 @@ using EPiServer.Web;
 using ShangriLa.CMS.SL.Web.Business.Extensions.EditorDescriptor;
 using ShangriLa.CMS.SL.Web.Helpers;
 using ShangriLa.CMS.SL.Web.Models.Blocks;
+using ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage;
 
 using System;
 using System.ComponentModel.DataAnnotations;

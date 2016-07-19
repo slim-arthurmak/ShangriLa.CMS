@@ -291,6 +291,7 @@
     <Compile Include="Business\Rendering\SiteViewEngine.cs" />
     <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
+    <Compile Include="Controllers\Blocks\HeroBannerBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomContentBlockController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\Pages\RoomSuiteListingPageController.cs" />
@@ -303,9 +304,13 @@
     <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
     <Compile Include="Models\Blocks\CityBlock.cs" />
     <Compile Include="Models\Blocks\CountryBlock.cs" />
-    <Compile Include="Models\Blocks\HotelHomepageContentBlockData.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\DineContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\EventsContent.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\ExperienceContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\HotelHomepageContentBlockData.cs" />
     <Compile Include="Models\Blocks\RestaurantBlock.cs" />
-    <Compile Include="Models\Blocks\RoomContentBlock.cs" />
+    <Compile Include="Models\Blocks\RoomCategoryBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\RoomContentBlock.cs" />
     <Compile Include="Models\Blocks\RoomGroupBlock.cs" />
     <Compile Include="Models\Blocks\RoomSuiteBlock.cs" />
     <Compile Include="Models\Folders\CityBlockContentFolder.cs" />
@@ -330,7 +335,7 @@
     <Compile Include="Models\Blocks\HeroBannerBlock.cs" />
     <Compile Include="Models\Blocks\HotelBlock.cs" />
     <Compile Include="Models\Blocks\HotelHightlightsBlock.cs" />
-    <Compile Include="Models\Blocks\OverviewContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\OverviewContentBlock.cs" />
     <Compile Include="Models\Blocks\PageListBlock.cs" />
     <Compile Include="Models\Blocks\SiteBlockData.cs" />
     <Compile Include="Models\Blocks\SiteLogotypeBlock.cs" />
@@ -743,6 +748,7 @@
     <Content Include="Views\Preview\Index.cshtml" />
     <Content Include="Views\Shared\BookingPanel.cshtml" />
     <Content Include="Views\Blocks\RoomContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\HeroBannerBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

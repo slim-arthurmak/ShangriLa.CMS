@@ -4,7 +4,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShangriLa.CMS.SL.Web.Models.Blocks
+namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
 {
     [ContentType(DisplayName = "OverviewContentBlock", GUID = "A0AC3CBA-F13F-40C5-A60A-B1787CA2D9DE", Description = "")]
     [SiteImageUrl]

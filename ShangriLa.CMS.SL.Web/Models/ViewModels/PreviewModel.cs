@@ -10,8 +10,7 @@ namespace ShangriLa.CMS.SL.Web.Models.ViewModels
 {
     public class PreviewModel : PageViewModel<SitePageData>
     {
-        public PreviewModel(SitePageData currentPage, IContent previewContent)
-           : base(currentPage)
+        public PreviewModel(SitePageData currentPage, IContent previewContent) : base(currentPage)
         {
             PreviewContent = previewContent;
             Areas = new List<PreviewArea>();

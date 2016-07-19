@@ -11,19 +11,19 @@ using EPiServer.Web.Mvc;
 using ShangriLa.CMS.SL.Web.Models.Blocks;
 using ShangriLa.CMS.SL.Web.Business;
 
-namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
+namespace ShangriLa.CMS.SL.Web.Controllers.Blocks
 {
-    public class OverviewContentBlockController : BlockController<OverviewContentBlock>
+    public class HeroBannerBlockController : BlockController<HeroBannerBlock>
     {
         private ContentLocator contentLocator;
         private IContentLoader contentLoader;
-        public OverviewContentBlockController(ContentLocator contentLocator, IContentLoader contentLoader)
+        public HeroBannerBlockController(ContentLocator contentLocator, IContentLoader contentLoader)
         {
             this.contentLocator = contentLocator;
             this.contentLoader = contentLoader;
         }
 
-        public override ActionResult Index(OverviewContentBlock currentBlock)
+        public override ActionResult Index(HeroBannerBlock currentBlock)
         {
             return PartialView(currentBlock);
         }
