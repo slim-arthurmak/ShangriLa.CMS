@@ -291,7 +291,13 @@
     <Compile Include="Business\Rendering\SiteViewEngine.cs" />
     <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
+    <Compile Include="Controllers\Blocks\OffersContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\MapAndDirectionContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\GalleryContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\DineContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\EventsContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\HeroBannerBlockController.cs" />
+    <Compile Include="Controllers\Blocks\ExperienceContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomContentBlockController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\Pages\RoomSuiteListingPageController.cs" />
@@ -305,9 +311,12 @@
     <Compile Include="Models\Blocks\CityBlock.cs" />
     <Compile Include="Models\Blocks\CountryBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\DineContentBlock.cs" />
-    <Compile Include="Models\Blocks\HotelHomepage\EventsContent.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\EventsContentBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\ExperienceContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\GalleryContentBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\HotelHomepageContentBlockData.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\MapAndDirectionContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\OffersContentBlock.cs" />
     <Compile Include="Models\Blocks\RestaurantBlock.cs" />
     <Compile Include="Models\Blocks\RoomCategoryBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\RoomContentBlock.cs" />
@@ -749,6 +758,12 @@
     <Content Include="Views\Shared\BookingPanel.cshtml" />
     <Content Include="Views\Blocks\RoomContentBlock\Index.cshtml" />
     <Content Include="Views\Blocks\HeroBannerBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\DineContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\EventsContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\ExperienceContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\GalleryContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\MapAndDirectionContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\OffersContentBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -58,7 +58,14 @@ namespace ShangriLa.CMS.SL.Web.Models.Pages
         //[AllowedTypes(typeof(MainCarouselBlock))]
         public virtual HeroBannerBlock HeroBanner { get; set; }
 
-        [AllowedTypes(new[] { typeof(OverviewContentBlock), typeof(RoomContentBlock) })]
+        [AllowedTypes(new[] { typeof(OverviewContentBlock),
+            typeof(RoomContentBlock),
+            typeof(DineContentBlock),
+            typeof(OffersContentBlock),
+            typeof(ExperienceContentBlock),
+            typeof(EventsContentBlock),
+            typeof(GalleryContentBlock),
+            typeof(MapAndDirectionContentBlock) })]
         [Display(
                   Name = "Section Content Area",
                   Description = "Hotel Content Blocks",
