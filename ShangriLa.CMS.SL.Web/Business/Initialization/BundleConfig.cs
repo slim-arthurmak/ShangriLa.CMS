@@ -24,8 +24,8 @@ namespace ShangriLa.CMS.SL.Web.Business.Initialization
                         "~/Static/js/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css")
-                .Include("~/Static/css/bootstrap.css", new CssRewriteUrlTransform())
-                .Include("~/Static/css/bootstrap-responsive.css")
+                //.Include("~/Static/css/bootstrap.css", new CssRewriteUrlTransform())
+                //.Include("~/Static/css/bootstrap-responsive.css")
                 //.Include("~/Static/lightbox/css/jquery.lightbox-0.5.css")
                 .Include("~/Static/css/media.css")
                 .Include("~/Static/css/style.css", new CssRewriteUrlTransform())

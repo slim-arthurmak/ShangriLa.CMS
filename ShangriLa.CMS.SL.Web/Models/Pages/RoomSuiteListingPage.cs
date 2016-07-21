@@ -1,9 +1,19 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using EPiServer.ServiceLocation;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
+
+using ShangriLa.CMS.SL.Web.Business.Extensions.EditorDescriptor;
+using ShangriLa.CMS.SL.Web.Helpers;
+using ShangriLa.CMS.SL.Web.Models.Blocks;
+using ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage;
+
+using System;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace ShangriLa.CMS.SL.Web.Models.Pages
 {
@@ -20,5 +30,14 @@ namespace ShangriLa.CMS.SL.Web.Models.Pages
                     Order = 1)]
                 public virtual XhtmlString MainBody { get; set; }
          */
+
+        [Display(
+                 Name = "Room Group Block",
+                 Description = "Room Group Block",
+                 Order = 1)]
+        [AllowedTypes(typeof(RoomGroupBlock))]
+        [UIHint(UIHint.Block)]
+        [Required]
+        public virtual ContentReference RoomGroupBlock { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿@model ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage.OverviewContentBlock
+﻿@using ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage;
+
+@model ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage.OverviewContentBlock
 
 @*<div class="span">
         <div class="media">
@@ -25,9 +27,18 @@
                     <div class="content-container">
                         <p>@Html.PropertyFor(m => m.LongDescription)</p>
                         <div class="row facilities">
-                            <div class="col-md-4 col-sm-4"><span class="icon-view">636 rooms in 3 wings</span></div>
+                            @{
+                                if (Model.HotelHighlights != null)
+                                {
+                                    foreach (HotelHighlightBlock highlight in Model.HotelHighlights)
+                                    {
+                                        <div class="col-md-4 col-sm-4"><span class="icon-view">@Html.Raw(highlight.Highlight)</span></div>
+                                    }
+                                }
+                            }
+                            @*<div class="col-md-4 col-sm-4"><span class="icon-view">636 rooms in 3 wings</span></div>
                             <div class="col-md-4 col-sm-4"><span class="icon-view">15 acres of lush greenery</span></div>
-                            <div class="col-md-4 col-sm-4"><span class="icon-view">8 bars &amp; restaurants</span></div>
+                            <div class="col-md-4 col-sm-4"><span class="icon-view">8 bars &amp; restaurants</span></div>*@
                         </div>
                     </div>
                 </div>

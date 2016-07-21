@@ -13,6 +13,7 @@ namespace ShangriLa.CMS.SL.Web.Business.Migration
         {
             //RenameContentType();
             //RenameProperty();
+            //RenameRoomSuiteBlockProperty();
         }
 
         private void RenameContentType()
@@ -28,5 +29,13 @@ namespace ShangriLa.CMS.SL.Web.Business.Migration
                 .Property("SectionContentArea")          //There is a property called "PneumaticTire"
                     .UsedToBeNamed("ModuleContentArea");   //That used to be called "WoodenTire"
         }
+
+        private void RenameRoomSuiteBlockProperty()
+        {
+            ContentType("RoomSuiteBlock")                  //On the content type "Bicycle"
+                .Property("RoomName")          //There is a property called "PneumaticTire"
+                    .UsedToBeNamed("RoomType");   //That used to be called "WoodenTire"
+        }
+        
     }
 }

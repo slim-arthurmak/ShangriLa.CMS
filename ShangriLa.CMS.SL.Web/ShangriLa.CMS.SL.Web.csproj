@@ -314,6 +314,7 @@
     <Compile Include="Models\Blocks\HotelHomepage\EventsContentBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\ExperienceContentBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\GalleryContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\HotelHighlightBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\HotelHomepageContentBlockData.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\MapAndDirectionContentBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\OffersContentBlock.cs" />
@@ -366,6 +367,8 @@
     <Compile Include="Models\SiteContentType.cs" />
     <Compile Include="Models\SiteImageUrl.cs" />
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\RoomGroupNavigatoinModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\RoomContentModel.cs" />
     <Compile Include="Models\ViewModels\PropertyPageViewModel.cs" />
     <Compile Include="Models\ViewModels\DefaultPageViewModel.cs" />
     <Compile Include="Models\ViewModels\LayoutModel.cs" />
@@ -375,9 +378,7 @@
     <Compile Include="Models\ViewModels\PreviewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Shared\Blocks\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\all-room-landing-list-view.html" />
     <Content Include="Content\all-room-landing-with-swipe.html" />
@@ -764,6 +765,7 @@
     <Content Include="Views\Blocks\GalleryContentBlock\Index.cshtml" />
     <Content Include="Views\Blocks\MapAndDirectionContentBlock\Index.cshtml" />
     <Content Include="Views\Blocks\OffersContentBlock\Index.cshtml" />
+    <Content Include="Views\Shared\Blocks\TrustYouWidget.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -781,7 +783,16 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62739/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

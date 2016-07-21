@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
 { 
@@ -22,13 +24,6 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
         public virtual string Name { get; set; }
          */
 
-        [CultureSpecific]
-        [Display(
-           Name = "Name",
-           Description = "Name field's description",
-           GroupName = SystemTabNames.Content,
-           Order = 1)]
-        public virtual string Name { get; set; }
 
         [AllowedTypes(new[] { typeof(RoomGroupBlock) })]
         [Display(
@@ -45,5 +40,23 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
          GroupName = SystemTabNames.Content,
          Order = 10)]
         public virtual ContentArea FeatureRoomsContentArea { get; set; }
+
+        public IEnumerable<RoomGroupBlock> RoomGroups
+        {
+            get
+            {
+                if (RoomGroupContentArea != null)
+                {
+                    return RoomGroupContentArea.FilteredItems.Select(item => item.GetContent() as RoomGroupBlock).ToList();
+                }
+
+                return Enumerable.Empty<RoomGroupBlock>(); ;
+            }
+        }
+
+        //public IEnumerable<RoomGroupBlock> FeatureRooms
+        //{
+        //    get; set;
+        //}
     }
 }

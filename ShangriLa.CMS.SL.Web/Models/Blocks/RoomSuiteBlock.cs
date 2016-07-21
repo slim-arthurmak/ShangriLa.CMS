@@ -11,11 +11,11 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
     {
         [CultureSpecific]
         [Display(
-                    Name = "RoomType",
-                    Description = "RoomType field's description",
+                    Name = "Room Name",
+                    Description = "Room Name",
                     GroupName = SystemTabNames.Content,
                     Order = 1)]
-        public virtual string RoomType { get; set; }
+        public virtual string RoomName { get; set; }
         
     }
 }
