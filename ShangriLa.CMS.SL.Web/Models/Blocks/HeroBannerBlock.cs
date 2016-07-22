@@ -6,7 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "HeroBannerBlock", GUID = "b1beba54-eb9c-4c59-bd33-74038ece1961", Description = "")]
+    [ContentType(DisplayName = "HeroBannerBlock",
+        GroupName = Global.GroupNames.SLDefault,
+         GUID = "b1beba54-eb9c-4c59-bd33-74038ece1961", Description = "")]
     public class HeroBannerBlock : BlockData
     {
         [Display(

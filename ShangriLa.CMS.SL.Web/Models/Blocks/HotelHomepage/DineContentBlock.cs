@@ -8,7 +8,7 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
 {
     [ContentType(
             DisplayName = "DineContentBlock",
-            GroupName = "Hotel Homepage Sections",
+            GroupName = Global.GroupNames.SLHotelHomepageSections,
             GUID = "1a9dbf71-e500-43da-9935-22e4737f2ff8", 
             Description = "")]
     public class DineContentBlock : HotelHomepageContentBlockData

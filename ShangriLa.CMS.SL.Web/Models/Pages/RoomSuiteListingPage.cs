@@ -17,7 +17,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Pages
 {
-    [ContentType(GroupName = "Property Pages", DisplayName = "RoomSuiteListingPage", GUID = "c0b9598d-4534-4d54-98ff-0a59390cceec", Description = "")]
+    [ContentType(DisplayName = "RoomSuiteListingPage", GUID = "c0b9598d-4534-4d54-98ff-0a59390cceec", Description = "", GroupName = Global.GroupNames.SLPages)]
     [AvailableContentTypes(Include = new[] { typeof(RoomSuitePage) })]
     public class RoomSuiteListingPage : SitePageData
     {

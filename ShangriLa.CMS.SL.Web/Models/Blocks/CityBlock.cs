@@ -9,7 +9,9 @@ using ShangriLa.CMS.SL.Web.Business.Extensions.EditorDescriptors;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "CityBlock", GUID = "e5bec282-abd7-4778-8123-0483da960217", Description = "")]
+    [ContentType(DisplayName = "CityBlock",
+        GroupName = Global.GroupNames.SLDefault,
+         GUID = "e5bec282-abd7-4778-8123-0483da960217", Description = "")]
     public class CityBlock : SiteBlockData
     {
         [CultureSpecific]

@@ -6,7 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "RoomGroupBlock", GUID = "a999e56e-ff7f-4848-bd16-5ce40bcad79e", Description = "")]
+    [ContentType(DisplayName = "RoomGroupBlock",
+        GroupName = Global.GroupNames.SLDefault, 
+        GUID = "a999e56e-ff7f-4848-bd16-5ce40bcad79e", Description = "")]
     public class RoomGroupBlock : BlockData
     {
         [CultureSpecific]

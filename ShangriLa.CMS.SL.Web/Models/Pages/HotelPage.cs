@@ -16,7 +16,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Pages
 {
-    [ContentType(GroupName = "Property Pages", DisplayName = "HotelPage", GUID = "19EA638C-376D-4216-9353-9E34D4C07B05", Description = "Hotel Page")]
+    [ContentType(DisplayName = "HotelPage", 
+        GUID = "19EA638C-376D-4216-9353-9E34D4C07B05", 
+        Description = "Hotel Page", 
+        GroupName = Global.GroupNames.SLPages)]
     public class HotelPage : SitePageData
     {
         /*

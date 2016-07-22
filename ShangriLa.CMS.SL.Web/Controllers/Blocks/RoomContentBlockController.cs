@@ -41,47 +41,55 @@ namespace ShangriLa.CMS.SL.Web.Controllers.Blocks
             PageReference pageReference = pageRouteHelper.PageLink;
             PageData currentPage = pageRouteHelper.Page;
 
-            PageListBlock PageList = new PageListBlock();
+            // Get the edit hint collections
+            var editingHints = ViewData.GetEditHints<RoomContentModel, RoomContentBlock>();
 
-            PageList.PageTypeFilter = typeof(RoomSuiteListingPage).GetPageType();
-            PageList.Recursive = true;
-            PageList.Root = pageReference;
+            // Adds a connection between 'Heading' in view model and 'MyText' in content data.
+            editingHints.AddConnection(m => m.Description, p => p.ShortDescription);
 
-            IEnumerable<PageData> pages = FindPages(PageList);
-
-            //pages = Sort(pages, PageList.SortOrder);
-
-            model.RoomGroups = new List<RoomGroupBlock>();
-            model.RoomGroupNavigatoins = new List<RoomGroupNavigatoinModel>();
-
-            if (pages != null)
+            if (currentPage is HotelPage)
             {
-                foreach (PageData page in pages)
+                PageListBlock PageList = new PageListBlock();
+
+                PageList.PageTypeFilter = typeof(RoomSuiteListingPage).GetPageType();
+                PageList.Recursive = true;
+                PageList.Root = pageReference;
+
+                IEnumerable<PageData> pages = FindPages(PageList);
+
+                //pages = Sort(pages, PageList.SortOrder);
+
+                model.RoomGroups = new List<RoomGroupBlock>();
+                model.RoomGroupNavigatoins = new List<RoomGroupNavigatoinModel>();
+
+                if (pages != null)
                 {
-                    if (page is RoomSuiteListingPage)
+                    foreach (PageData page in pages)
                     {
-                        RoomSuiteListingPage listingPage = (RoomSuiteListingPage)page;
-                        string url = urlResolver.GetVirtualPath(page).VirtualPath;
-
-
-                        if (listingPage.RoomGroupBlock != null)
+                        if (page is RoomSuiteListingPage)
                         {
-                            RoomGroupBlock roomGroup = contentLoader.Get<RoomGroupBlock>(listingPage.RoomGroupBlock);
-                            model.RoomGroups.Add(roomGroup);
+                            RoomSuiteListingPage listingPage = (RoomSuiteListingPage)page;
+                            //string url = urlResolver.GetVirtualPath(page).VirtualPath;
 
-                            model.RoomGroupNavigatoins.Add(
-                                new RoomGroupNavigatoinModel()
-                                {
-                                    Title = roomGroup.RoomGroupName,
-                                    Description = roomGroup.Teaser,
-                                    Url = url
-                                });
 
+                            if (listingPage.RoomGroupBlock != null)
+                            {
+                                RoomGroupBlock roomGroup = contentLoader.Get<RoomGroupBlock>(listingPage.RoomGroupBlock);
+                                model.RoomGroups.Add(roomGroup);
+
+                                model.RoomGroupNavigatoins.Add(
+                                    new RoomGroupNavigatoinModel()
+                                    {
+                                        Title = roomGroup.RoomGroupName,
+                                        Description = roomGroup.Teaser,
+                                        Url = page.LinkURL
+                                    });
+
+                            }
                         }
                     }
                 }
             }
-
             return PartialView(model);
         }
 

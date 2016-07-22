@@ -9,6 +9,8 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
     [ContentType(
         DisplayName = "HotelBlock",
+        GroupName = Global.GroupNames.SLDefault,
+
         GUID = "4707c0e7-87b0-4f3b-b18e-b57bfdea2815",
         Description = "")]
     public class HotelBlock : SiteBlockData

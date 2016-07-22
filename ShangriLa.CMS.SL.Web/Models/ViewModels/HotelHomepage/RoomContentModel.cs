@@ -25,7 +25,7 @@ namespace ShangriLa.CMS.SL.Web.Models.ViewModels.HotelHomepage
                 RoomGroups = block.RoomGroupContentArea.FilteredItems.Select(item => item.GetContent() as RoomGroupBlock).ToList();
             }
             */
-            
+            FeatureRoomsContentArea = block.FeatureRoomsContentArea;
         }
 
         public string Title { get; set; }
@@ -34,5 +34,7 @@ namespace ShangriLa.CMS.SL.Web.Models.ViewModels.HotelHomepage
         public List<RoomGroupBlock> RoomGroups { get; set; }
 
         public List<RoomGroupNavigatoinModel> RoomGroupNavigatoins { get; set; }
+
+        public virtual IList<ContentReference> FeatureRoomsContentArea { get; set; }
     }
 }

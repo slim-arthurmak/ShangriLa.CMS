@@ -8,7 +8,11 @@ using EPiServer.Web;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
 {
-    [ContentType(DisplayName = "HotelHomepageContentBlockData", GUID = "906e138f-31d9-4649-947a-5f340e97a7b7", Description = "")]
+    [ContentType(
+        DisplayName = "HotelHomepageContentBlockData",
+        GroupName = Global.GroupNames.SLHotelHomepageSections,
+        GUID = "906e138f-31d9-4649-947a-5f340e97a7b7",
+        Description = "")]
     [SiteImageUrl]
     public class HotelHomepageContentBlockData : BlockData
     {

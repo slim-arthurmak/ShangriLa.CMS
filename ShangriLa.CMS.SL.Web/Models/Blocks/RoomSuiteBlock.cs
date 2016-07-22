@@ -6,7 +6,9 @@ using EPiServer.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "RoomSuiteBlock", GUID = "275712a5-21d6-4ef4-884e-cdbeb2b04250", Description = "")]
+    [ContentType(DisplayName = "RoomSuiteBlock",
+        GroupName = Global.GroupNames.SLDefault,
+         GUID = "275712a5-21d6-4ef4-884e-cdbeb2b04250", Description = "")]
     public class RoomSuiteBlock : SiteBlockData
     {
         [CultureSpecific]

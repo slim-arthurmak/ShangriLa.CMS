@@ -13,6 +13,12 @@ namespace ShangriLa.CMS.SL.Web
         [GroupDefinitions()]
         public static class GroupNames
         {
+            // Page Groups
+            public const string SLDefault = "SL";
+            public const string SLPages = "SL Pages";
+            public const string SLContainerPages = "SL Container Pages";
+            public const string SLHotelHomepageSections = "SL - Hotel Homepage Sections";
+
             [Display(Name = "Contact", Order = 1)]
             public const string Contact = "Contact";
 

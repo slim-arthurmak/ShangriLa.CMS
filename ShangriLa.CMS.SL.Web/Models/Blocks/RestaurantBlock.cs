@@ -6,7 +6,9 @@ using EPiServer.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "RestaurantBlock", GUID = "1678931c-a2ca-4ee4-9c3a-54cccb610cf9", Description = "")]
+    [ContentType(DisplayName = "RestaurantBlock",
+        GroupName = Global.GroupNames.SLDefault,
+         GUID = "1678931c-a2ca-4ee4-9c3a-54cccb610cf9", Description = "")]
     public class RestaurantBlock : BlockData
     {
         /*

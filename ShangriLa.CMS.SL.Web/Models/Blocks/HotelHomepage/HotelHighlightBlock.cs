@@ -6,7 +6,10 @@ using EPiServer.DataAnnotations;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
 {
-    [ContentType(DisplayName = "HotelHighlightBlock", GUID = "57486ce2-33e8-4edd-b185-a4c060a09cd3", Description = "")]
+    [ContentType(DisplayName = "HotelHighlightBlock", 
+        GroupName = Global.GroupNames.SLHotelHomepageSections, 
+        GUID = "57486ce2-33e8-4edd-b185-a4c060a09cd3", 
+        Description = "")]
     public class HotelHighlightBlock : BlockData
     {
 

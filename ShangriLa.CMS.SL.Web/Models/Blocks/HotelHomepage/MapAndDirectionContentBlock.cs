@@ -7,7 +7,7 @@ using EPiServer.DataAnnotations;
 namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
 {
     [ContentType(DisplayName = "MapAndDirectionContentBlock",
-        GroupName = "Hotel Homepage Sections",
+        GroupName = Global.GroupNames.SLHotelHomepageSections,
         GUID = "2bb14733-2b41-4f84-b77b-2b19cb25285f", Description = "")]
     public class MapAndDirectionContentBlock : HotelHomepageContentBlockData
     {

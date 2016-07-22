@@ -7,7 +7,9 @@ using EPiServer;
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "CountryBlock", GUID = "d98876a8-42c3-43af-86e4-418e917012d2", Description = "")]
+    [ContentType(DisplayName = "CountryBlock",
+        GroupName = Global.GroupNames.SLDefault,
+         GUID = "d98876a8-42c3-43af-86e4-418e917012d2", Description = "")]
     public class CountryBlock : SiteBlockData
     {
         [CultureSpecific]
