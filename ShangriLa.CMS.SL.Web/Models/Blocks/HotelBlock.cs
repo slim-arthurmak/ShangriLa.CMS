@@ -1,9 +1,14 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using EPiServer;
+using EPiServer.Shell.ObjectEditing;
+using ShangriLa.CMS.SL.Web.Business.SelectionFactories;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Collections.Generic;
+
+
 
 namespace ShangriLa.CMS.SL.Web.Models.Blocks
 {
@@ -118,8 +123,24 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks
         [Display(Name = "Check-out Time", Order = 22)]
         public virtual string CheckOutTime { get; set; }
 
-        [Display(Name = "Payment Options", Order = 23)]
-        public virtual ContentArea PaymentOptions { get; set; }
+        [Display(Name = "Payment Modes", Order = 23)]
+        [SelectMany(SelectionFactoryType = typeof(PaymentModeSelectionFactory))]
+        public virtual string PaymentModes { get; set; }
+
+        public virtual List<string> PaymentModeList
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(this.PaymentModes))
+                {
+                    return new List<string>(this.PaymentModes.Split(",".ToCharArray()));
+                }
+                else
+                {
+                    return new List<string>();
+                }
+            }
+        }
 
         [Display(Name = "Is Non-Smoking Hotel", Order = 31)]
         public virtual bool IsNonSmokingHotel { get; set; }

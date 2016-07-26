@@ -18,9 +18,17 @@ namespace ShangriLa.CMS.SL.Web.Controllers.Pages
     {
         public ActionResult Index(HotelPage currentPage)
         {
+            var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
+
+            HotelBlock hotelBlock = contentRepository.Get<HotelBlock>(currentPage.HotelBlock);
+
             /* Implementation of action. You can create your own view model class that you pass to the view or
              * you can pass the page type for simpler templates */
-            PropertyPageViewModel model = new PropertyPageViewModel(currentPage);
+            PropertyPageViewModel<HotelPage> model = new PropertyPageViewModel<HotelPage>(currentPage);
+            //PropertyPageViewModel model = new PropertyPageViewModel(currentPage);
+
+            model.Hotel = hotelBlock;
+
 
             return View(model);
         }

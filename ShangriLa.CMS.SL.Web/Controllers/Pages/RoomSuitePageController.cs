@@ -1,23 +1,27 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-using EPiServer;
-using EPiServer.Core;
-using EPiServer.Framework.DataAnnotations;
-using EPiServer.Web.Mvc;
-
+﻿using EPiServer;
+using ShangriLa.CMS.SL.Web.Business;
+using ShangriLa.CMS.SL.Web.Models.Blocks;
 using ShangriLa.CMS.SL.Web.Models.Pages;
 using ShangriLa.CMS.SL.Web.Models.ViewModels;
+using System.Web.Mvc;
 
 namespace ShangriLa.CMS.SL.Web.Controllers.Pages
 {
     public class RoomSuitePageController : PageControllerBase<RoomSuitePage>
     {
+        private ContentLocator contentLocator;
+        private IContentLoader contentLoader;
+        public RoomSuitePageController(ContentLocator contentLocator, IContentLoader contentLoader)
+        {
+            this.contentLocator = contentLocator;
+            this.contentLoader = contentLoader;
+        }
+
         public ActionResult Index(RoomSuitePage currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
-            DefaultPageViewModel<RoomSuitePage> model = new DefaultPageViewModel<RoomSuitePage>(currentPage);
+            RoomSuitePageViewModel model = new RoomSuitePageViewModel(currentPage);
+            model.RoomSuiteBlock = contentLoader.Get<RoomSuiteBlock>(currentPage.RoomSuiteBlock);
+
             return View(model);
         }
     }

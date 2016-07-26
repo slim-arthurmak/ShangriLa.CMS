@@ -25,7 +25,7 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
         [UIHint(UIHint.Image)]
         public virtual ContentReference ContentImage { get; set; }
 
-        [Required]
+        //[Required]
         [BackingType(typeof(PropertyStringList))]
         [Display(Name = "Hotel Highlights",
                    Description = "Place items on separate lines",

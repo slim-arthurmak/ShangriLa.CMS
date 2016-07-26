@@ -1,0 +1,19 @@
+﻿@using EPiServer.Core;
+@model ShangriLa.CMS.SL.Web.Models.Pages.RoomSuitePage
+
+<div class="item">
+    <div class="col-md-12 no-gutter">
+        <div class="half-panel-block">
+            <div class="image-container scaled-image"><img src="@Url.Content("~/Content/img/content/hotel-landing-room-sml1.jpg")" alt="{CMS}"></div>
+            <div class="caption-container shadow-box mobile-equal-height-block">
+                <div class="featured">Featured</div>
+                <h3 class="heading">@Model.PageName</h3>
+                <p class="description">Our spacious and stylish Executive Rooms offer city skyline views through sweeping floor-to-ceiling windows, with a full range of amenities for business and leisure. </p>
+                <div class="room-price">
+                    <p>From <span class="price">HKD2,800 </span>Per night</p>
+                </div>
+                <div class="button-aligner"><a href="@Url.PageUrl(Model.LinkURL)" class="button-primary">Book Now</a></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,46 +16,12 @@ namespace ShangriLa.CMS.SL.Web.Models.Blocks.HotelHomepage
     [SiteImageUrl]
     public class RoomContentBlock : HotelHomepageContentBlockData
     {
-        /*
-        [CultureSpecific]
-        [Display(
-            Name = "Name",
-            Description = "Name field's description",
-            GroupName = SystemTabNames.Content,
-            Order = 1)]
-        public virtual string Name { get; set; }
-         */
-
-        /*
-        [AllowedTypes(new[] { typeof(RoomGroupBlock) })]
-        [Display(
-          Name = "Room Group Content Area",
-          Description = "Room Group Blocks",
-          GroupName = SystemTabNames.Content,
-          Order = 10)]
-        public virtual ContentArea RoomGroupContentArea { get; set; }
-        */
         [AllowedTypes(new[] { typeof(RoomSuitePage) })]
         [Display(
-         Name = "Feature Rooms Content Area",
-         Description = "Feature Rooms",
-         GroupName = SystemTabNames.Content,
-         Order = 10)]
-        public virtual IList<ContentReference> FeatureRoomsContentArea { get; set; }
-
-        /*
-        public IEnumerable<RoomGroupBlock> RoomGroups
-        {
-            get
-            {
-                if (RoomGroupContentArea != null)
-                {
-                    return RoomGroupContentArea.FilteredItems.Select(item => item.GetContent() as RoomGroupBlock).ToList();
-                }
-
-                return Enumerable.Empty<RoomGroupBlock>(); ;
-            }
-        }
-        */
+        Name = "Feature Rooms Content Area",
+        Description = "Feature Rooms",
+        GroupName = SystemTabNames.Content,
+        Order = 10)]
+        public virtual ContentArea FeatureRoomsContentArea { get; set; }
     }
 }

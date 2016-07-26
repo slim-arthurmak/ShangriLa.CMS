@@ -16,25 +16,33 @@ namespace ShangriLa.CMS.SL.Web.Models.ViewModels.HotelHomepage
             RoomGroups = new List<RoomGroupBlock>();
             RoomGroupNavigatoins = new List<RoomGroupNavigatoinModel>();
 
-            /*
-            var pageRouteHelper = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<EPiServer.Web.Routing.PageRouteHelper>();
-            var pageReference = pageRouteHelper.PageLink;
 
-            if (block.RoomGroupContentArea != null)
+            ContentArea contentArea = new ContentArea();
+            if (block.FeatureRoomsContentArea != null)
             {
-                RoomGroups = block.RoomGroupContentArea.FilteredItems.Select(item => item.GetContent() as RoomGroupBlock).ToList();
+                foreach (ContentAreaItem item in block.FeatureRoomsContentArea.Items)
+                {
+                    contentArea.Items.Add(new ContentAreaItem
+                    {
+                        ContentLink = item.ContentLink,
+                        RenderSettings = item.RenderSettings,
+                        AllowedRoles = item.AllowedRoles,
+                        ContentGroup = item.ContentGroup,
+                        ContentGuid = item.ContentGuid
+                    });
+                }
             }
-            */
-            FeatureRoomsContentArea = block.FeatureRoomsContentArea;
+            FeatureRoomsContentArea = contentArea;
         }
 
         public string Title { get; set; }
+
         public string Description { get; set; }
 
         public List<RoomGroupBlock> RoomGroups { get; set; }
 
         public List<RoomGroupNavigatoinModel> RoomGroupNavigatoins { get; set; }
 
-        public virtual IList<ContentReference> FeatureRoomsContentArea { get; set; }
+        public ContentArea FeatureRoomsContentArea { get; set; }
     }
 }

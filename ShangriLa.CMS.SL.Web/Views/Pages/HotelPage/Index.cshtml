@@ -2,7 +2,7 @@
 @using EPiServer.Web.Mvc.Html
 @using ShangriLa.CMS.SL.Web.Business.Extensions;
 
-@model ShangriLa.CMS.SL.Web.Models.ViewModels.PropertyPageViewModel
+@model ShangriLa.CMS.SL.Web.Models.ViewModels.PropertyPageViewModel<ShangriLa.CMS.SL.Web.Models.Pages.HotelPage>
 
 @*<h1>
         @Html.PropertyFor(x => x.CurrentPage.PageName)
@@ -56,28 +56,26 @@
         }*@
 
     @Html.PropertyFor(x => x.CurrentPage.SectionContentArea, new
-{
-    //CustomTag = "ul",
-    //CssClass = "list",
-    //ChildrenCustomTagName = "li",
-    //ChildrenCssClass = "list_item",
-    //Tag = string.Empty,
-    HasContainer = false
-})
+    {
+        //CustomTag = "ul",
+        //CssClass = "list",
+        //ChildrenCustomTagName = "li",
+        //ChildrenCssClass = "list_item",
+        //Tag = string.Empty,
+        HasContainer = false
+    })
 </div>
-
-
 
 <div class="room-contact-details">
     <div class="container">
         <ul class="room-contact-container row">
             <li class="col-xs-12 col-sm-12 col-md-4">
-                <div class="heading">Contact Shangri-La Hotel, Singapore</div>
+                <div class="heading">Contact @Html.PropertyFor(m => m.Hotel.HotelName)</div>
                 <p>
-                    <strong>Address: </strong>22 Orange Grove Road, 258350, Singapore
-                    <br><strong>Phone: </strong><span>(65) 6737 3644</span>
-                    <br><strong>Fax: </strong><span>(65) 6737 3257</span>
-                    <br><strong>Email: </strong><a href="mailto:sls@shangri-la.com;">sls@shangri-la.com</a>
+                    <strong>Address: </strong>@Html.PropertyFor(m => m.Hotel.Address)
+                    <br><strong>Phone: </strong><span>@Html.PropertyFor(m => m.Hotel.Phone)</span>
+                    <br><strong>Fax: </strong><span>@Html.PropertyFor(m => m.Hotel.Fax)</span>
+                    <br><strong>Email: </strong><a href="mailto:@Html.PropertyFor(m => m.Hotel.Email);">@Html.PropertyFor(m => m.Hotel.Email)</a>
                 </p>
             </li>
             <li class="col-xs-12 col-sm-6 col-md-4">
@@ -85,8 +83,8 @@
                 <div class="description">
                     <p>
                         Please note the check-in / out times below:
-                        <br><strong>Check-in:</strong>2pm
-                        <br><strong>Check-out: </strong>12 noon
+                        <br><strong>Check-in:</strong>@Html.PropertyFor(m => m.Hotel.CheckInTime)
+                        <br><strong>Check-out: </strong>@Html.PropertyFor(m => m.Hotel.CheckOutTime)
                     </p>
                 </div>
             </li>
@@ -96,12 +94,93 @@
                     <p>We accept the following payment methods:</p>
                     <div class="payment-methods">
                         <ul class="list-unstyled clearfix">
-                            <li><img width="24" height="24" src="@Url.Content("~/Content/img/content/amex-logo.png")" alt="{CMS}" class="retina-image"></li>
+
+                            @*@Html.PropertyFor(m => m.Hotel.PaymentModes)*@
+
+                            @if (Model.Hotel.PaymentModeList != null)
+                            {
+
+                                string img = "";
+                                int width = 0;
+                                int height = 0;
+
+                                foreach (string cc in Model.Hotel.PaymentModeList)
+                                {
+                                    switch (cc)
+                                    {
+                                        case "AX":
+                                            img = "amex-logo";
+                                            width = 24;
+                                            height = 24;
+
+                                            break;
+
+                                        case "DC":
+                                            img = "diners-club-logo";
+                                            width = 30;
+                                            height = 22;
+
+                                            break;
+
+                                        case "JC":
+                                            img = "jcb-logo";
+                                            width = 28;
+                                            height = 22;
+
+                                            break;
+
+                                        case "MC":
+                                            img = "mastercard-logo";
+                                            width = 33;
+                                            height = 20;
+
+                                            break;
+
+                                        case "VA":
+                                            img = "visa-logo";
+                                            width = 39;
+                                            height = 14;
+
+                                            break;
+
+                                            /*
+                                        case "AP":
+                                            img = "amex-logo";
+                                            width = 24;
+                                            height = 24;
+
+                                            break;
+                                            */
+                                        case "UP":
+                                            img = "union-pay-logo";
+                                            width = 33;
+                                            height = 21;
+
+                                            break;
+                                            /*
+                                        case "TP":
+                                            img = "amex-logo";
+                                            width = 24;
+                                            height = 24;
+
+                                            break;
+                                            */
+                                    }
+
+                                    <li><img width="@width" height="@height" src="@Url.Content("~/Content/img/content/" + img + ".png")" alt="@cc" class="retina-image"></li>
+
+                                }
+
+
+
+
+                            @*<li><img width="24" height="24" src="@Url.Content("~/Content/img/content/amex-logo.png")" alt="{CMS}" class="retina-image"></li>
                             <li><img width="30" height="22" src="@Url.Content("~/Content/img/content/diners-club-logo.png")" alt="{CMS}" class="retina-image"></li>
                             <li><img width="28" height="22" src="@Url.Content("~/Content/img/content/jcb-logo.png")" alt="{CMS}" class="retina-image"></li>
                             <li><img width="33" height="20" src="@Url.Content("~/Content/img/content/mastercard-logo.png")" alt="{CMS}" class="retina-image"></li>
                             <li><img width="39" height="14" src="@Url.Content("~/Content/img/content/visa-logo.png")" alt="{CMS}" class="retina-image"></li>
-                            <li><img width="33" height="21" src="@Url.Content("~/Content/img/content/union-pay-logo.png")" alt="{CMS}" class="retina-image"></li>
+                            <li><img width="33" height="21" src="@Url.Content("~/Content/img/content/union-pay-logo.png")" alt="{CMS}" class="retina-image"></li>*@
+                            }
                         </ul>
                     </div>
                 </div>
