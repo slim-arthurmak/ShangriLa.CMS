@@ -16,7 +16,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
     [SiteImageUrl]
     public class RoomContentBlock : HotelHomepageContentBlockData
     {
-        [AllowedTypes(new[] { typeof(RoomSuitePage) })]
+        [AllowedTypes(new[] { typeof(RoomDetailPage) })]
         [Display(
         Name = "Feature Rooms Content Area",
         Description = "Feature Rooms",

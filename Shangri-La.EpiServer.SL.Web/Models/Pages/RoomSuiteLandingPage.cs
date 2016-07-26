@@ -11,7 +11,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         GUID = "dc147606-779c-4c1b-af56-4f00eb131588", 
         Description = "", 
         GroupName = Global.GroupNames.SLContainerPages)]
-    [AvailableContentTypes(Include = new[] { typeof(RoomSuitePage), typeof(RoomSuiteListingPage) })]
+    [AvailableContentTypes(Include = new[] { typeof(RoomDetailPage), typeof(RoomSuiteListingPage) })]
     public class RoomSuiteLandingPage : PageData
     {
         /*

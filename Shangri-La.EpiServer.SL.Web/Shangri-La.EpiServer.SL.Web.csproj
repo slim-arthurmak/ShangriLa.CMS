@@ -280,6 +280,7 @@
     <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
     <Compile Include="Business\Initialization\FileBasedEventsInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
+    <Compile Include="Business\Migration\RoomSuitePageMigrationStep.cs" />
     <Compile Include="Business\Migration\HotelPageMigrationStep.cs" />
     <Compile Include="Business\PageContextActionFilter.cs" />
     <Compile Include="Business\PageTypeExtensions.cs" />
@@ -303,10 +304,10 @@
     <Compile Include="Controllers\Blocks\HeroBannerBlockController.cs" />
     <Compile Include="Controllers\Blocks\ExperienceContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomContentBlockController.cs" />
-    <Compile Include="Controllers\Pages\RoomSuitePagePartialController.cs" />
+    <Compile Include="Controllers\Pages\RoomDetailPagePartialController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\Pages\RoomSuiteListingPageController.cs" />
-    <Compile Include="Controllers\Pages\RoomSuitePageController.cs" />
+    <Compile Include="Controllers\Pages\RoomDetailPageController.cs" />
     <Compile Include="Business\Extensions\EditorDescriptors\HotelBlockReferenceEditorDescriptor.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="ImageResizer\EPiServerBlobFile.cs" />
@@ -363,7 +364,7 @@
     <Compile Include="Models\Pages\HotelPage.cs" />
     <Compile Include="Models\Pages\RoomSuiteLandingPage.cs" />
     <Compile Include="Models\Pages\RoomSuiteListingPage.cs" />
-    <Compile Include="Models\Pages\RoomSuitePage.cs" />
+    <Compile Include="Models\Pages\RoomDetailPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
@@ -373,7 +374,7 @@
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
     <Compile Include="Models\ViewModels\HotelHomepage\RoomGroupNavigatoinModel.cs" />
     <Compile Include="Models\ViewModels\HotelHomepage\RoomContentModel.cs" />
-    <Compile Include="Models\ViewModels\RoomSuitePageViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomDetailPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PropertyPageViewModel.cs" />
     <Compile Include="Models\ViewModels\DefaultPageViewModel.cs" />
     <Compile Include="Models\ViewModels\LayoutModel.cs" />
@@ -1265,7 +1266,7 @@
     <Content Include="Views\Shared\TemplateError.cshtml" />
     <Content Include="Views\Shared\TemplateHint.cshtml" />
     <Content Include="Views\Pages\RoomSuiteListingPage\Index.cshtml" />
-    <Content Include="Views\Pages\RoomSuitePage\Index.cshtml" />
+    <Content Include="Views\Pages\RoomDetailPage\Index.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Preview\Index.cshtml" />
     <Content Include="Views\Shared\BookingPanel.cshtml" />
@@ -1282,8 +1283,8 @@
     <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Image.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\StringList.cshtml" />
-    <Content Include="Views\Shared\PagePartials\RoomSuitePage.cshtml" />
-    <Content Include="Views\Shared\PagePartials\RoomSuitePageFullWidth.cshtml" />
+    <Content Include="Views\Shared\PagePartials\RoomDetailPage.cshtml" />
+    <Content Include="Views\Shared\PagePartials\RoomDetailPageFullWidth.cshtml" />
     <Content Include="Views\Blocks\SectionHeaderBannerBlock\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\MosaicBannerCarousel.cshtml" />
     <None Include="Web.Debug.config">

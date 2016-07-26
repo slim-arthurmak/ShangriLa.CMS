@@ -12,9 +12,9 @@ using Shangri_La.EpiServer.SL.Web.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
 {
-    public class RoomSuitePageViewModel : PropertyPageViewModel<RoomSuitePage>
+    public class RoomDetailPageViewModel : PropertyPageViewModel<RoomDetailPage>
     {
-        public RoomSuitePageViewModel(RoomSuitePage currentPage) : base(currentPage)
+        public RoomDetailPageViewModel(RoomDetailPage currentPage) : base(currentPage)
         {
 
         }

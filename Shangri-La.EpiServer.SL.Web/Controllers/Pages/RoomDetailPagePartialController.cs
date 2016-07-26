@@ -11,22 +11,22 @@ using EPiServer.Framework.Web;
 namespace Shangri_La.EpiServer.SL.Web.Controllers
 {
     [TemplateDescriptor(TemplateTypeCategory = TemplateTypeCategories.MvcPartialController, Default = true, Inherited = true, AvailableWithoutTag = true)]
-    public class RoomSuitePagePartialController : PartialContentController<RoomSuitePage>
+    public class RoomDetailPagePartialController : PartialContentController<RoomDetailPage>
     {
-        public override ActionResult Index(RoomSuitePage currentContent)
+        public override ActionResult Index(RoomDetailPage currentContent)
         {
-            return PartialView("/Views/Shared/PagePartials/RoomSuitePage.cshtml", currentContent);
+            return PartialView("/Views/Shared/PagePartials/RoomDetailPage.cshtml", currentContent);
         }
     }
 
     [TemplateDescriptor(TemplateTypeCategory = TemplateTypeCategories.MvcPartialController, Inherited = true, 
         Tags = new[] { Global.ContentAreaTags.FullWidth },
         AvailableWithoutTag = false)]
-    public class RoomSuitePageFullWidthPartialController : PartialContentController<RoomSuitePage>
+    public class RoomDetailPageFullWidthPartialController : PartialContentController<RoomDetailPage>
     {
-        public override ActionResult Index(RoomSuitePage currentContent)
+        public override ActionResult Index(RoomDetailPage currentContent)
         {
-            return PartialView("/Views/Shared/PagePartials/RoomSuitePageFullWidth.cshtml", currentContent);
+            return PartialView("/Views/Shared/PagePartials/RoomDetailPageFullWidth.cshtml", currentContent);
         }
     }
 }

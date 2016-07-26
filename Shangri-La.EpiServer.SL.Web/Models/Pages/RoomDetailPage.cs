@@ -15,8 +15,8 @@ using Shangri_La.EpiServer.SL.Web.Models.Properties;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
-    [ContentType(DisplayName = "RoomSuitePage", GUID = "22ba9772-9e1f-47f8-9ae8-2999c7193eff", Description = "", GroupName = Global.GroupNames.SLPages)]
-    public class RoomSuitePage : SitePageData
+    [ContentType(DisplayName = "RoomDetailPage", GUID = "22ba9772-9e1f-47f8-9ae8-2999c7193eff", Description = "", GroupName = Global.GroupNames.SLPages)]
+    public class RoomDetailPage : SitePageData
     {
         [Display(
                   Name = "Room Suite Block",
