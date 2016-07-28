@@ -904,14 +904,8 @@
     <Content Include="ClientResources\Styles\ContentIcons.css" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
-    <Content Include="Content\all-room-landing-list-view.html" />
-    <Content Include="Content\all-room-landing-with-swipe.html" />
     <Content Include="Content\all-room-landing.html" />
     <Content Include="Content\all-room-wings.html" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\modules.css" />
     <Content Include="Content\css\vendors.css" />
@@ -932,7 +926,6 @@
     <Content Include="Content\font\pluto-sans-thin\plutosansthin1-webfont.svg" />
     <Content Include="Content\hotel-landing-banner-varient.html" />
     <Content Include="Content\hotel-landing-video-hero.html" />
-    <Content Include="Content\hotel-landing-with-swipe.html" />
     <Content Include="Content\hotel-landing.html" />
     <Content Include="Content\img\bg\bg-horizon-club-mobile.png" />
     <Content Include="Content\img\bg\bg-horizon-club.png" />
@@ -1354,9 +1347,7 @@
     <Content Include="Content\pagemodules\trustyou-widget.html" />
     <Content Include="Content\pagemodules\video-popup-background-fragment.html" />
     <Content Include="Content\pagemodules\whats-in-the-room.html" />
-    <Content Include="Content\room-details-with-swipe.html" />
     <Content Include="Content\room-details.html" />
-    <Content Include="Content\room-landing.html" />
     <Content Include="Content\video-popup-with-background-fragment.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1364,10 +1355,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\img\bg\video-background" />
     <Content Include="Content\js\module-animation.json" />
     <Content Include="Content\pagemodules\img\bg\video-background" />
@@ -1513,6 +1500,7 @@
     <Content Include="Views\Blocks\ExploreOtherRoomsContentBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomOffersContentBlock\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\HotelInformationSummary.cshtml" />
+    <Content Include="Views\Pages\RoomSuiteListingPage\Index_Wing.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

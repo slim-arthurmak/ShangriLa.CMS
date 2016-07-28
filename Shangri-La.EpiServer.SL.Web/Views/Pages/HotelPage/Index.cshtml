@@ -77,11 +77,11 @@
 
 <div class="inpage-container">
 
-    @*@{
-            Html.RenderCustomContentArea(Model.CurrentPage.SectionContentArea);
-        }*@
+    @{
+        Html.RenderCustomContentArea(Model.CurrentPage.SectionContentArea);
+    }
 
-    @Html.PropertyFor(x => x.CurrentPage.SectionContentArea, new
+    @*@Html.PropertyFor(x => x.CurrentPage.SectionContentArea, new
        {
            //CustomTag = "ul",
            //CssClass = "list",
@@ -89,7 +89,7 @@
            //ChildrenCssClass = "list_item",
            //Tag = string.Empty,
            HasContainer = false
-       })
+       })*@
 </div>
 
 @Html.Partial("HotelInformationSummary", Model.HotelInformationSummary)

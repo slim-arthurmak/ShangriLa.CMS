@@ -26,7 +26,11 @@
 
     <link rel="stylesheet" href="@Url.Content("~/Content/css/vendors.css")" />
     <link rel="stylesheet" href="@Url.Content("~/Content/css/base.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/css/modules.css")" />*
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/modules.css")" />
+
+    <!-- to avoid stripping of previous line-->
+    <script src="@Url.Content("~/Content/js/modernizr-2.8.2.min.js")"></script>
+    <!-- to avoid stripping of previous line-->
 
     @Html.RenderExtendedCSS(Model.CurrentPage.CSS, Model.CurrentPage.CSSFiles)
     @Scripts.Render("~/bundles/js")
