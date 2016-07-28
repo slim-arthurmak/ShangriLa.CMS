@@ -1,6 +1,6 @@
 [
   {
-    "element": ".caption-container > .two-sided-line, .caption-container > .heading, .caption-container > .description, .caption-container > .read-more-droplink, .caption-container > .room-price",
+    "element": ".caption-container > .two-sided-line, .caption-container > .heading, .caption-container > .description, .caption-container > .read-more-droplink, .caption-container > .room-price, .caption-container > .button-aligner",
     "animation" : "fadeInUp"
   },
   {
@@ -19,7 +19,7 @@
   {
     "element": ".everything-you-need ul.everything-links > li",
     "animation": "fadeInUp",
-    "delay" : 1
+    "delay" : 0.2
   },
   {
     "element": ".trust-you-widget",
@@ -30,11 +30,16 @@
     "animation": "fadeInUp"
   },
   {
-    "element": ".offers-list",
+    "element": ".offers-list .section-heading",
     "animation": "fadeInUp"
   },
   {
-    "element": ".explore-other-rooms",
+    "element": ".offers-list .event-offer-container > .content-container, .offers-list .view-all-button",
+    "animation": "fadeInUp",
+    "delay": 0.2
+  },
+  {
+    "element": ".explore-other-rooms .section-heading",
     "animation": "fadeInUp"
   },
   {
@@ -42,35 +47,57 @@
     "animation" : "fadeInUp"
   },
   {
-    "element": ".overview-container .section-heading, .overview-container .description",
-    "animation": "fadeIn"
+    "element": ".caption-container-hotel-landing .heading, .caption-container-hotel-landing .description, .caption-container-hotel-landing .climate-time-control",
+    "animation": "fadeInUp"
+  },
+  {
+    "element": ".content-container .facilities .icon-view",
+    "animation": "fadeInUp",
+    "delay": 0.1
   },
   {
     "element": ".hotel-rooms-container .section-header .section-heading, .hotel-rooms-container .section-header .description",
-    "animation": "fadeIn"
+    "animation": "fadeInUp"
   },
   {
-    "element": ".the-table .section-heading, .the-table .description",
-    "animation": "fadeIn"
+    "element": ".rooms-with-wings .row .type-container",
+    "animation": "fadeInUp"
+  },
+  {
+    "element": ".room-grid-list .caption-container > .heading, .room-grid-list .caption-container > .description, .room-grid-list .caption-container > .read-more-droplink, .room-grid-list .caption-container > .room-price, .room-grid-list .caption-container > .button-aligner",
+    "animation" : "0"
+  },
+  {
+    "element": ".hotel-rooms-container .trust-you-widget",
+    "animation": "0"
+  },  
+  {
+    "element": ".the-table .section-heading, .the-table .description, .the-table .logo-container",
+    "animation": "fadeInUp"
   },
   {
     "element": ".relax-reboot-refresh .section-header .section-heading, .relax-reboot-refresh .section-header .description",
-    "animation": "fadeIn"
+    "animation": "fadeInUp"
   },
   {
     "element": ".events-list .section-header .section-heading, .events-list .section-header .description",
-    "animation": "fadeIn"    
+    "animation": "fadeInUp"
   },
   {
-    "element": ".gallery-section .section-heading, .gallery-section .description",
-    "animation": "fadeIn"    
+    "element": ".gallery-section .section-heading, .gallery-section .description, .gallery-section .trust-you-widget, .gallery-section .image-gallery .image-container, .gallery-section .view-all-button",
+    "animation": "fadeInUp"
   },
   {
-    "element": ".map-direction-container .section-heading, .map-direction-container .description",
-    "animation": "fadeIn"    
+    "element": ".map-direction-container .section-heading, .map-direction-container .description, .map-direction-container .view-map",
+    "animation": "fadeInUp"
+  },
+  {
+    "element": ".map-direction-container .map-tracker .location",
+    "animation": "fadeInUp",
+    "delay": 0.2
   },
   {
     "element": ".hotel-offers-list .section-heading",
-    "animation": "fadeIn"    
+    "animation": "fadeInUp"
   }
 ]

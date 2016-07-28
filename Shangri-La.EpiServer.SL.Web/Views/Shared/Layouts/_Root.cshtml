@@ -63,12 +63,14 @@
     @Html.RequiredClientResources("Footer")
     @Html.RenderExtendedScripts(Model.CurrentPage.Scripts)
 
-    <script src="@Url.Content("~/Content/js/waypoint.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/moment.js")"></script>
+    <script src="@Url.Content("~/Content/js/moment-timezone.js")"></script>
     <!-- to avoid stripping of previous line-->
     <script src="@Url.Content("~/Content/js/vendors.js")"></script>
     <script src="@Url.Content("~/Content/js/common.js")"></script>
     <!-- to avoid stripping of previous line-->
     <script src="@Url.Content("~/Content/js/modules.js")"></script>
+    <!-- to avoid stripping of previous line-->
     <!--CMS FOOTER SCRIPTS AND TAGS OUTPUT HERE-->
 </body>
 

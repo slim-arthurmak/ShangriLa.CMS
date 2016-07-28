@@ -35,24 +35,30 @@
     <!--CMS HEADER SCRIPTS AND TAGS OUTPUT HERE-->
     <div class="site-wrapper">
       <section id="main-banner" class="viewport-element main-banner-hotel-landing lighter-text">
-        <video id="bgvid" autoplay="" poster="img/bg/video-background.jpg" loop="">
-          <source src="img/content/SL-video.webm" type="video/webm">
-          <source src="img/content/SL-video.mp4" type="video/mp4">
-        </video>
+        <div class="video-block">
+          <video style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;" data-video-id="4891851963001" data-account="4554542031001" data-player="ByGvZnc3D" data-embed="default" muted class="video-js"></video>
+          <script src="//players.brightcove.net/4554542031001/ByGvZnc3D_default/index.min.js"></script>
+        </div>
         <div class="caption-container-hotel-landing">
-          <h1 class="heading">Shangri-La Hotel, Singaporeee</h1>
+          <h1 class="heading">Shangri-La Hotel, Singapore</h1>
           <p class="description">A lush, green sanctuary of calm in one of Asia's most dynamic modern cities, and the place where the legendary Shangri-La story first began.</p>
-          <div data-city="kowloon" data-lang="" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"> </span></div>
+          <!-- climate temp and time include starts-->
+          <div data-lat="1.31081" data-lon="103.8246095" data-lang="en" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"></span></div>
+          <!-- climate temp and time include ends-->
         </div><a href="#overview" class="explore-button icon-ios-arrow-down"><span></span></a>
       </section>
     </div>
     <script src="../js/jquery-1.10.2.min.js"></script>
     <script src="../js/waypoint.min.js"></script>
+    <script src="../js/moment.js"></script>
+    <script src="../js/moment-timezone.js"></script>
     <script src="../js/vendors.js"></script>
     
     
     <script src="../js/common.js"></script>
     <script src="../js/modules.js"></script>
+    
+    <!-- to avoid stripping of previous line-->
     
     <!--CMS FOOTER SCRIPTS AND TAGS OUTPUT HERE-->
   </body>

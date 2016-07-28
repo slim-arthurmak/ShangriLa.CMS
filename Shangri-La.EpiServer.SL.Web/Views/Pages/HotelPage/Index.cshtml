@@ -33,22 +33,48 @@
     Html.RenderPartial("BookingPanel", Model.BookingPanel);
 }
 
-<sections class="in-page-navigation sticked" data-height="38" style="top: 133px;">
+<sections class="in-page-navigation">
     <div class="container">
-        <div class="share-link"><a class="share-icon"><span>Share</span></a></div>
+        <div class="share-link">
+            <a class="share-icon"><span>Share</span></a>
+            <div class="share-icon-container shadow-box">
+                <span>share page</span>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="icon-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.twitter.com/" target="_blank" class="icon-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/" target="_blank" class="icon-google-plus"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.weibo.com/login.php" target="_blank" class="icon-weibo"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" target="_blank" class="icon-chat"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" target="_blank" class="icon-email"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="selected-item"><span class="icon-ios-arrow-down">Overview</span></div>
         <ul class="horizontal-scroll">
-            <li class=""><a href="#overview">Overview</a></li>
-            <li class=""><a href="#rooms">Our rooms</a></li>
-            <li class=""><a href="#dining">Dining</a></li>
-            <li class=""><a href="#experience">Experience</a></li>
-            <li class=""><a href="#events">Events</a></li>
-            <li class="active"><a href="#gallery">Gallery</a></li>
-            <li class=""><a href="#location">Location</a></li>
-            <li class=""><a href="#offers">Offers</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#rooms">Our rooms</a></li>
+            <li><a href="#dining">Dining</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#offers">Offers</a></li>
         </ul>
     </div>
 </sections>
+
 <div class="inpage-container">
 
     @*@{
@@ -56,14 +82,14 @@
         }*@
 
     @Html.PropertyFor(x => x.CurrentPage.SectionContentArea, new
-    {
-        //CustomTag = "ul",
-        //CssClass = "list",
-        //ChildrenCustomTagName = "li",
-        //ChildrenCssClass = "list_item",
-        //Tag = string.Empty,
-        HasContainer = false
-    })
+       {
+           //CustomTag = "ul",
+           //CssClass = "list",
+           //ChildrenCustomTagName = "li",
+           //ChildrenCssClass = "list_item",
+           //Tag = string.Empty,
+           HasContainer = false
+       })
 </div>
 
 @Html.Partial("HotelInformationSummary", Model.HotelInformationSummary)

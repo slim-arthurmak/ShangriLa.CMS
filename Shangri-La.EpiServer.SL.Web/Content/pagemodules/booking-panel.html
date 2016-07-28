@@ -39,8 +39,7 @@
         <section id="booking-module" class="booking-panel">
           <div class="container clearfix">
             <div class="burger-menu-container"><a href="javascript:void(0)" class="icon-menu"></a></div>
-            <div class="panel-block search-visible">     
-              <div class="book-room-cta hidden-md hidden-lg"><a href="javascript:void(0)" class="icon-ios-arrow-down">Book a room</a></div>
+            <div class="panel-block search-visible"><a href="javascript:void(0)" class="booking-close-btn icon-close"></a><span class="heading-booking">Booking Panel </span>
               <div class="form-elements-section clearfix">
                 <div class="search-hotels-block">
                   <div class="form-field">
@@ -119,7 +118,7 @@
                                   <div class="form-field">                 
                                     <div class="field-container ui-select-wrapper">
                                       <div class="ui-select icon-ios-arrow-down">
-                                        <select name="adults">
+                                        <select name="adult_Room1">
                                           <option>1</option>
                                           <option>2</option>
                                         </select>
@@ -131,7 +130,7 @@
                                   <div class="form-field">                   
                                     <div class="field-container ui-select-wrapper">
                                       <div class="ui-select icon-ios-arrow-down">
-                                        <select name="childrens">
+                                        <select name="children_Room1">
                                           <option>0</option>
                                           <option>1</option>
                                           <option>2</option>
@@ -195,11 +194,15 @@
     </div>
     <script src="../js/jquery-1.10.2.min.js"></script>
     <script src="../js/waypoint.min.js"></script>
+    <script src="../js/moment.js"></script>
+    <script src="../js/moment-timezone.js"></script>
     <script src="../js/vendors.js"></script>
     
     
     <script src="../js/common.js"></script>
     <script src="../js/modules.js"></script>
+    
+    <!-- to avoid stripping of previous line-->
     
     <!--CMS FOOTER SCRIPTS AND TAGS OUTPUT HERE-->
   </body>

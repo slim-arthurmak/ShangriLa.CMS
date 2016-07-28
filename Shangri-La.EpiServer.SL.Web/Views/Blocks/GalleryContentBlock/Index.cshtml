@@ -10,12 +10,14 @@
         <div class="row equal-height-section">
             <div class="col-xs-12 col-sm-8">
                 <div class="image-gallery equal-height-block clearfix">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="image-container scaled-image"><img src="@Url.Content("~/Content/img/content/368x368-gallery-photo-1.jpg")" alt="{CMS}"></div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="image-container scaled-image hidden-xs"><img src="@Url.Content("~/Content/img/content/368x368-gallery-photo-2.jpg")" alt="{CMS}"></div>
-                    </div>
+                    <!-- Start of Candid io plugin-->
+                    <script type="text/x-jsrender" id="mediaTemplate">
+                        <div class="candid-wall-cell col-sm-6">
+                            <div class="image-container scaled-image"><img src="{{> Media.Images.LowResolution.Url }}" alt="{{> Title }}" style="display:inline-block;"></div>
+                        </div>
+                    </script>
+                    <div id="img-2-container"></div>
+                    <!-- End of Candid io plugin-->
                 </div>
                 <div class="view-all-button"><a href="#" class="button-secondary">View All Gallery Images</a></div>
             </div>

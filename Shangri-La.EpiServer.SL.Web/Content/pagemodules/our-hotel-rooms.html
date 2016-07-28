@@ -46,17 +46,17 @@
             <div class="grid-medium-container">
               <div class="row">
                 <div class="col-xs-12 col-sm-4 no-gutter">
-                  <div class="type-container"><a href="#" class="room-title">Tower Wing</a>
+                  <div class="type-container"><a href="javascript:void(0)" class="room-title">Tower Wing</a>
                     <p>Discover the classic grandeur of the hotel's original wing.</p>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 no-gutter">
-                  <div class="type-container"><a href="#" class="room-title">Garden Wing</a>
+                  <div class="type-container"><a href="javascript:void(0)" class="room-title">Garden Wing</a>
                     <p>Explore nature at its most tranquil set amid our landscaped gardens.</p>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 no-gutter">
-                  <div class="type-container no-border"><a href="#" class="room-title">Valley Wing</a>
+                  <div class="type-container no-border"><a href="javascript:void(0)" class="room-title">Valley Wing</a>
                     <p>Experience the highest levels of hospitality for discerning travellers.</p>
                   </div>
                 </div>
@@ -70,11 +70,13 @@
                 <div class="item">
                   <div class="col-md-12 no-gutter">
                     <div class="full-panel-block">
-                      <div class="image-container scaled-image"><a href="//players.brightcove.net/4554542031001/default_default/index.html?videoId=4898716212001" class="video-link icon-play-circle"></a><img src="img/content/hotel-landing-room-sml1.jpg" alt="{CMS}">
+                      <div class="image-container scaled-image"><a href="//players.brightcove.net/4554542031001/default_default/index.html?videoId=4898716212001" class="video-link icon-play-circle"><img src="img/content/hotel-landing-room-sml1.jpg" alt="{CMS}"></a>
+                        
+                        
                       </div>
                       <div class="caption-container shadow-box">
                         <div class="featured">Featured</div>
-                        <h3 class="heading">Valley Wing Shangri-La Suite</h3>
+                        <h3 class="heading"> <a href="#">Valley Wing Shangri-La Suite</a></h3>
                         <p class="description">Experience Shangri-La luxury at its finest. Spanning an incredible 348 sqm, the suite includes private butler, workout room, living and dining rooms and more.</p>
                         <div class="room-price">
                           <p>From <span class="price">HKD2,800 </span>Per night</p>
@@ -87,10 +89,10 @@
                 <div class="item">     
                   <div class="col-sm-6 col-xs-12 no-gutter">
                     <div class="half-panel-block">
-                      <div class="image-container scaled-image"><img src="img/content/hotel-landing-room-sml1.jpg" alt="{CMS}"></div>
+                      <div class="image-container scaled-image"><a href="#"> <img src="img/content/hotel-landing-room-sml1.jpg" alt="{CMS}"></a></div>
                       <div class="caption-container shadow-box mobile-equal-height-block">
                         <div class="featured">Featured</div>
-                        <h3 class="heading">Tower Wing Executive Room</h3>
+                        <h3 class="heading"> <a href="#">Tower Wing Executive Room</a></h3>
                         <p class="description">Our spacious and stylish Executive Rooms offer city skyline views through sweeping floor-to-ceiling windows, with a full range of amenities for business and leisure.            </p>
                         <div class="room-price">
                           <p>From <span class="price">HKD2,800 </span>Per night</p>
@@ -103,10 +105,10 @@
                 <div class="item">
                   <div class="col-sm-6 col-xs-12 no-gutter">
                     <div class="half-panel-block">
-                      <div class="image-container scaled-image"><img src="img/content/hotel-landing-room-sml2.jpg" alt="{CMS}"></div>
+                      <div class="image-container scaled-image"><a href="#"> <img src="img/content/hotel-landing-room-sml2.jpg" alt="{CMS}"></a></div>
                       <div class="caption-container shadow-box mobile-equal-height-block">
                         <div class="featured">Featured</div>
-                        <h3 class="heading">Garden Wing Premier Balcony Suite</h3>
+                        <h3 class="heading"> <a href="#">Garden Wing Premier Balcony Suite</a></h3>
                         <p class="description">Our Premier Balcony Suites feature spacious bedrooms with separate living space. Ideal for entertaining, each balcony hosts a private Jacuzzi, BBQ grill and loungers.                  </p>
                         <div class="room-price">
                           <p>From <span class="price">HKD2,800 </span>Per night</p>
@@ -139,11 +141,15 @@
     </div>
     <script src="../js/jquery-1.10.2.min.js"></script>
     <script src="../js/waypoint.min.js"></script>
+    <script src="../js/moment.js"></script>
+    <script src="../js/moment-timezone.js"></script>
     <script src="../js/vendors.js"></script>
     
     
     <script src="../js/common.js"></script>
     <script src="../js/modules.js"></script>
+    
+    <!-- to avoid stripping of previous line-->
     
     <!--CMS FOOTER SCRIPTS AND TAGS OUTPUT HERE-->
   </body>

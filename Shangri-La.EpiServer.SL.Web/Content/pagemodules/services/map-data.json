@@ -1,0 +1,103 @@
+{
+    "hoteldetails": [
+        {
+            "id": "1",
+            "longitude": -64.404945,
+            "latitude": -32.202924,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "2",
+            "longitude": 17.470493,
+            "latitude": 47.867077,
+            "hotel_name": "Island Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "3",
+            "longitude": 145.141754,
+            "latitude": -37.766372,
+            "hotel_name": "Hotel Jen",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "4",
+            "longitude": 30.785408,
+            "latitude": 46.639301,
+            "hotel_name": "Kerry Hotel ",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "5",
+            "longitude": -84.693432,
+            "latitude": 10.479372,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "6",
+            "longitude": 12.900009,
+            "latitude": 47.409968,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "7",
+            "longitude": 11.272659,
+            "latitude": 59.637472,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "8",
+            "longitude": 13.189259,
+            "latitude": 47.483221,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "9",
+            "longitude": -61.013432,
+            "latitude": 14.493688,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "10",
+            "longitude": 0.490866,
+            "latitude": 40.903783,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        },
+        {
+            "id": "11",
+            "longitude": 12.852459,
+            "latitude": 47.609519,
+            "hotel_name": "Kowloon Shangrila",
+            "location": "Hongkong",
+            "description": "Welcome to the beating heart of Hong Kong, where dynamic dining, electrifying entertainment and unstoppable shopping come alive at our doorstep.",
+            "hotel_url": "http://www.google.com"
+        }
+    ]
+}
