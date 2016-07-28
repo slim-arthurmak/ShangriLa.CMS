@@ -63,6 +63,8 @@
     @Html.RequiredClientResources("Footer")
     @Html.RenderExtendedScripts(Model.CurrentPage.Scripts)
 
+    <!-- to avoid stripping of previous line-->
+    <script src="js/waypoint.min.js"></script>
     <script src="@Url.Content("~/Content/js/moment.js")"></script>
     <script src="@Url.Content("~/Content/js/moment-timezone.js")"></script>
     <!-- to avoid stripping of previous line-->
