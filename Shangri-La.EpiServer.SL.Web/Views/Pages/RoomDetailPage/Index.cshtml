@@ -24,7 +24,7 @@
 
 <!-- Main banner ends here-->
 
-
+@Model.Hotel.HotelName
 
 
 @{
@@ -40,15 +40,26 @@
             <p class="description">From designer furniture to handcrafted premium materials, our rooms have been designed and appointed to reflect the dynamism of our surroundings</p><a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-4">
-                <p class="room-details icon-view">Incredible views of Asia's most spectacular skyline</p>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <p class="room-details icon-view">Handcrafted Italian marble inlayed bathroom</p>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <p class="room-details icon-view">Bright, spacious, open flowing 484sqft room</p>
-            </div>
+
+            @if (Model.RoomSuiteBlock.RoomFeatures != null)
+            {
+                foreach (string features in Model.RoomSuiteBlock.RoomFeatures)
+                {
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="room-details icon-view">@Html.Raw(features)</p>
+                    </div>
+                }
+            }
+
+            @*<div class="col-xs-12 col-sm-4">
+                    <p class="room-details icon-view">Incredible views of Asia's most spectacular skyline</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <p class="room-details icon-view">Handcrafted Italian marble inlayed bathroom</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <p class="room-details icon-view">Bright, spacious, open flowing 484sqft room</p>
+                </div>*@
         </div><a href="http://sa-dev.shangri-la.com/uploadedFiles/Shangri-la_Hotels/Singapore,_Shangri-la/sls_floorplan.pdf" target="_blank" class="view-floorplan">VIEW FLOORPLAN</a>
         <!--a.view-floorplan(href="//players.brightcove.net/4554542031001/default_default/index.html?videoId=4898716212001" class="video-link") VIEW FLOORPLAN-->
     </div>
@@ -67,58 +78,58 @@
                 <ul class="everything-links row">
                     @if (Model.RoomSuiteBlock.AmenitiesOfficeEquipmentStationary != null)
                     {
-                        <li class="col-xs-12 col-md-3">
-                            <div class="accordion-header icon-accordian-plus">OFFICE EQUIPMENT &amp; STATIONERY</div>
-                            <ul>
-                                @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesOfficeEquipmentStationary)
+                    <li class="col-xs-12 col-md-3">
+                        <div class="accordion-header icon-accordian-plus">OFFICE EQUIPMENT &amp; STATIONERY</div>
+                        <ul>
+                            @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesOfficeEquipmentStationary)
 
-                                @*<li>Full-size executive writing desk</li>
-                                    <li>International Direct Dial telephone</li>
-                                    <li>Voicemail</li>
-                                    <li>Electronic safe</li>
-                                    <li>Bedside lighting control</li>
-                                    <li>24-hour butler call button</li>
-                                    <li>Computer dataport</li>*@
-                            </ul>
-                        </li>
+                            @*<li>Full-size executive writing desk</li>
+                                <li>International Direct Dial telephone</li>
+                                <li>Voicemail</li>
+                                <li>Electronic safe</li>
+                                <li>Bedside lighting control</li>
+                                <li>24-hour butler call button</li>
+                                <li>Computer dataport</li>*@
+                        </ul>
+                    </li>
                     }
                     @if (Model.RoomSuiteBlock.AmenitiesMediaEntertainment != null)
                     {
-                        <li class="col-xs-12 col-md-3">
-                            <div class="accordion-header icon-accordian-plus">MEDIA &amp; ENTERTAINMENT</div>
-                            <ul>
-                                @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesOfficeEquipmentStationary)
+                    <li class="col-xs-12 col-md-3">
+                        <div class="accordion-header icon-accordian-plus">MEDIA &amp; ENTERTAINMENT</div>
+                        <ul>
+                            @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesOfficeEquipmentStationary)
 
-                                @*<li>Complimentary Wi-Fi</li>
-                                    <li>Satellite / cable television</li>
-                                    <li>In-house movie channels</li>
-                                    <li>iPod connection cable</li>*@
-                            </ul>
-                        </li>
+                            @*<li>Complimentary Wi-Fi</li>
+                                <li>Satellite / cable television</li>
+                                <li>In-house movie channels</li>
+                                <li>iPod connection cable</li>*@
+                        </ul>
+                    </li>
                     }
                     @if (Model.RoomSuiteBlock.AmenitiesBathPersonalCare != null)
                     {
-                        <li class="col-xs-12 col-md-3">
-                            <div class="accordion-header icon-accordian-plus">BATH &amp; PERSONAL CARE</div>
-                            <ul>
-                                @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesBathPersonalCare)
-                                @*<li>Hair dryer</li>
-                                    <li>Shangri-La toiletries</li>
-                                    <li>Pillow Menu</li>
-                                    <li>Iron &amp; ironing board</li>*@
-                            </ul>
-                        </li>
+                    <li class="col-xs-12 col-md-3">
+                        <div class="accordion-header icon-accordian-plus">BATH &amp; PERSONAL CARE</div>
+                        <ul>
+                            @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesBathPersonalCare)
+                            @*<li>Hair dryer</li>
+                                <li>Shangri-La toiletries</li>
+                                <li>Pillow Menu</li>
+                                <li>Iron &amp; ironing board</li>*@
+                        </ul>
+                    </li>
                     }
                     @if (Model.RoomSuiteBlock.AmenitiesRefreshments != null)
                     {
-                        <li class="col-xs-12 col-md-3">
-                            <div class="accordion-header icon-accordian-plus">REFRESHMENTS</div>
-                            <ul>
-                                @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesRefreshments)
-                                @*<li>Coffee/tea making facilities</li>
-                                    <li>Mini-bar</li>*@
-                            </ul>
-                        </li>
+                    <li class="col-xs-12 col-md-3">
+                        <div class="accordion-header icon-accordian-plus">REFRESHMENTS</div>
+                        <ul>
+                            @Html.PropertyFor(m => m.RoomSuiteBlock.AmenitiesRefreshments)
+                            @*<li>Coffee/tea making facilities</li>
+                                <li>Mini-bar</li>*@
+                        </ul>
+                    </li>
                     }
                 </ul>
             </div>
@@ -129,141 +140,113 @@
 
 @Html.Partial("TrustYouWidget")
 
-<!-- Module - Horizon Club Section - Starts-->
-<section class="section-row horizon-club">
-    <div class="container">
-        <div class="horizon-container equal-height-section">
+@Html.PropertyFor(x => x.CurrentPage.SectionContentArea, new
+{
+    //CustomTag = "ul",
+    //CssClass = "list",
+    //ChildrenCustomTagName = "li",
+    //ChildrenCssClass = "list_item",
+    //Tag = string.Empty,
+    HasContainer = false
+})
+
+@*
+        <!-- Module - Horizon Club Section - Starts-->
+        <section class="section-row horizon-club">
+            <div class="container">
+                <div class="horizon-container equal-height-section">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 hidden-xs no-gutter">
+                            <div class="image-container equal-height-block"><img src="@Url.Content("~/Content/img/content/horizon-club.jpg")" alt="{CMS}"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 no-gutter">
+                            <div class="content-container shadow-box equal-height-block">
+                                <div class="content-inner">
+                                    <div class="heading">What could make your stay even better? Upgrade to Horizon Club and find out</div>
+                                    <p class="description">Dive deeper into Shangri-La's unique brand of hospitality, with our personalised Horizon Club privileges and benefits.</p><a href="#" class="common-cta">VIEW MORE DETAILS</a>
+                                    <div class="book-now-button"><a href="#" class="button-primary">Book Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Module - Horizon Club Section - Ends-->
+
+    <!-- Module Get more out of your stay starts here-->
+    <section class="section-row offers-list equal-height-section">
+        <div class="container carousel-container">
+            <h2 class="section-heading">Get more out of your stay</h2>
             <div class="row">
-                <div class="col-xs-12 col-sm-6 hidden-xs no-gutter">
-                    <div class="image-container equal-height-block"><img src="@Url.Content("~/Content/img/content/horizon-club.jpg")" alt="{CMS}"></div>
-                </div>
-                <div class="col-xs-12 col-sm-6 no-gutter">
-                    <div class="content-container shadow-box equal-height-block">
-                        <div class="content-inner">
-                            <div class="heading">What could make your stay even better? Upgrade to Horizon Club and find out</div>
-                            <p class="description">Dive deeper into Shangri-La's unique brand of hospitality, with our personalised Horizon Club privileges and benefits.</p><a href="#" class="common-cta">VIEW MORE DETAILS</a>
-                            <div class="book-now-button"><a href="#" class="button-primary">Book Now</a></div>
+                <div class="owl-carousel mobile-carousel">
+                    <div class="item">
+                        <div class="col-xs-12 col-sm-6 no-gutter">
+                            <div class="event-offer-container shadow-box mobile-equal-height-block">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/get-more-get-ahead.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container">
+                                    <div class="heading"><a href="#">Get ahead</a></div>
+                                    <p class="description">Early birds get the best savings. Make your room booking 30 days in advance, and you will receive a 15% discount on your rate.</p><a href="#" class="common-cta">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-12 col-sm-6 no-gutter">
+                            <div class="event-offer-container shadow-box mobile-equal-height-block">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/get-more-fresh-start.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container">
+                                    <div class="heading"><a href="#">Fresh start</a></div>
+                                    <p class="description">Make healthy and hearty start to the day with a complimentary breakfast buffet. Enjoy everything from local delights to continental favourites.</p><a href="#" class="common-cta">SEE MORE      </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="view-all-button"><a href="#" class="button-secondary">VIEW ALL 10 OFFERS</a></div>
         </div>
-    </div>
-</section>
-<!-- Module - Horizon Club Section - Ends-->
-<!-- Module Get more out of your stay starts here-->
-<section class="section-row offers-list equal-height-section">
-    <div class="container carousel-container">
-        <h2 class="section-heading">Get more out of your stay</h2>
-        <div class="row">
-            <div class="owl-carousel mobile-carousel">
-                <div class="item">
-                    <div class="col-xs-12 col-sm-6 no-gutter">
-                        <div class="event-offer-container shadow-box mobile-equal-height-block">
-                            <div class="image-container scaled-image">
-                                <a href="#"><img src="@Url.Content("~/Content/img/content/get-more-get-ahead.jpg")" alt="{CMS}"></a>
-                            </div>
+    </section>
+    <!-- Module Get more out of your stay Ends here          -->
+    <!-- Module Explore other rooms starts here-->
+    <section class="section-row explore-other-rooms equal-height-section">
+        <div class="container">
+            <h2 class="section-heading">Explore other rooms</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="explore-container shadow-box row equal-height-block">
+                        <div class="col-xs-12 col-sm-5 col-md-6 no-gutter">
+                            <div class="image-container"><img src="@Url.Content("~/Content/img/content/explore-room1.jpg")" alt="{CMS}"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-6 no-gutter">
                             <div class="content-container">
-                                <div class="heading"><a href="#">Get ahead</a></div>
-                                <p class="description">Early birds get the best savings. Make your room booking 30 days in advance, and you will receive a 15% discount on your rate.</p><a href="#" class="common-cta">READ MORE</a>
+                                <div class="heading">Horizon Club Deluxe Room</div>
+                                <p class="description">Inspired by timeless Asian design and furnished to accentuate the dazzling views.</p><a href="#" class="common-cta">VIEW MORE</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="col-xs-12 col-sm-6 no-gutter">
-                        <div class="event-offer-container shadow-box mobile-equal-height-block">
-                            <div class="image-container scaled-image">
-                                <a href="#"><img src="@Url.Content("~/Content/img/content/get-more-fresh-start.jpg")" alt="{CMS}"></a>
-                            </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="explore-container shadow-box row equal-height-block">
+                        <div class="col-xs-12 col-sm-5 col-md-6 no-gutter">
+                            <div class="image-container"><img src="@Url.Content("~/Content/img/content/explore-room2.jpg")" alt="{CMS}"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-6 no-gutter">
                             <div class="content-container">
-                                <div class="heading"><a href="#">Fresh start</a></div>
-                                <p class="description">Make healthy and hearty start to the day with a complimentary breakfast buffet. Enjoy everything from local delights to continental favourites.</p><a href="#" class="common-cta">SEE MORE      </a>
+                                <div class="heading">Horizon Side Harbour View Room</div>
+                                <p class="description">Classic Asian influence meets modern indulgence, nestled in the waterfront skyline.</p><a href="#" class="common-cta">VIEW MORE</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="view-all-button"><a href="#" class="button-secondary">VIEW ALL 10 OFFERS</a></div>
-    </div>
-</section>
-<!-- Module Get more out of your stay Ends here          -->
-<!-- Module Explore other rooms starts here-->
-<section class="section-row explore-other-rooms equal-height-section">
-    <div class="container">
-        <h2 class="section-heading">Explore other rooms</h2>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div class="explore-container shadow-box row equal-height-block">
-                    <div class="col-xs-12 col-sm-5 col-md-6 no-gutter">
-                        <div class="image-container"><img src="@Url.Content("~/Content/img/content/explore-room1.jpg")" alt="{CMS}"></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-7 col-md-6 no-gutter">
-                        <div class="content-container">
-                            <div class="heading">Horizon Club Deluxe Room</div>
-                            <p class="description">Inspired by timeless Asian design and furnished to accentuate the dazzling views.</p><a href="#" class="common-cta">VIEW MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div class="explore-container shadow-box row equal-height-block">
-                    <div class="col-xs-12 col-sm-5 col-md-6 no-gutter">
-                        <div class="image-container"><img src="@Url.Content("~/Content/img/content/explore-room2.jpg")" alt="{CMS}"></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-7 col-md-6 no-gutter">
-                        <div class="content-container">
-                            <div class="heading">Horizon Side Harbour View Room</div>
-                            <p class="description">Classic Asian influence meets modern indulgence, nestled in the waterfront skyline.</p><a href="#" class="common-cta">VIEW MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Module  Explore other rooms Ends here            -->
-<!-- Module - Room Contact Details - Starts-->
-<div class="room-contact-details">
-    <div class="container">
-        <ul class="room-contact-container row">
-            <li class="col-xs-12 col-sm-12 col-md-4">
-                <div class="heading">Contact Shangri-La Hotel, Singapore</div>
-                <p>
-                    <strong>Address: </strong>22 Orange Grove Road, 258350, Singapore
-                    <br><strong>Phone: </strong><span>(65) 6737 3644</span>
-                    <br><strong>Fax: </strong><span>(65) 6737 3257</span>
-                    <br><strong>Email: </strong><a href="mailto:sls@shangri-la.com;">sls@shangri-la.com</a>
-                </p>
-            </li>
-            <li class="col-xs-12 col-sm-6 col-md-4">
-                <div class="heading accordion-header icon-accordian-plus">Check-In/Out</div>
-                <div class="description">
-                    <p>
-                        Please note the check-in / out times below:
-                        <br><strong>Check-in: </strong>2pm
-                        <br><strong>Check-out: </strong>12 noon
-                    </p>
-                </div>
-            </li>
-            <li class="col-xs-12 col-sm-6 col-md-4">
-                <div class="heading accordion-header icon-accordian-plus">Payments</div>
-                <div class="description">
-                    <p>We accept the following payment methods:</p>
-                    <div class="payment-methods">
-                        <ul class="list-unstyled clearfix">
-                            <li><img width="24" height="24" src="@Url.Content("~/Content/img/content/amex-logo.png")" alt="{CMS}" class="retina-image"></li>
-                            <li><img width="30" height="22" src="@Url.Content("~/Content/img/content/diners-club-logo.png")" alt="{CMS}" class="retina-image"></li>
-                            <li><img width="28" height="22" src="@Url.Content("~/Content/img/content/jcb-logo.png")" alt="{CMS}" class="retina-image"></li>
-                            <li><img width="33" height="20" src="@Url.Content("~/Content/img/content/mastercard-logo.png")" alt="{CMS}" class="retina-image"></li>
-                            <li><img width="39" height="14" src="@Url.Content("~/Content/img/content/visa-logo.png")" alt="{CMS}" class="retina-image"></li>
-                            <li><img width="33" height="21" src="@Url.Content("~/Content/img/content/union-pay-logo.png")" alt="{CMS}" class="retina-image"></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- Module - Room Contact Details - Ends-->
+    </section>
+    <!-- Module  Explore other rooms Ends here            -->
+*@
+
+@Html.Partial("HotelInformationSummary", Model.HotelInformationSummary)

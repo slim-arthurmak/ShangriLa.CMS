@@ -1,26 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using EPiServer.Core;
-using EPiServer.DataAbstraction;
+﻿using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
 using EPiServer.Shell.ObjectEditing;
-using System.Collections.Generic;
-
-using EPiServer.DataAbstraction;
-using EPiServer.DataAnnotations;
-using Shangri_La.EpiServer.SL.Web.Models.Blocks;
-using System.ComponentModel.DataAnnotations;
-
-using EPiServer.Core;
-using EPiServer.DataAbstraction;
-using EPiServer.DataAnnotations;
 using EPiServer.Web;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Collections.Generic;
-
+using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
 using Shangri_La.EpiServer.SL.Web.Models.Properties;
+using System.ComponentModel.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
@@ -37,9 +21,30 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                     Order = 1)]
         public virtual string RoomName { get; set; }
 
-        [Display(Name = "Room Type", Order = 2)]
+        [Display(Name = "Room Type", 
+                Description = "Room Type",
+                GroupName = SystemTabNames.Content,
+                Order = 2)]
         [SelectOne(SelectionFactoryType = typeof(RoomTypeSelectionFactory))]
         public virtual string RoomType { get; set; }
+
+
+        [Display(Name = "Room Type Code", 
+            Description = "Room Type Code",
+            GroupName = SystemTabNames.Content,
+            Order = 3)]
+        public virtual string RoomTypeCode { get; set; }
+
+        //[Required]
+
+        [BackingType(typeof(PropertyStringList))]
+        [Display(Name = "Room Features",
+                Description = "Place items on separate lines",
+                GroupName = SystemTabNames.Content,
+                Order = 4)]
+        [UIHint(Global.SiteUIHints.Strings)]
+        [CultureSpecific]
+        public virtual string[] RoomFeatures { get; set; }
 
         [BackingType(typeof(PropertyStringList))]
         [Display(Name = "Room Amenities (Media & Entertainment)",
@@ -68,7 +73,6 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         [UIHint(Global.SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] AmenitiesOfficeEquipmentStationary { get; set; }
-
 
         [BackingType(typeof(PropertyStringList))]
         [Display(Name = "Room Amenities (Bath & Personal Care)",

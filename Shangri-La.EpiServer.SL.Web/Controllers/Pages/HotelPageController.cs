@@ -28,7 +28,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
             //PropertyPageViewModel model = new PropertyPageViewModel(currentPage);
 
             model.Hotel = hotelBlock;
-
+            model.HotelInformationSummary = new HotelInformationSummaryViewModel(model.Hotel);
 
             return View(model);
         }

@@ -1,17 +1,10 @@
-﻿using EPiServer.DataAbstraction;
-using EPiServer.DataAnnotations;
-using Shangri_La.EpiServer.SL.Web.Models.Blocks;
-using System.ComponentModel.DataAnnotations;
-
-using EPiServer.Core;
+﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
+using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Collections.Generic;
-
-using Shangri_La.EpiServer.SL.Web.Models.Properties;
+using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
@@ -36,5 +29,20 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         //[AllowedTypes(typeof(MainCarouselBlock))]
         public virtual SectionHeaderBannerBlock HeaderBanner { get; set; }
 
+
+        [Display(Name = "RoomFeatures",
+                GroupName = SystemTabNames.Content,
+                Order = 21)]
+        public virtual SectionOverviewContentBlock RoomFeatures { get; set; }
+
+        [AllowedTypes(new[] {   typeof(SectionHightlightContentBlock),
+                                typeof(RoomOffersContentBlock),
+                                typeof(ExploreOtherRoomsContentBlock)})]
+        [Display(
+                  Name = "Section Content Area",
+                  Description = "Room Content Blocks",
+                  GroupName = SystemTabNames.Content,
+                  Order = 110)]
+        public virtual ContentArea SectionContentArea { get; set; }
     }
 }

@@ -77,7 +77,7 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
                 AvailableWithoutTag = false,
                 Path = PagePartialPath("ContactPageWide.cshtml")
             });
-
+            */
             viewTemplateModelRegistrator.Add(typeof(IContentData), new TemplateModel
             {
                 Name = "NoRendererMessage",
@@ -86,7 +86,7 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
                 AvailableWithoutTag = false,
                 Path = BlockPath("NoRenderer.cshtml")
             });
-
+            /*
             viewTemplateModelRegistrator.Add(typeof(TwitterBlock), new TemplateModel
             {
                 Tags = new[] { Global.ContentAreaTags.OneThirdWidth },
@@ -107,7 +107,16 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
                 AvailableWithoutTag = false,
                 Path = BlockPath("LinkedInCompanyBlockNarrow.cshtml"),
             });        
-            */    
+            */
+
+            viewTemplateModelRegistrator.Add(typeof(SectionHightlightContentBlock), new TemplateModel
+            {
+                Name = "SectionHightlightContent",
+                //Inherit = true,
+                //Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                AvailableWithoutTag = true,
+                Path = BlockPath("SectionHightlightContent.cshtml")
+            });
         }
 
         private static string BlockPath(string fileName)

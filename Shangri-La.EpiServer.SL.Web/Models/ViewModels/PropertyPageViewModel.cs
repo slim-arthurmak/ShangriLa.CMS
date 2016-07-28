@@ -18,16 +18,19 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
         public PropertyPageViewModel() : base()
         {
             BookingPanel = new BookingPanelModel();
+            HotelInformationSummary = new HotelInformationSummaryViewModel();
         }
 
         public PropertyPageViewModel(T currentPage) : base(currentPage)
         {
             BookingPanel = new BookingPanelModel();
+            HotelInformationSummary = new HotelInformationSummaryViewModel();
         }
 
 
         public BookingPanelModel BookingPanel { get; set; }
 
         public HotelBlock Hotel { get; set; }
+        public HotelInformationSummaryViewModel HotelInformationSummary { get; set; }
     }
 }
