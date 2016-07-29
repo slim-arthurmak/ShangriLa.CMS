@@ -8,23 +8,22 @@ using EPiServer.Core;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
 
-using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage;
 using Shangri_La.EpiServer.SL.Web.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
 {
-    public class ExploreOtherRoomsListBlockController : BlockController<ExploreOtherRoomsListBlock>
+    public class RoomHeaderBannerBlockController : BlockController<RoomHeaderBannerBlock>
     {
         private ContentLocator contentLocator;
         private IContentLoader contentLoader;
-        public ExploreOtherRoomsListBlockController(ContentLocator contentLocator, IContentLoader contentLoader)
+        public RoomHeaderBannerBlockController(ContentLocator contentLocator, IContentLoader contentLoader)
         {
             this.contentLocator = contentLocator;
             this.contentLoader = contentLoader;
         }
 
-        public override ActionResult Index(ExploreOtherRoomsListBlock currentBlock)
+        public override ActionResult Index(RoomHeaderBannerBlock currentBlock)
         {
             return PartialView(currentBlock);
         }

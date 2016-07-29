@@ -10,18 +10,35 @@ using Shangri_La.EpiServer.SL.Web.Models.Pages;
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage
 {
     [ContentType(
-        DisplayName = "ExploreOtherRoomsContentBlock", 
+        DisplayName = "Explore Other Rooms List Block", 
         GUID = "6d991e4b-4426-470d-856a-d2d024919a54", 
         Description = "",
         GroupName = Global.GroupNames.SLPages)]
-    public class ExploreOtherRoomsContentBlock : BlockData
+    public class ExploreOtherRoomsListBlock : SectionContentBlockData
     {
+        [Display(
+            Name = "Heading",
+            Description = "Heading",
+            GroupName = SystemTabNames.Content,
+            Order = 10)]
+        [CultureSpecific]
+        public virtual string Heading { get; set; }
+
+        /*
+        [Display(
+            Name = "Count",
+            Description = "",
+            GroupName = SystemTabNames.Content,
+            Order = 20)]
+        public virtual int Count { get; set; }
+        */
+
         [AllowedTypes(new[] { typeof(RoomDetailPage) })]
         [Display(
         Name = "Feature Rooms Content Area",
         Description = "Feature Rooms",
         GroupName = SystemTabNames.Content,
-        Order = 10)]
+        Order = 20)]
         public virtual ContentArea FeatureRoomsContentArea { get; set; }
     }
 }

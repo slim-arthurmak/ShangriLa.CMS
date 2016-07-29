@@ -257,6 +257,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Attributes\ContentImageAttribute.cs" />
     <Compile Include="Business\Channels\DisplayResolutionBase.cs" />
     <Compile Include="Business\Channels\DisplayResolutions.cs" />
     <Compile Include="Business\Channels\MobileChannel.cs" />
@@ -297,6 +298,7 @@
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
     <Compile Include="Controllers\Blocks\ExploreOtherRoomsContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomOffersContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomHeaderBannerBlockController.cs" />
     <Compile Include="Controllers\Blocks\SectionHeaderBannerBlockController.cs" />
     <Compile Include="Controllers\Blocks\OffersContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\MapAndDirectionContentBlockController.cs" />
@@ -329,8 +331,9 @@
     <Compile Include="Models\Blocks\RestaurantBlock.cs" />
     <Compile Include="Models\Blocks\RoomCategoryBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\RoomContentBlock.cs" />
-    <Compile Include="Models\Blocks\RoomPage\ExploreOtherRoomsContentBlock.cs" />
+    <Compile Include="Models\Blocks\RoomPage\ExploreOtherRoomsListBlock.cs" />
     <Compile Include="Models\Blocks\RoomGroupBlock.cs" />
+    <Compile Include="Models\Blocks\RoomPage\RoomHeaderBannerBlock.cs" />
     <Compile Include="Models\Blocks\RoomSuiteBlock.cs" />
     <Compile Include="Models\Blocks\SectionContentBlockData.cs" />
     <Compile Include="Models\Blocks\SectionHeaderBannerBlock.cs" />
@@ -393,6 +396,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\ContentIcons\" />
     <Folder Include="Content\img\icons\" />
     <Folder Include="Content\pagemodules\img\icons\" />
     <Folder Include="Content\pagemodules\services\" />
@@ -1497,10 +1501,11 @@
     <Content Include="Views\Shared\Blocks\MosaicBannerCarousel.cshtml" />
     <Content Include="Views\Shared\Blocks\SectionHightlightContent.cshtml" />
     <Content Include="Views\Shared\Blocks\NoRenderer.cshtml" />
-    <Content Include="Views\Blocks\ExploreOtherRoomsContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\ExploreOtherRoomsListBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomOffersContentBlock\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\HotelInformationSummary.cshtml" />
     <Content Include="Views\Pages\RoomSuiteListingPage\Index_Wing.cshtml" />
+    <Content Include="Views\Blocks\RoomHeaderBannerBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

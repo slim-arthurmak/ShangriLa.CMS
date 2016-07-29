@@ -1,0 +1,19 @@
+﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage.RoomHeaderBannerBlock
+
+<!-- Main banner starts here-->
+<section class="main-banner">
+    <div class="image-container">
+        <img src="@Url.ContentUrl(Model.DesktopImage)?width=1400&height=700&mode=crop&scale=canvas" alt="@Model.AlternateText">
+    </div>
+    <div class="caption-container read-more-container shadow-box">
+        <div class="two-sided-line">@Html.PropertyFor(m => m.Label)</div>
+        <h1 class="heading">@Html.PropertyFor(m => m.Title)</h1>
+        <p class="description">@Html.PropertyFor(m => m.Introduction)</p>
+        <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+        <div class="room-price">
+            <p>From <span class="price">HKD2,800 </span>Per night</p>
+        </div>
+        <div class="book-room shadow-box"><span>10 Rooms Remaining</span></div>
+    </div>
+</section>
+<!-- Main banner ends here-->

@@ -52,7 +52,14 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         [UIHint(UIHint.Textarea)]
         public virtual string Introduction { get; set; }
 
-
+        [CultureSpecific]
+        [Display(
+            Name = "Teaser text",
+            Description = "",
+            GroupName = SystemTabNames.Content,
+            Order = 140)]
+        [UIHint(UIHint.Textarea)]
+        public virtual string TeaserText { get; set; }
 
         //Sets the default property values
         public override void SetDefaultValues(ContentType contentType)

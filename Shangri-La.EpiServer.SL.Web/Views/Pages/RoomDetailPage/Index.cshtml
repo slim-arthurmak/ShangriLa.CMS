@@ -1,5 +1,6 @@
 ﻿@using EPiServer.Core
 @using EPiServer.Web.Mvc.Html
+@using Shangri_La.EpiServer.SL.Web.Business.Extensions;
 
 @model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomDetailPageViewModel
 
@@ -20,11 +21,22 @@
         </div>
     </section>*@
 
-@Html.PropertyFor(m => m.CurrentPage.HeaderBanner)
+@*@Html.PropertyFor(m => m.CurrentPage.HeaderContentArea)*@
+
+@*@Html.PropertyFor(x => x.CurrentPage.HeaderContentArea, new
+{
+    //CustomTag = "ul",
+    //CssClass = "list",
+    ChildrenCustomTagName = "section",
+    ChildrenCssClass = "main-banner",
+    //Tag = string.Empty,
+    HasContainer = false
+})*@
+
 
 <!-- Main banner ends here-->
 
-@Model.Hotel.HotelName
+
 
 
 @{

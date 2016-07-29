@@ -17,35 +17,51 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
     {
         [CultureSpecific]
         [Display(
-            Name = "Title",
-            Description = "Title",
+            Name = "Heading",
+            Description = "Heading",
             GroupName = SystemTabNames.Content,
             Order = 1)]
-        public virtual string Title { get; set; }
+        public virtual string Heading { get; set; }
 
         [CultureSpecific]
         [Display(
-            Name = "Short Description",
-            Description = "Short Description",
+            Name = "Intro Text",
+            Description = "Intro Text",
             GroupName = SystemTabNames.Content,
             Order = 2)]
         [UIHint(UIHint.Textarea)]
-        public virtual string ShortDescription { get; set; }
+        public virtual string IntroText { get; set; }
 
         [CultureSpecific]
         [Display(
-            Name = "Long Description",
-            Description = "Long Description",
+            Name = "Main Text",
+            Description = "Main Text",
             GroupName = SystemTabNames.Content,
             Order = 3)]
         [UIHint(UIHint.Textarea)]
-        public virtual string LongDescription { get; set; }
+        public virtual string MainText { get; set; }
+
+        [Display(
+                   Name = "Image",
+                   Description = "",
+                   GroupName = SystemTabNames.Content,
+                   Order = 10)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference Image { get; set; }
+
 
         [Display(
             Name = "Block CTA",
             Description = "Block CTA",
             GroupName = SystemTabNames.Content,
-            Order = 4)]
+            Order = 20)]
         public virtual ButtonBlock BlockCTA { get; set; }
+
+        [Display(
+            Name = "Block Button Link",
+            Description = "Block Button Link",
+            GroupName = SystemTabNames.Content,
+            Order = 30)]
+        public virtual ButtonBlock BlockButtonLink { get; set; }
     }
 }

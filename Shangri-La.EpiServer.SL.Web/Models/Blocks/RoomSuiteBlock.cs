@@ -83,6 +83,18 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         [CultureSpecific]
         public virtual string[] AmenitiesBathPersonalCare { get; set; }
 
+        [Display(Name = "Room Size",
+           Description = "Room Size",
+           GroupName = SystemTabNames.Content,
+           Order = 25)]
+        public virtual string RoomSize { get; set; }
+
+        [Display(Name = "Room View",
+           Description = "Room View",
+           GroupName = SystemTabNames.Content,
+           Order = 26)]
+        public virtual string RoomView { get; set; }
+
 
         [Display(Name = "Bookable", Order = 31)]
         public virtual bool Bookable { get; set; }

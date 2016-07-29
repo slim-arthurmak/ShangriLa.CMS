@@ -18,18 +18,19 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
     [SiteImageUrl]
     public class SectionOverviewContentBlock : SectionContentBlockData
     {
+        /*
         [Display(Name = "Content Image",
                    Description = "3x2 ratio",
                    GroupName = SystemTabNames.Content,
                    Order = 11)]
         [UIHint(UIHint.Image)]
         public virtual ContentReference ContentImage { get; set; }
-
+        */
         [BackingType(typeof(PropertyStringList))]
         [Display(Name = "Highlights",
                    Description = "Place items on separate lines",
                    GroupName = SystemTabNames.Content,
-                   Order = 12)]
+                   Order = 100)]
         [UIHint(Global.SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] Highlights { get; set; }

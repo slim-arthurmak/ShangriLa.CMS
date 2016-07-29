@@ -23,6 +23,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
         public T CurrentPage { get; private set; }
         public LayoutModel Layout { get; set; }
         public IContent Section { get; set; }
+
+        public string HotelLogo { get; set; }
     }
 
     public static class PageViewModel
