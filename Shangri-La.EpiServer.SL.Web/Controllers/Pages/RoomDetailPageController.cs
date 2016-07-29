@@ -6,6 +6,8 @@ using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
 using System.Linq;
 using System.Web.Mvc;
+using EPiServer.Web.Routing;
+using EPiServer.ServiceLocation;
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
 {
@@ -28,6 +30,8 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
 
             HotelPage hotelPage = (HotelPage)FindHotelPage(currentPage);
 
+            UrlResolver urlResolver = ServiceLocator.Current.GetInstance<UrlResolver>();
+
             if (hotelPage != null)
             {
                 HotelBlock hotelBlock = contentLoader.Get<HotelBlock>(hotelPage.HotelBlock);
@@ -36,6 +40,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
                     model.Hotel = hotelBlock;
                     model.HotelInformationSummary = new HotelInformationSummaryViewModel(model.Hotel);
                     //model.CurrentPage.HeaderBanner.Label = hotelBlock.HotelShortName;
+                    model.HeaderLogo = urlResolver.GetVirtualPath(hotelBlock.Logo).VirtualPath;
                 }
             }
 

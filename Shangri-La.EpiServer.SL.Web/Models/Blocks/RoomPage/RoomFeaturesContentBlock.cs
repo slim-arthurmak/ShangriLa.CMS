@@ -4,13 +4,12 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 
-namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
+namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage
 {
-    [ContentType(DisplayName = "RestaurantBlock",
-        GUID = "1678931c-a2ca-4ee4-9c3a-54cccb610cf9",
-        GroupName = Global.GroupNames.SLDefault,
+    [ContentType(DisplayName = "RoomFeaturesContentBlock", GUID = "920c41ee-49fa-46cf-9103-46d474b3ff6b",
+        GroupName = Global.GroupNames.SLRoomDetailPageSections,
         Description = "")]
-    public class RestaurantBlock : BlockData
+    public class RoomFeaturesContentBlock : SectionOverviewContentBlock
     {
         /*
                 [CultureSpecific]

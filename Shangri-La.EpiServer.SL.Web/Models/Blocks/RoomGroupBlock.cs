@@ -7,8 +7,9 @@ using System.ComponentModel.DataAnnotations;
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "RoomGroupBlock",
-        GroupName = Global.GroupNames.SLDefault, 
-        GUID = "a999e56e-ff7f-4848-bd16-5ce40bcad79e", Description = "")]
+        GUID = "a999e56e-ff7f-4848-bd16-5ce40bcad79e",
+        GroupName = Global.GroupNames.SLDefault,
+        Description = "")]
     public class RoomGroupBlock : BlockData
     {
         [CultureSpecific]

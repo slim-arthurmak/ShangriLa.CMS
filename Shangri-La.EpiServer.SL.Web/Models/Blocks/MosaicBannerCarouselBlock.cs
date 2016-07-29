@@ -6,11 +6,12 @@ using EPiServer.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "RestaurantBlock",
-        GUID = "1678931c-a2ca-4ee4-9c3a-54cccb610cf9",
+    [ContentType(
+        DisplayName = "MosaicBannerCarouselBlock", 
+        GUID = "3cc56df4-4fa4-41fc-989c-3abf8f9b6ac2",
         GroupName = Global.GroupNames.SLDefault,
         Description = "")]
-    public class RestaurantBlock : BlockData
+    public class MosaicBannerCarouselBlock : BlockData
     {
         /*
                 [CultureSpecific]

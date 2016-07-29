@@ -24,7 +24,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
         public LayoutModel Layout { get; set; }
         public IContent Section { get; set; }
 
-        public string HotelLogo { get; set; }
+        public string HeaderLogo { get; set; }
     }
 
     public static class PageViewModel

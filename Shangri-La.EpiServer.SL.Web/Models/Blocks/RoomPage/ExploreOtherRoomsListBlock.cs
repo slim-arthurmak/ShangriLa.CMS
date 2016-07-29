@@ -11,9 +11,9 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage
 {
     [ContentType(
         DisplayName = "Explore Other Rooms List Block", 
-        GUID = "6d991e4b-4426-470d-856a-d2d024919a54", 
-        Description = "",
-        GroupName = Global.GroupNames.SLPages)]
+        GUID = "6d991e4b-4426-470d-856a-d2d024919a54",
+        GroupName = Global.GroupNames.SLRoomDetailPageSections,
+        Description = "")]
     public class ExploreOtherRoomsListBlock : SectionContentBlockData
     {
         [Display(

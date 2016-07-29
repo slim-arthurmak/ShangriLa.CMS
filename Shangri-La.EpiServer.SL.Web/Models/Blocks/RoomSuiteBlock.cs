@@ -9,8 +9,9 @@ using System.ComponentModel.DataAnnotations;
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "RoomSuiteBlock",
+         GUID = "275712a5-21d6-4ef4-884e-cdbeb2b04250",
         GroupName = Global.GroupNames.SLDefault,
-         GUID = "275712a5-21d6-4ef4-884e-cdbeb2b04250", Description = "")]
+        Description = "")]
     public class RoomSuiteBlock : SiteBlockData
     {
         [CultureSpecific]
@@ -21,7 +22,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                     Order = 1)]
         public virtual string RoomName { get; set; }
 
-        [Display(Name = "Room Type", 
+        [Display(Name = "Room Type",
                 Description = "Room Type",
                 GroupName = SystemTabNames.Content,
                 Order = 2)]
@@ -29,7 +30,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         public virtual string RoomType { get; set; }
 
 
-        [Display(Name = "Room Type Code", 
+        [Display(Name = "Room Type Code",
             Description = "Room Type Code",
             GroupName = SystemTabNames.Content,
             Order = 3)]

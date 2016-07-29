@@ -8,5 +8,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
         T CurrentPage { get; }
         LayoutModel Layout { get; set; }
         IContent Section { get; set; }
+
+        string HeaderLogo { get; set; }
     }
 }

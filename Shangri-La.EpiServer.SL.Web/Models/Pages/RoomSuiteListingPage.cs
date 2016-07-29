@@ -1,23 +1,17 @@
-﻿using EPiServer;
-using EPiServer.Core;
+﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using EPiServer.ServiceLocation;
-using EPiServer.SpecializedProperties;
 using EPiServer.Web;
-
-using Shangri_La.EpiServer.SL.Web.Business.Extensions.EditorDescriptor;
-using Shangri_La.EpiServer.SL.Web.Helpers;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
-using Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage;
-
-using System;
 using System.ComponentModel.DataAnnotations;
 
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
-    [ContentType(DisplayName = "RoomSuiteListingPage", GUID = "c0b9598d-4534-4d54-98ff-0a59390cceec", Description = "", GroupName = Global.GroupNames.SLPages)]
+    [ContentType(DisplayName = "RoomSuiteListingPage", 
+        GUID = "c0b9598d-4534-4d54-98ff-0a59390cceec", 
+        Description = "", 
+        GroupName = Global.GroupNames.SLPages)]
     [AvailableContentTypes(Include = new[] { typeof(RoomDetailPage) })]
     public class RoomSuiteListingPage : SitePageData
     {

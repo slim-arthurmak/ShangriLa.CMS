@@ -23,15 +23,6 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         [UIHint(UIHint.Block)]
         public virtual ContentReference RoomSuiteBlock { get; set; }
 
-        /*
-        [Display(Name = "Header Banner",
-                GroupName = SystemTabNames.Content,
-                Order = 20)]
-        //[CultureSpecific]
-        //[MaxItemCount(1)]
-        //[AllowedTypes(typeof(MainCarouselBlock))]
-        public virtual SectionHeaderBannerBlock HeaderBanner { get; set; }
-        */
         [AllowedTypes(new[] { typeof(RoomHeaderBannerBlock) })]
         [Display(
                   Name = "Header Content Area",
@@ -40,13 +31,14 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
                   Order = 30)]
         public virtual ContentArea HeaderContentArea { get; set; }
 
+
+        [AllowedTypes(new[] { typeof(SectionOverviewContentBlock ), typeof(MosaicBannerCarouselBlock) })]
         [Display(
                   Name = "Main Content Area",
                   Description = "Main Content Area (Room Suite Properties)",
                   GroupName = SystemTabNames.Content,
                   Order = 40)]
         public virtual ContentArea MainContentArea { get; set; }
-
 
         [AllowedTypes(new[] {   typeof(SectionHightlightContentBlock),
                                 typeof(RoomOffersContentBlock),

@@ -19,6 +19,8 @@ namespace Shangri_La.EpiServer.SL.Web
             public const string SLContainerPages = "SL Container Pages";
             public const string SLHotelHomepageSections = "SL - Hotel Homepage Sections";
 
+            public const string SLRoomDetailPageSections = "SL - Room Detail Page Sections";
+
             [Display(Name = "Contact", Order = 1)]
             public const string Contact = "Contact";
 

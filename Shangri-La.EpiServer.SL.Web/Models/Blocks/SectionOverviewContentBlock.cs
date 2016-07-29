@@ -12,8 +12,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(
         DisplayName = "SectionOverviewContentBlock",
-        GroupName = Global.GroupNames.SLDefault,
         GUID = "ba247296-abde-42a1-b415-b3d3cf482a8e",
+        GroupName = Global.GroupNames.SLDefault,
         Description = "")]
     [SiteImageUrl]
     public class SectionOverviewContentBlock : SectionContentBlockData

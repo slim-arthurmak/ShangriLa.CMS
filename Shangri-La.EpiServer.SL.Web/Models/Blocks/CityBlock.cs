@@ -10,8 +10,9 @@ using Shangri_La.EpiServer.SL.Web.Business.Extensions.EditorDescriptors;
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "CityBlock",
+         GUID = "e5bec282-abd7-4778-8123-0483da960217",
         GroupName = Global.GroupNames.SLDefault,
-         GUID = "e5bec282-abd7-4778-8123-0483da960217", Description = "")]
+        Description = "")]
     public class CityBlock : SiteBlockData
     {
         [CultureSpecific]

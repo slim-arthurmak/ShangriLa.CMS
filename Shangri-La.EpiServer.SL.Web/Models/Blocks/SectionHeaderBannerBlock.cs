@@ -6,7 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "SectionHeaderBanner", GUID = "bb4b2795-5c20-449e-8872-2916dd5104d2", Description = "")]
+    [ContentType(DisplayName = "SectionHeaderBanner", GUID = "bb4b2795-5c20-449e-8872-2916dd5104d2", 
+        GroupName = Global.GroupNames.SLDefault,
+        Description = "")]
     public class SectionHeaderBannerBlock : SiteBlockData
     {
         [Display(

@@ -4,7 +4,19 @@
 @using Shangri_La.EpiServer.SL.Web.Models.Pages;
 @using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
 @using Shangri_La.EpiServer.SL.Web.Helpers
+
 @model IPageViewModel<SitePageData>
+
+
+@{ 
+    string HotelLogo = "";
+
+    if (!string.IsNullOrEmpty(Model.HeaderLogo))
+    {
+        HotelLogo = Model.HeaderLogo;
+    }
+
+}
 
 <header>
     <div class="header-container">
@@ -16,7 +28,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-xs-6">
                         <div class="hotel-logo">
-                            <a href="javascript:void(0);"><img src="@Url.Content("~/Content/img/content/hotel-logo.png")" alt="{CMS}" class="hidden-xs"><img src="@Url.Content("~/Content/img/content/hotel-logo.png")" alt="{CMS}" class="visible-xs"></a>
+                            <a href="javascript:void(0);"><img src="@Url.Content("~/" + HotelLogo)" alt="{CMS}" class="hidden-xs"><img src="@Url.Content("~/" + HotelLogo)" alt="{CMS}" class="visible-xs"></a>
                         </div>
                     </div>
                     <div class="col-sm-4 col-xs-6">
@@ -36,7 +48,7 @@
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <div class="hotel-logo">
-                            <a href="javascript:void(0);"><img src="@Url.Content("~/Content/img/content/hotel-logo.png")" alt="{CMS}"></a>
+                            <a href="javascript:void(0);"><img src="@Url.Content("~/" + HotelLogo)" alt="{CMS}"></a>
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-12">
@@ -655,7 +667,7 @@
     </div>
 </header>
 @if (false)
-{
+        {
 
     <div class="row">
         <div id="header">

@@ -17,8 +17,8 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
 
         public static void OnTemplateResolved(object sender, TemplateResolverEventArgs args)
         {
-            //Disable DefaultPageController for page types that shouldn't have any renderer as pages
-            if (args.ItemToRender is IContainerPage && args.SelectedTemplate != null && args.SelectedTemplate.TemplateType == typeof(DefaultPageController))
+            if (args.ItemToRender is IContainerPage && args.SelectedTemplate != null &&
+                args.SelectedTemplate.TemplateType == typeof(DefaultPageController))
             {
                 args.SelectedTemplate = null;
             }
@@ -108,6 +108,16 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
                 Path = BlockPath("LinkedInCompanyBlockNarrow.cshtml"),
             });        
             */
+
+            viewTemplateModelRegistrator.Add(typeof(MosaicBannerCarouselBlock), new TemplateModel
+            {
+                Name = "MosaicBannerCarousel",
+                //Inherit = true,
+                //Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                AvailableWithoutTag = true,
+                Path = BlockPath("MosaicBannerCarousel.cshtml")
+            });
+
 
             viewTemplateModelRegistrator.Add(typeof(SectionHightlightContentBlock), new TemplateModel
             {

@@ -10,10 +10,10 @@ using Shangri_La.EpiServer.SL.Web;
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "SectionContentBlockData", 
-        GUID = "b3a417fe-3337-4687-ac99-069d46d0832a", 
-        Description = "",
-        GroupName = Global.GroupNames.SLDefault)]
-    public class SectionContentBlockData : BlockData
+        GUID = "b3a417fe-3337-4687-ac99-069d46d0832a",
+        GroupName = Global.GroupNames.SLDefault,
+        Description = "")]
+    public class SectionContentBlockData : SiteBlockData
     {
         [CultureSpecific]
         [Display(

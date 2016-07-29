@@ -1,20 +1,18 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using EPiServer.Core;
+﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
-using EPiServer.DataAnnotations;
 using EPiServer.Web;
-
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
     [ContentType(
         DisplayName = "StartPage", 
         GUID = "8C31185E-E32F-44E9-B95D-47FC9A02799A",
-        Description = "Shangri-La Start Page")]
+        Description = "Shangri-La Start Page",
+        GroupName = Global.GroupNames.SLPages)]
     [SiteImageUrl]
     [AvailableContentTypes(
         Availability.Specific,
