@@ -16,7 +16,9 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers
     {
         public override ActionResult Index(RoomDetailPage currentContent)
         {
-            return PartialView("/Views/Shared/PagePartials/RoomDetailPage.cshtml", currentContent);
+            RoomDetailPageViewModel model = new RoomDetailPageViewModel(currentContent);
+
+            return PartialView("/Views/Shared/PagePartials/RoomDetailPage.cshtml", model);
         }
     }
 
@@ -27,7 +29,9 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers
     {
         public override ActionResult Index(RoomDetailPage currentContent)
         {
-            return PartialView("/Views/Shared/PagePartials/RoomDetailPageFullWidth.cshtml", currentContent);
+            RoomDetailPageViewModel model = new RoomDetailPageViewModel(currentContent);
+
+            return PartialView("/Views/Shared/PagePartials/RoomDetailPageFullWidth.cshtml", model);
         }
     }
 

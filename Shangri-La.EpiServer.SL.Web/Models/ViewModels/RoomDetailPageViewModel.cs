@@ -27,6 +27,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
 
             RoomSuiteBlock = roomSuiteBlock;
 
+            LinkURL = currentPage.LinkURL;
 
             if (currentPage.HeaderContentArea != null && 
                 currentPage.HeaderContentArea.Items != null)
@@ -35,6 +36,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
                 RoomHeaderBanner = new RoomHeaderBannerViewModel(roomHeaderBannerBlock);
             }
         }
+
+        public string LinkURL { get; set; }
 
         public RoomHeaderBannerViewModel RoomHeaderBanner { get; set; }
 

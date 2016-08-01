@@ -17,22 +17,22 @@ using Shangri_La.EpiServer.SL.Web.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
 {
-    public class RoomSuiteListingPageController : PageControllerBase<RoomSuiteListingPage>
+    public class RoomGroupListingPageController : PageControllerBase<RoomGroupListingPage>
     {
         private ContentLocator contentLocator;
         private IContentLoader contentLoader;
-        public RoomSuiteListingPageController(ContentLocator contentLocator, IContentLoader contentLoader)
+        public RoomGroupListingPageController(ContentLocator contentLocator, IContentLoader contentLoader)
         {
             this.contentLocator = contentLocator;
             this.contentLoader = contentLoader;
         }
 
-        public ActionResult Index(RoomSuiteListingPage currentPage)
+        public ActionResult Index(RoomGroupListingPage currentPage)
         {
             /* Implementation of action. You can create your own view model class that you pass to the view or
              * you can pass the page type for simpler templates */
             //DefaultPageViewModel<RoomSuiteListingPage> model = new DefaultPageViewModel<RoomSuiteListingPage>(currentPage);
-            PropertyPageViewModel<RoomSuiteListingPage> model = new PropertyPageViewModel<RoomSuiteListingPage>(currentPage);
+            PropertyPageViewModel<RoomGroupListingPage> model = new PropertyPageViewModel<RoomGroupListingPage>(currentPage);
             return View(model);
         }
 

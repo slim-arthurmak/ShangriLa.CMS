@@ -316,8 +316,9 @@
     <Compile Include="Controllers\Blocks\RoomContentBlockController.cs" />
     <Compile Include="Controllers\BlockControllerBase.cs" />
     <Compile Include="Controllers\Pages\RoomDetailPagePartialController.cs" />
+    <Compile Include="Controllers\Pages\RoomGroupListingPageController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
-    <Compile Include="Controllers\Pages\RoomSuiteListingPageController.cs" />
+    <Compile Include="Controllers\Pages\RoomListingPageController.cs" />
     <Compile Include="Controllers\Pages\RoomDetailPageController.cs" />
     <Compile Include="Business\Extensions\EditorDescriptors\HotelBlockReferenceEditorDescriptor.cs" />
     <Compile Include="Global.cs" />
@@ -352,6 +353,7 @@
     <Compile Include="Models\Folders\CountryBlockContentFolder.cs" />
     <Compile Include="Models\Blocks\RoomPage\RoomOffersContentBlock.cs" />
     <Compile Include="Models\Pages\ContainerPage.cs" />
+    <Compile Include="Models\Pages\RoomGroupListingPage.cs" />
     <Compile Include="Models\ViewModels\HotelInformationSummaryViewModel.cs" />
     <Compile Include="Models\ViewModels\BookingPanelModel.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
@@ -384,7 +386,7 @@
     <Compile Include="Models\Pages\HotelLandingPage.cs" />
     <Compile Include="Models\Pages\HotelPage.cs" />
     <Compile Include="Models\Pages\RoomSuiteLandingPage.cs" />
-    <Compile Include="Models\Pages\RoomSuiteListingPage.cs" />
+    <Compile Include="Models\Pages\RoomListingPage.cs" />
     <Compile Include="Models\Pages\RoomDetailPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
@@ -1495,7 +1497,7 @@
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\TemplateError.cshtml" />
     <Content Include="Views\Shared\TemplateHint.cshtml" />
-    <Content Include="Views\Pages\RoomSuiteListingPage\Index.cshtml" />
+    <Content Include="Views\Pages\RoomListingPage\Index.cshtml" />
     <Content Include="Views\Pages\RoomDetailPage\Index.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Preview\Index.cshtml" />
@@ -1522,10 +1524,11 @@
     <Content Include="Views\Blocks\ExploreOtherRoomsListBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomOffersContentBlock\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\HotelInformationSummary.cshtml" />
-    <Content Include="Views\Pages\RoomSuiteListingPage\Index_Wing.cshtml" />
+    <Content Include="Views\Pages\RoomListingPage\Index_Wing.cshtml" />
     <Content Include="Views\Blocks\RoomHeaderBannerBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomFeaturesContentBlock\Index.cshtml" />
     <Content Include="Views\Shared\PagePartials\RoomDetailPageExploreOtherRooms.cshtml" />
+    <Content Include="Views\Pages\RoomGroupListingPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

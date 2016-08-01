@@ -51,7 +51,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
             {
                 PageListBlock PageList = new PageListBlock();
 
-                PageList.PageTypeFilter = typeof(RoomSuiteListingPage).GetPageType();
+                PageList.PageTypeFilter = typeof(RoomGroupListingPage).GetPageType();
                 PageList.Recursive = true;
                 PageList.Root = pageReference;
 
@@ -66,9 +66,9 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
                 {
                     foreach (PageData page in pages)
                     {
-                        if (page is RoomSuiteListingPage)
+                        if (page is RoomGroupListingPage)
                         {
-                            RoomSuiteListingPage listingPage = (RoomSuiteListingPage)page;
+                            RoomGroupListingPage listingPage = (RoomGroupListingPage)page;
                             //string url = urlResolver.GetVirtualPath(page).VirtualPath;
 
 

@@ -11,7 +11,7 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Migration
     {
         public override void AddChanges()
         {
-            //RenameContentType();
+            RenameContentType();
             //RenameProperty();
             //RenameRoomSuiteBlockProperty();
         }
@@ -19,8 +19,8 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Migration
         private void RenameContentType()
         {
             //The content type formerly known as "Velocipede" should hereby be known as "Bicycle".
-            ContentType("ExploreOtherRoomsListBlock")
-                .UsedToBeNamed("ExploreOtherRoomsContentBlock");
+            ContentType("RoomListingPage")
+                .UsedToBeNamed("RoomSuiteListingPage");
         }
 
         private void RenameProperty()
