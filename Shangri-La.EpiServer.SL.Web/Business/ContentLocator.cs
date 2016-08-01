@@ -113,6 +113,25 @@ namespace Shangri_La.EpiServer.SL.Web.Business
             return _contentLoader.GetChildren<CountryBlock>(countryBlockFolderReference).OrderBy(p => p.CountryName);
         }
 
+        /// <summary>
+        /// Returns all  
+        /// </summary>
+        /// <returns></returns>
+        public List<HotelBlock> GetHotelBlocks()
+        {
+            var allHotelPages = GetAll<HotelPage>(ContentReference.StartPage);
+
+            List<HotelBlock> hotelList = new List<HotelBlock>();
+
+            foreach (HotelPage hp in allHotelPages)
+            {
+                HotelBlock hotelBlock = _contentLoader.Get<HotelBlock>(hp.HotelBlock);
+                hotelList.Add(hotelBlock);
+            }
+
+            return hotelList.OrderBy(p => p.HotelCode).ToList();
+        }
+
         /*
         /// <summary>
         /// Returns all contact pages beneath the main contacts container
