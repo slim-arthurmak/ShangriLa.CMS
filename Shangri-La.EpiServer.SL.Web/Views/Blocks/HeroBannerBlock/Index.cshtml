@@ -6,8 +6,9 @@
             <p class="description">A lush, green sanctuary of calm in one of Asia's most dynamic modern cities, and the place where the legendary Shangri-La story first began.</p>*@
         <h1 class="heading">@Html.PropertyFor(m => m.Title)</h1>
         <p class="description">@Html.PropertyFor(m => m.ShortDescription)</p>
-        <!-- climate temp and time include starts-->
-        <div data-lat="1.31081" data-lon="103.8246095" data-lang="en" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"></span></div>
+        <!-- climate temp and time include starts-->        
+        @*<div data-lat="1.3113355055433844" data-lon="103.82673382759094" data-hotelCode="SLS" data-lang="en" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"></span></div>*@
+        <div data-hotelCode="SLS" data-lang="en" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"></span></div>
         <!-- climate temp and time include ends-->
     </div>
     <div class="image-container">
