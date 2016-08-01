@@ -16,23 +16,6 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage
         Description = "")]
     public class ExploreOtherRoomsListBlock : SectionContentBlockData
     {
-        [Display(
-            Name = "Heading",
-            Description = "Heading",
-            GroupName = SystemTabNames.Content,
-            Order = 10)]
-        [CultureSpecific]
-        public virtual string Heading { get; set; }
-
-        /*
-        [Display(
-            Name = "Count",
-            Description = "",
-            GroupName = SystemTabNames.Content,
-            Order = 20)]
-        public virtual int Count { get; set; }
-        */
-
         [AllowedTypes(new[] { typeof(RoomDetailPage) })]
         [Display(
         Name = "Feature Rooms Content Area",
