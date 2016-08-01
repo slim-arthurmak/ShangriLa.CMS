@@ -19,17 +19,15 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomPage
             ContentArea contentArea = new ContentArea();
             if (block.FeatureRoomsContentArea != null)
             {
-                foreach (ContentAreaItem item in block.FeatureRoomsContentArea.Items)
+                foreach (ContentAreaItem item in block.FeatureRoomsContentArea.FilteredItems)
                 {
                     contentArea.Items.Add(new ContentAreaItem
                     {
                         ContentLink = item.ContentLink,
-                        RenderSettings = item.RenderSettings
-                        /*
-                        ,
+                        RenderSettings = item.RenderSettings,
                         AllowedRoles = item.AllowedRoles,
                         ContentGroup = item.ContentGroup,
-                        ContentGuid = item.ContentGuid*/
+                        ContentGuid = item.ContentGuid
                     });
                 }
             }
