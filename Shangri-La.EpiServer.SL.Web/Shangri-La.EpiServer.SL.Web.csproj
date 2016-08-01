@@ -297,7 +297,7 @@
     <Compile Include="Business\SelectionFactories\PaymentModeSelectionFactory.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\UIDescriptors\ContainerPageUIDescriptor.cs" />
-    <Compile Include="Controllers\Blocks\ExploreOtherRoomsContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\ExploreOtherRoomsListBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomFeaturesContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomOffersContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomHeaderBannerBlockController.cs" />
@@ -399,6 +399,7 @@
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PreviewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomPage\ExploreOtherRoomsListViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\RoomFeaturesContentViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\RoomHeaderBannerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1515,6 +1516,7 @@
     <Content Include="Views\Pages\RoomSuiteListingPage\Index_Wing.cshtml" />
     <Content Include="Views\Blocks\RoomHeaderBannerBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomFeaturesContentBlock\Index.cshtml" />
+    <Content Include="Views\Shared\PagePartials\RoomDetailPageExploreOtherRooms.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

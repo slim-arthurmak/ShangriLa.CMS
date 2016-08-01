@@ -1,0 +1,17 @@
+﻿@using EPiServer.Core;
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomDetailPageViewModel
+
+<div class="col-xs-12 col-sm-12 col-md-6">
+    <div class="explore-container shadow-box row equal-height-block">
+        <div class="col-xs-12 col-sm-5 col-md-6 no-gutter">
+            <div class="image-container"><img src="@Url.ContentUrl(Model.RoomHeaderBanner.Image)" alt="{CMS}"></div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-6 no-gutter">
+            <div class="content-container">
+                <div class="heading">@Model.RoomSuiteBlock.RoomName</div>
+                <p class="description">@Model.RoomHeaderBanner.TeaserText</p>
+                <a href="@Url.PageUrl(Model.CurrentPage.LinkURL)" class="common-cta">VIEW MORE</a>
+            </div>
+        </div>
+    </div>
+</div>

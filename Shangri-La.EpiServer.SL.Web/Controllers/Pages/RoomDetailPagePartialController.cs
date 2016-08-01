@@ -1,4 +1,5 @@
 ﻿using Shangri_La.EpiServer.SL.Web.Models.Pages;
+using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
 using System;
@@ -27,6 +28,19 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers
         public override ActionResult Index(RoomDetailPage currentContent)
         {
             return PartialView("/Views/Shared/PagePartials/RoomDetailPageFullWidth.cshtml", currentContent);
+        }
+    }
+
+    [TemplateDescriptor(TemplateTypeCategory = TemplateTypeCategories.MvcPartialController, Inherited = true,
+        Tags = new[] { "ExploreOtherRooms" },
+        AvailableWithoutTag = false)]
+    public class RoomDetailPageExploreOtherRoomsPartialController : PartialContentController<RoomDetailPage>
+    {
+        public override ActionResult Index(RoomDetailPage currentContent)
+        {
+            RoomDetailPageViewModel model = new RoomDetailPageViewModel(currentContent);
+
+            return PartialView("/Views/Shared/PagePartials/RoomDetailPageExploreOtherRooms.cshtml", model);
         }
     }
 }
