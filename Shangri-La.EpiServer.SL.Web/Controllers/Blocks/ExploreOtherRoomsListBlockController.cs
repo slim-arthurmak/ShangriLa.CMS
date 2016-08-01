@@ -42,6 +42,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
 
             editingHints.AddConnection(m => m.Heading, p => p.Heading);
             editingHints.AddConnection(m => m.IntroText, p => p.IntroText);
+            editingHints.AddConnection(m => m.FeatureRoomsContentArea, p => p.FeatureRoomsContentArea);
             /*
             editingHints.AddConnection(m => m.MainText, p => p.MainText);
             editingHints.AddConnection(m => m.Highlights, p => p.Highlights);
