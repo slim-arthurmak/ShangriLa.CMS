@@ -301,6 +301,8 @@
     <Compile Include="Business\SelectionFactories\PaymentModeSelectionFactory.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\UIDescriptors\ContainerPageUIDescriptor.cs" />
+    <Compile Include="Controllers\Blocks\HorizonClubListBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomCategroyListBlockController.cs" />
     <Compile Include="Controllers\Blocks\ExploreOtherRoomsListBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomFeaturesContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomOffersContentBlockController.cs" />
@@ -340,6 +342,9 @@
     <Compile Include="Models\Blocks\RestaurantBlock.cs" />
     <Compile Include="Models\Blocks\RoomCategoryBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\RoomContentBlock.cs" />
+    <Compile Include="Models\Blocks\RoomListing\HorizonClubListBlock.cs" />
+    <Compile Include="Models\Blocks\RoomListing\RoomCategroyListBlock.cs" />
+    <Compile Include="Models\Blocks\RoomListing\SuiteListingBlock.cs" />
     <Compile Include="Models\Blocks\RoomPage\ExploreOtherRoomsListBlock.cs" />
     <Compile Include="Models\Blocks\RoomGroupBlock.cs" />
     <Compile Include="Models\Blocks\RoomPage\RoomFeaturesContentBlock.cs" />
@@ -405,6 +410,8 @@
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PreviewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListing\HorizonClubListViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListing\RoomCategroyListViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\ExploreOtherRoomsListViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\RoomFeaturesContentViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\RoomHeaderBannerViewModel.cs" />
@@ -1524,11 +1531,12 @@
     <Content Include="Views\Blocks\ExploreOtherRoomsListBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomOffersContentBlock\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\HotelInformationSummary.cshtml" />
-    <Content Include="Views\Pages\RoomListingPage\Index_Wing.cshtml" />
     <Content Include="Views\Blocks\RoomHeaderBannerBlock\Index.cshtml" />
     <Content Include="Views\Blocks\RoomFeaturesContentBlock\Index.cshtml" />
     <Content Include="Views\Shared\PagePartials\RoomDetailPageExploreOtherRooms.cshtml" />
     <Content Include="Views\Pages\RoomGroupListingPage\Index.cshtml" />
+    <Content Include="Views\Blocks\RoomCategroyListBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\HorizonClubListBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

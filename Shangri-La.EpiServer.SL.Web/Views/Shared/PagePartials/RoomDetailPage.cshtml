@@ -5,11 +5,11 @@
     <div class="col-sm-6 col-xs-12 no-gutter">
         <div class="half-panel-block">
             <div class="image-container scaled-image">
-                <a href="Url.PageUrl(Model.LinkURL)"> <img src="@Url.ContentUrl(Model.RoomHeaderBanner.Image)" alt="{CMS}"></a>
+                <a href="@Url.PageUrl(Model.LinkURL)"> <img src="@Url.ContentUrl(Model.RoomHeaderBanner.Image)" alt="{CMS}"></a>
             </div>
             <div class="caption-container shadow-box mobile-equal-height-block">
                 <div class="featured">Featured</div>
-                <h3 class="heading"> <a href="#">@Model.RoomSuiteBlock.RoomName</a></h3>
+                <h3 class="heading"> <a href="@Url.PageUrl(Model.LinkURL)">@Model.RoomSuiteBlock.RoomName</a></h3>
                 <p class="description">@Model.RoomHeaderBanner.Introduction</p>
                 <div class="room-price">
                     <p>From <span class="price">HKD2,800 </span>Per night</p>

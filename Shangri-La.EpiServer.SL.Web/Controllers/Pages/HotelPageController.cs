@@ -1,21 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-using EPiServer;
-using EPiServer.Core;
-using EPiServer.Framework.DataAnnotations;
-using EPiServer.Web.Mvc;
+﻿using EPiServer;
 using EPiServer.ServiceLocation;
-
+using Shangri_La.EpiServer.SL.Web.Business;
+using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
-using Shangri_La.EpiServer.SL.Web.Models.Blocks;
+using System.Web.Mvc;
+
 
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
 {
     public class HotelPageController : PageControllerBase<HotelPage>
     {
+        private ContentLocator contentLocator;
+        private IContentLoader contentLoader;
+        public HotelPageController(ContentLocator contentLocator, IContentLoader contentLoader) : base(contentLocator, contentLoader)
+        {
+            this.contentLocator = contentLocator;
+            this.contentLoader = contentLoader;
+        }
+
         public ActionResult Index(HotelPage currentPage)
         {
             var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
@@ -29,6 +33,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
 
             model.Hotel = hotelBlock;
             model.HotelInformationSummary = new HotelInformationSummaryViewModel(model.Hotel);
+            model.HeaderLogo = Hotel.Logo;
 
             return View(model);
         }

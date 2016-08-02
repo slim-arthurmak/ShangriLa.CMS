@@ -6,6 +6,7 @@ using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
 using EPiServer.ServiceLocation;
+using EPiServer.Web.Routing;
 
 using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
@@ -21,7 +22,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
     {
         private ContentLocator contentLocator;
         private IContentLoader contentLoader;
-        public RoomListingPageController(ContentLocator contentLocator, IContentLoader contentLoader)
+        public RoomListingPageController(ContentLocator contentLocator, IContentLoader contentLoader) : base(contentLocator, contentLoader)
         {
             this.contentLocator = contentLocator;
             this.contentLoader = contentLoader;
@@ -29,26 +30,16 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
 
         public ActionResult Index(RoomListingPage currentPage)
         {
+            UrlResolver urlResolver = ServiceLocator.Current.GetInstance<UrlResolver>();
             /* Implementation of action. You can create your own view model class that you pass to the view or
              * you can pass the page type for simpler templates */
             //DefaultPageViewModel<RoomSuiteListingPage> model = new DefaultPageViewModel<RoomSuiteListingPage>(currentPage);
             PropertyPageViewModel<RoomListingPage> model = new PropertyPageViewModel<RoomListingPage>(currentPage);
+            model.Hotel = this.Hotel;
+            model.HeaderLogo = Hotel.Logo;
+
             return View(model);
         }
 
-
-        private IContent FindHotelPage(PageData currentPage)
-        {
-            if (currentPage.ParentLink != null && currentPage.ParentLink.ID == typeof(HotelPage).GetPageType().ID)
-            {
-                return contentLoader.Get<IContent>(currentPage.ParentLink);
-            }
-
-
-            return contentLoader.GetAncestors(currentPage.ContentLink)
-                .OfType<HotelPage>()
-                .SkipWhile(x => x.ParentLink == null || x.ParentLink.ID != typeof(HotelPage).GetPageType().ID)
-                .FirstOrDefault();
-        }
     }
 }

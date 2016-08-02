@@ -21,7 +21,7 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
     {
         private ContentLocator contentLocator;
         private IContentLoader contentLoader;
-        public RoomGroupListingPageController(ContentLocator contentLocator, IContentLoader contentLoader)
+        public RoomGroupListingPageController(ContentLocator contentLocator, IContentLoader contentLoader) : base(contentLocator, contentLoader)
         {
             this.contentLocator = contentLocator;
             this.contentLoader = contentLoader;
