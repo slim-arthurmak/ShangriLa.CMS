@@ -16,6 +16,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomPage
         public RoomHeaderBannerViewModel(RoomHeaderBannerBlock block)
         {
             Label = block.Label;
+            Title = block.Title;
             Introduction = block.Introduction;
             Image = block.DesktopImage;
             AlternateText = block.AlternateText;
