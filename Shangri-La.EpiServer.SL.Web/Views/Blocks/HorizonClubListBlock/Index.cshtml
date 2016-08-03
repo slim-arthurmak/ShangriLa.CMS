@@ -2,6 +2,8 @@
 
 @model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing.HorizonClubListViewModel
 
+@if (Model.AllRooms != null && Model.AllRooms.Count() > 0)
+{
 <!-- Module Room landing - Horizon Club rooms starts here-->
 <section id="@Model.RoomType" class="section-row room-landing-horizon-container">
     <div class="horizon-special-background">
@@ -116,3 +118,4 @@
     </div>
 </section>
 <!-- Module Room landing - Horizon Club rooms Ends here-->
+}

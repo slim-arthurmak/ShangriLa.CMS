@@ -36,6 +36,23 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
             //DefaultPageViewModel<RoomSuiteListingPage> model = new DefaultPageViewModel<RoomSuiteListingPage>(currentPage);
             RoomListingPageViewModel model = new RoomListingPageViewModel(currentPage);
 
+            model.OtherRoomGroupListNavigatoins = new List<RoomGroupListingPageViewModel>();
+
+            IEnumerable<PageData> pages = FindPages(CurrentPageReference, typeof(RoomGroupListingPage), false);
+
+
+            if (pages != null)
+            {
+                foreach (PageData page in pages)
+                {
+                    if (page is RoomGroupListingPage)
+                    {
+                        RoomGroupListingPage listingPage = (RoomGroupListingPage)page;
+                        model.OtherRoomGroupListNavigatoins.Add(new RoomGroupListingPageViewModel(listingPage));
+                    }
+                }
+            }
+
             model.Hotel = this.Hotel;
             model.HeaderLogo = Hotel.Logo;
 

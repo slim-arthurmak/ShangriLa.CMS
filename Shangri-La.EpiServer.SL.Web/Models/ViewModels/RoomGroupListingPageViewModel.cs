@@ -18,9 +18,9 @@ using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
 {
-    public class RoomListingPageViewModel : PropertyPageViewModel<RoomListingPage>
+    public class RoomGroupListingPageViewModel : PropertyPageViewModel<RoomListingPage>
     {
-        public RoomListingPageViewModel(RoomListingPage currentPage) : base(currentPage)
+        public RoomGroupListingPageViewModel(RoomGroupListingPage currentPage) : base(currentPage)
         {
             RoomHeaderBanner = new RoomHeaderBannerViewModel();
 
@@ -30,7 +30,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
                 var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
 
                 RoomCategoryListNavigatoins = new List<RoomCategoryListNavigatoinModel>();
-                OtherRoomGroupListNavigatoins = new List<RoomGroupListingPageViewModel>();
+
                 /*
                 RoomSuiteBlock roomSuiteBlock = contentRepository.Get<RoomSuiteBlock>(currentPage.RoomSuiteBlock);
 
@@ -73,6 +73,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
         public List<RoomCategoryListNavigatoinModel> RoomCategoryListNavigatoins { get; set; }
 
         public List<RoomGroupListingPageViewModel> OtherRoomGroupListNavigatoins { get; set; }
+        
 
     }
 }

@@ -16,6 +16,9 @@
         showMoreRooms = true;
     }
 }
+
+@if (Model.AllRooms != null && Model.AllRooms.Count() > 0)
+{
 <!-- Module Room landing - Suites starts here-->
 <section id="@Model.RoomType" class="section-row room-landing-suites-container">
     <div class="suites-special-background">
@@ -232,3 +235,4 @@
     </div>
 </section>
 <!-- Module Room landing - Suites Ends here-->
+}

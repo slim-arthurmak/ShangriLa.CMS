@@ -2,6 +2,8 @@
 
 @model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing.RoomCategroyListViewModel
 
+@if(Model.AllRooms != null && Model.AllRooms.Count() > 0)
+{
 <!-- Module Room landing - Standard rooms starts here-->
 <section id="@Model.RoomType" class="section-row all-statndard-rooms-container">
     <div class="container carousel-container">
@@ -156,3 +158,4 @@
     </div>
 </section>
 <!-- Module Room landing - Standard rooms Ends here-->
+}

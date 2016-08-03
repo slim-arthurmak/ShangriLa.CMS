@@ -361,6 +361,7 @@
     <Compile Include="Models\Blocks\RoomPage\RoomOffersContentBlock.cs" />
     <Compile Include="Models\Pages\ContainerPage.cs" />
     <Compile Include="Models\Pages\RoomGroupListingPage.cs" />
+    <Compile Include="Models\ViewModels\FindTheRoomPanelModel.cs" />
     <Compile Include="Models\ViewModels\HotelInformationSummaryViewModel.cs" />
     <Compile Include="Models\ViewModels\BookingPanelModel.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
@@ -404,6 +405,7 @@
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
     <Compile Include="Models\ViewModels\HotelHomepage\RoomGroupNavigatoinModel.cs" />
     <Compile Include="Models\ViewModels\HotelHomepage\RoomContentModel.cs" />
+    <Compile Include="Models\ViewModels\RoomGroupListingPageViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomListingPageViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomDetailPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PropertyPageViewModel.cs" />
@@ -1543,6 +1545,7 @@
     <Content Include="Views\Blocks\HorizonClubListBlock\Index.cshtml" />
     <Content Include="Views\Blocks\SuiteListBlock\Index.cshtml" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <Content Include="Views\Shared\FindTheRoomPanel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
