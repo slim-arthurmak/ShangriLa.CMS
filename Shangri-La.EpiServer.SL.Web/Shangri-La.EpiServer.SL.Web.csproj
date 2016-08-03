@@ -1385,16 +1385,12 @@
     <Content Include="Content\room-details.html" />
     <Content Include="Content\video-popup-with-background-fragment.html" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\img\bg\video-background" />
     <Content Include="Content\js\module-animation.json" />
     <Content Include="Content\pagemodules\img\bg\video-background" />
     <Content Include="Content\pagemodules\img\content\SL-video.ogv" />
     <Content Include="Content\pagemodules\img\content\SL-video.webm" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="module.config" />
     <Content Include="modules\_protected\Shell\web.config" />
     <Content Include="modules\_protected\Shell\Shell.zip" />
@@ -1405,7 +1401,6 @@
     <Content Include="Content\pagemodules\img\bg\dining-experiences-mothers-day-bg" />
     <Content Include="Content\img\content\SL-video.ogv" />
     <Content Include="Content\img\content\SL-video.webm" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Resources\LanguageFiles\ContentTypeNames.xml" />
     <Content Include="Resources\LanguageFiles\Display.xml" />
     <Content Include="Resources\LanguageFiles\EditorHints.xml" />
@@ -1413,10 +1408,15 @@
     <Content Include="Resources\LanguageFiles\PropertyNames.xml" />
     <Content Include="Resources\LanguageFiles\Views.xml" />
     <Content Include="Resources\LanguageFiles\_ReadMe.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Services\WeatherService.svc" />
     <Content Include="Static\css\bootstrap-collapse.js" />
     <Content Include="Static\css\bootstrap-responsive.css" />
@@ -1511,7 +1511,6 @@
     <Content Include="Views\Shared\TemplateHint.cshtml" />
     <Content Include="Views\Pages\RoomListingPage\Index.cshtml" />
     <Content Include="Views\Pages\RoomDetailPage\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Preview\Index.cshtml" />
     <Content Include="Views\Shared\BookingPanel.cshtml" />
     <Content Include="Views\Blocks\RoomContentBlock\Index.cshtml" />
@@ -1543,6 +1542,7 @@
     <Content Include="Views\Blocks\RoomCategroyListBlock\Index.cshtml" />
     <Content Include="Views\Blocks\HorizonClubListBlock\Index.cshtml" />
     <Content Include="Views\Blocks\SuiteListBlock\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

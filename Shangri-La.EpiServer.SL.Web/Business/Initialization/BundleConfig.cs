@@ -19,8 +19,9 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Initialization
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
-
-                "~/Content/js/jquery-1.10.2.min.js",
+                //"~/Static/lightbox/js/jquery.lightbox-0.5.js",
+                //"~/Content/js/jquery-3.1.0.min.js",
+                "~/Scripts/jquery-1.12.4.min.js",
                         //"~/Static/js/jquery.js", //jquery.js can be removed and linked from CDN instead, we use a local one for demo purposes without internet connectionzz
                         //"~/Static/lightbox/js/jquery.lightbox-0.5.js",
                         "~/Static/js/bootstrap.js"));
