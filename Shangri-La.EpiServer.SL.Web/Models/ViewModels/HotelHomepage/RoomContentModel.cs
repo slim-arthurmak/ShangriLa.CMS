@@ -16,7 +16,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
             RoomGroups = new List<RoomGroupBlock>();
             RoomGroupNavigatoins = new List<RoomGroupNavigatoinModel>();
 
-
+            /*
             ContentArea contentArea = new ContentArea();
             if (block.FeatureRoomsContentArea != null)
             {
@@ -33,6 +33,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
                 }
             }
             FeatureRoomsContentArea = contentArea;
+            */
+            FeatureRoomsContentArea = block.FeatureRoomsContentArea.Copy();
         }
 
         public string Title { get; set; }

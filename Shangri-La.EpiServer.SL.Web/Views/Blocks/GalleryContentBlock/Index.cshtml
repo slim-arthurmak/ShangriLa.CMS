@@ -4,8 +4,8 @@
 <section id="gallery" class="section-row gallery-section inpage-element">
     <div class="container">
         <div class="section-header read-more-section-header">
-            <h2 class="section-heading">Your stay, your stories</h2>
-            <p class="description">Take a closer look at the hotel and all the experiences you can enjoy in our photo and video gallery, complete with guest photos and comments.</p><a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+            <h2 class="section-heading">@Html.PropertyFor(m => m.Title)</h2>
+            <p class="description">@Html.PropertyFor(m => m.ShortDescription)</p><a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
         </div>
         <div class="row equal-height-section">
             <div class="col-xs-12 col-sm-8">
@@ -16,7 +16,7 @@
                             <div class="image-container scaled-image"><img src="{{> Media.Images.LowResolution.Url }}" alt="{{> Title }}" style="display:inline-block;"></div>
                         </div>
                     </script>
-                    <div id="img-2-container"></div>
+                    <div id="img-2-container" data-candidguid="@Model.CandidGUID"></div>
                     <!-- End of Candid io plugin-->
                 </div>
                 <div class="view-all-button"><a href="#" class="button-secondary">View All Gallery Images</a></div>

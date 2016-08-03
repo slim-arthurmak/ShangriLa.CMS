@@ -15,7 +15,10 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
     /// The GUID has been commented out in this file for training purposes, so that it is possible to copy a content type 
     /// from the solution files into the AlloyTraining project without getting a conflict, should the content type already exist there.
     /// </remarks>
-    [ContentType(DisplayName = "StandardPage", GUID = "8C34A6BD-45A0-4D0F-BD2F-AF6C5AC6DE25", Description = "Shangri-La Standard Page")] //, GUID = "4960c063-16fc-4e45-ba0b-7e3fdcf88006"
+    [ContentType(DisplayName = "StandardPage", 
+        GUID = "8C34A6BD-45A0-4D0F-BD2F-AF6C5AC6DE25", 
+        Description = "Shangri-La Standard Page",
+        GroupName = Global.GroupNames.SLPages)]
     public class StandardPage : SitePageData
     {
         [CultureSpecific]

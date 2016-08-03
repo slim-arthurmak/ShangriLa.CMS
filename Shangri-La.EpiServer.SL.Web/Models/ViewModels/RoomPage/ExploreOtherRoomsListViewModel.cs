@@ -19,7 +19,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomPage
             ContentArea contentArea = new ContentArea();
             if (block.FeatureRoomsContentArea != null)
             {
-                foreach (ContentAreaItem item in block.FeatureRoomsContentArea.Items)
+                foreach (ContentAreaItem item in block.FeatureRoomsContentArea.FilteredItems)
                 {
                     contentArea.Items.Add(new ContentAreaItem
                     {

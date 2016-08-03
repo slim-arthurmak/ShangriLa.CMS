@@ -1,0 +1,108 @@
+﻿@using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
+
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing.HorizonClubListViewModel
+
+<!-- Module Room landing - Horizon Club rooms starts here-->
+<section id="horizon-club-rooms" class="section-row room-landing-horizon-container">
+    <div class="horizon-special-background">
+        <div class="container">
+            <div class="section-header read-more-section-header">
+                <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+                <p class="description">@Html.PropertyFor(m => m.IntroText)</p>
+                <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+            </div>
+            <div class="row">
+                <div class="clearfix col-xs-12 col-md-12">
+                    <div class="horizon-special-container clearfix">
+                        <div class="image-container scaled-image hidden-xs"><img src="@Url.ContentUrl(Model.Image)" alt="@Model.AlternateText"></div>
+                        <div class="content-container shadow-box">
+                            <div class="inner-content">
+                                <div class="heading hidden-xs">@Html.PropertyFor(m => m.MainText)</div>
+                                @if (Model.BlockCTA != null)
+                                {
+                                <a href="@Model.BlockCTA.ButtonLink" class="common-cta">@Model.BlockCTA.ButtonText</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container carousel-container">
+        <div class="grid-small-container">
+
+            <div class="row list-view-row">
+                <div class="owl-carousel mobile-carousel">
+
+                    @if (Model.AllRooms != null)
+                    {
+                        foreach (RoomDetailPageViewModel room in Model.AllRooms)
+                        {
+                            <div class="item">
+                                <div class="col-xs-12 col-md-6 col-sm-6 no-gutter">
+                                    <div class="all-horizon-rooms row-list-item">
+                                        <div class="image-container scaled-image">
+                                            <a href="@Url.PageUrl(room.LinkURL)"><img src="@Url.ContentUrl(room.RoomHeaderBanner.Image)?width=368&height=184&mode=crop&scale=canvas" alt="@room.RoomHeaderBanner.AlternateText"></a>
+                                        </div>
+                                        <div class="content-container mobile-equal-height-block">
+                                            <div class="heading"><a href="@Url.PageUrl(room.LinkURL)">@room.RoomSuiteBlock.RoomName</a></div>
+                                            <div class="persons">
+                                                <i class="icon-person-01"></i>
+                                                <i class="icon-person-01"></i>
+                                                <i class="icon-person-01"></i>
+                                            </div>
+                                            <p class="description">@room.RoomSuiteBlock.RoomSize</p>
+                                            <p class="view-of-room">@room.RoomSuiteBlock.RoomView</p>
+                                            <a href="@Url.PageUrl(room.LinkURL)" class="common-cta">VIEW MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    @*<div class="item">
+                        <div class="col-xs-12 col-md-6 col-sm-6 no-gutter">
+                            <div class="all-horizon-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-1.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="heading"><a href="#">Tower Wing Horizon Club Deluxe Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">38 sqm / 409 sqf</p>
+                                    <p class="view-of-room">Floor-to-ceiling city view</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-12 col-md-6 col-sm-6 no-gutter">
+                            <div class="all-horizon-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-2.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="heading"><a href="#">Tower Wing Horizon Club Grand Premier Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">72 sqm / 775 sqf</p>
+                                    <p class="view-of-room">Overlooking the pool</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Module Room landing - Horizon Club rooms Ends here-->

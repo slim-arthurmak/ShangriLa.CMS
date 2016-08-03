@@ -21,20 +21,27 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels
         {
             RoomHeaderBanner = new RoomHeaderBannerViewModel();
 
-            var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
-
-            RoomSuiteBlock roomSuiteBlock = contentRepository.Get<RoomSuiteBlock>(currentPage.RoomSuiteBlock);
-
-            RoomSuiteBlock = roomSuiteBlock;
-
-
-            if (currentPage.HeaderContentArea != null && 
-                currentPage.HeaderContentArea.Items != null)
+            if (currentPage != null && currentPage.RoomSuiteBlock != null)
             {
-                RoomHeaderBannerBlock roomHeaderBannerBlock = (RoomHeaderBannerBlock) currentPage.HeaderContentArea.Items.FirstOrDefault().GetContent();
-                RoomHeaderBanner = new RoomHeaderBannerViewModel(roomHeaderBannerBlock);
+
+                var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
+
+                RoomSuiteBlock roomSuiteBlock = contentRepository.Get<RoomSuiteBlock>(currentPage.RoomSuiteBlock);
+
+                RoomSuiteBlock = roomSuiteBlock;
+
+                LinkURL = currentPage.LinkURL;
+
+                if (currentPage.HeaderContentArea != null &&
+                    currentPage.HeaderContentArea.Items != null)
+                {
+                    RoomHeaderBannerBlock roomHeaderBannerBlock = (RoomHeaderBannerBlock)currentPage.HeaderContentArea.Items.FirstOrDefault().GetContent();
+                    RoomHeaderBanner = new RoomHeaderBannerViewModel(roomHeaderBannerBlock);
+                }
             }
         }
+
+        public string LinkURL { get; set; }
 
         public RoomHeaderBannerViewModel RoomHeaderBanner { get; set; }
 

@@ -1,9 +1,10 @@
-﻿using System;
-using System.Web.Mvc;
-using EPiServer;
+﻿using EPiServer;
 using EPiServer.Framework.DataAnnotations;
+using Shangri_La.EpiServer.SL.Web.Business;
 using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
+using System;
+using System.Web.Mvc;
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers
 {
@@ -19,6 +20,14 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers
     [TemplateDescriptor(Inherited = true)]
     public class DefaultPageController : PageControllerBase<SitePageData>
     {
+        private ContentLocator contentLocator;
+        private IContentLoader contentLoader;
+        public DefaultPageController(ContentLocator contentLocator, IContentLoader contentLoader): base(contentLocator, contentLoader)
+        {
+            this.contentLocator = contentLocator;
+            this.contentLoader = contentLoader;
+        }
+
         public ViewResult Index(SitePageData currentPage)
         {
             var model = CreateModel(currentPage);

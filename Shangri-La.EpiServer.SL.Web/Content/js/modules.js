@@ -411,7 +411,8 @@ Shangrila.anchortag = {
     },
     viewportChange: function () { }
 }, Shangrila.modules.push("bookingModule"), $("#img-2-container").length > 0 && candid.wall("#img-2-container", {
-    id: "3e1601cd-d88b-4192-a119-9f9add6493e3",
+    //id: "3e1601cd-d88b-4192-a119-9f9add6493e3",
+    id: $("#img-2-container").data("candidguid"),
     layout: "standard;ct-minimal",
     scroll: !1,
     count: 2,
@@ -422,6 +423,7 @@ Shangrila.anchortag = {
     }
 }), $("#img-4-container").length > 0 && candid.wall("#img-4-container", {
     id: "3e1601cd-d88b-4192-a119-9f9add6493e3",
+    //id: $(".candid-wall-cell").data("candidguid"),
     layout: "standard;ct-minimal",
     scroll: !1,
     count: 4,

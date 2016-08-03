@@ -22,5 +22,12 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
                     Order = 1)]
                 public virtual string Name { get; set; }
          */
+        [CultureSpecific]
+        [Display(
+                   Name = "Candid GUID",
+                   Description = "Candid GUID",
+                   GroupName = SystemTabNames.Content,
+                   Order = 1)]
+        public virtual string CandidGUID { get; set; }
     }
 }
