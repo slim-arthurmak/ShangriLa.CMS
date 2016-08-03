@@ -39,8 +39,8 @@ namespace Shangri_La.EpiServer.SL.Web.Services
         [OperationContract]
         [AspNetCacheProfile("CacheServiceWeatherService")]
         //[WebGet(UriTemplate = "/GetCurrentWeatherJSON/?hotelCode={hotelCode}&cityCode={cityCode}&lat={latitude}&lon={longitude}", ResponseFormat = WebMessageFormat.Json)]
-        [WebGet(UriTemplate = "/GetCurrentWeatherJSON/?hotelCode={hotelCode}&cityCode={cityCode}", ResponseFormat = WebMessageFormat.Json)]
-        public WeatherRawData GetCurrentWeatherJSON(string hotelCode, string cityCode)
+        [WebGet(UriTemplate = "/GetCurrentWeatherJSON/?hotelCode={hotelCode}", ResponseFormat = WebMessageFormat.Json)]
+        public WeatherRawData GetCurrentWeatherJSON(string hotelCode)
         {
             var hotelBlocks = contentLocator.Service.GetHotelBlocks() as List<HotelBlock>;
             HotelBlock hotelBlock = hotelBlocks.Where(h => h.HotelCode == hotelCode).FirstOrDefault();
