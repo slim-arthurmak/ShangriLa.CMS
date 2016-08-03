@@ -24,7 +24,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
                    Order = 30)]
         public virtual ContentArea HeaderContentArea { get; set; }
 
-        [AllowedTypes(new[] { typeof(RoomCategroyListBlock), typeof(HorizonClubListBlock) , typeof(SuiteListingBlock) })]
+        [AllowedTypes(new[] { typeof(RoomCategroyListBlock), typeof(HorizonClubListBlock) , typeof(SuiteListBlock) })]
         [Display(
                   Name = "Main Content Area",
                   Description = "Main Content Area (Room Suite Properties)",

@@ -23,8 +23,8 @@
                             {
                                 <div class="col-xs-12 col-sm-4 no-gutter">
                                     <div class="type-container">
-                                        <a href="@Url.PageUrl(roomGroup.Url)" class="room-title">@roomGroup.Title</a>
-                                        <p>@roomGroup.Description</p>
+                                        <a href="@Url.PageUrl(roomGroup.LinkURL)" class="room-title">@Html.Raw(roomGroup.Heading)</a>
+                                        <p>@Html.Raw(roomGroup.IntroText)</p>
                                     </div>
                                 </div>
                             }

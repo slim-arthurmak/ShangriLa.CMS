@@ -10,9 +10,11 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
 {
     public class RoomGroupNavigatoinModel
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string Heading { get; set; }
+        public string IntroText { get; set; }
 
-        public string Url { get; set; }
+        public ContentReference Image { get; set; }
+
+        public string LinkURL { get; set; }
     }
 }

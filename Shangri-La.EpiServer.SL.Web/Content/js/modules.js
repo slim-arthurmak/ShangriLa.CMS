@@ -119,7 +119,8 @@ Shangrila.anchortag = {
             var c = $(this).attr("href");
             if ($(c).length) {
                 var d = $(c).offset().top - 2 * a;
-                Shangrila.scrollToPosition(d)
+
+                Shangrila.scrollToPosition(d);
             }
         })
     }

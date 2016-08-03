@@ -20,5 +20,12 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing
                     Order = 1)]
                 public virtual string Name { get; set; }
          */
+        public override void SetDefaultValues(ContentType contentType)
+        {
+            base.SetDefaultValues(contentType);
+            //Set up your defaults here  
+
+            RoomType = "club";
+        }
     }
 }

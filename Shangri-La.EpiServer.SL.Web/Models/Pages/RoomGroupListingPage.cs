@@ -13,7 +13,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         Description = "",
         GroupName = Global.GroupNames.SLPages)]
     [AvailableContentTypes(Include = new[] { typeof(RoomListingPage), typeof(RoomDetailPage) })]
-    public class RoomGroupListingPage : SitePageData
+    public class RoomGroupListingPage : RoomListingPage
     {
         [Display(
                  Name = "Room Group Block",
@@ -23,5 +23,6 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         [UIHint(UIHint.Block)]
         [Required]
         public virtual ContentReference RoomGroupBlock { get; set; }
+
     }
 }

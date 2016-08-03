@@ -71,11 +71,20 @@ namespace Shangri_La.EpiServer.SL.Web
         /// </summary>
         public static class ContentAreaTags
         {
-            public const string FullWidth = "span12";
-            public const string TwoThirdsWidth = "span8";
-            public const string HalfWidth = "span6";
-            public const string OneThirdWidth = "span4";
-            public const string NoRenderer = "norenderer";
+            //public const string FullWidth = "span12";
+            //public const string TwoThirdsWidth = "span8";
+            //public const string HalfWidth = "span6";
+            //public const string OneThirdWidth = "span4";
+            //public const string NoRenderer = "norenderer";
+
+            public const string OneQuarterWidth = "displaymode-one-quarter";
+            public const string OneThirdWidth = "displaymode-one-third";
+            public const string HalfWidth = "displaymode-half";
+            public const string ThreeQuartersWidth = "displaymode-three-quarters";
+            public const string TwoThirdsWidth = "displaymode-two-thirds";
+            public const string FullWidth = "displaymode-full";
+            public const string PageWidth = "displaymode-page";
+            public const string NoRenderer = "displaymode-norenderer";
         }
 
         /// <summary>

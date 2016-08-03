@@ -6,10 +6,10 @@ using EPiServer.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing
 {
-    [ContentType(DisplayName = "SuiteListingBlock", GUID = "2c2a0b47-dda3-493b-bb82-2d56ca028ee6",
+    [ContentType(DisplayName = "SuiteListBlock", GUID = "2c2a0b47-dda3-493b-bb82-2d56ca028ee6",
         Description = "",
         GroupName = Global.GroupNames.SLRoomListingPageSections)]
-    public class SuiteListingBlock : RoomCategroyListBlock
+    public class SuiteListBlock : RoomCategroyListBlock
     {
         /*
                 [CultureSpecific]
@@ -20,5 +20,13 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing
                     Order = 1)]
                 public virtual string Name { get; set; }
          */
+
+        public override void SetDefaultValues(ContentType contentType)
+        {
+            base.SetDefaultValues(contentType);
+            //Set up your defaults here  
+
+            RoomType = "room";
+        }
     }
 }

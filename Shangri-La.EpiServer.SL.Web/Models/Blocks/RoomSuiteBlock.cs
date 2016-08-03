@@ -4,6 +4,7 @@ using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
 using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
 using Shangri_La.EpiServer.SL.Web.Models.Properties;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
@@ -100,12 +101,22 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         [Display(Name = "Bookable", Order = 31)]
         public virtual bool Bookable { get; set; }
 
+        [Display(Name = "Is Featured", Order = 100)]
+        public virtual bool IsFeatured { get; set; }
+
+        [Display(Name = "Max Occupancy", Order = 110)]
+        [Range(1, 5)]
+        [DefaultValue(3)]
+        public virtual int MaxOccupancy { get; set; }
+
 
         public override void SetDefaultValues(ContentType contentType)
         {
             base.SetDefaultValues(contentType);
 
             RoomType = "room";
+            IsFeatured = false;
+            MaxOccupancy = 3;
         }
     }
 }

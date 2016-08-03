@@ -35,20 +35,5 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
             PropertyPageViewModel<RoomGroupListingPage> model = new PropertyPageViewModel<RoomGroupListingPage>(currentPage);
             return View(model);
         }
-
-
-        private IContent FindHotelPage(PageData currentPage)
-        {
-            if (currentPage.ParentLink != null && currentPage.ParentLink.ID == typeof(HotelPage).GetPageType().ID)
-            {
-                return contentLoader.Get<IContent>(currentPage.ParentLink);
-            }
-
-
-            return contentLoader.GetAncestors(currentPage.ContentLink)
-                .OfType<HotelPage>()
-                .SkipWhile(x => x.ParentLink == null || x.ParentLink.ID != typeof(HotelPage).GetPageType().ID)
-                .FirstOrDefault();
-        }
     }
 }

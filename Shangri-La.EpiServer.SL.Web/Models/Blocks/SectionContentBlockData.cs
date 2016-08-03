@@ -41,6 +41,15 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         [UIHint(UIHint.Textarea)]
         public virtual string MainText { get; set; }
 
+        [CultureSpecific]
+        [Display(
+          Name = "Teaser Text",
+          Description = "Teaser Text",
+          GroupName = SystemTabNames.Content,
+          Order = 4)]
+        [UIHint(UIHint.Textarea)]
+        public virtual string TeaserText { get; set; }
+
         [Display(
                    Name = "Image",
                    Description = "",

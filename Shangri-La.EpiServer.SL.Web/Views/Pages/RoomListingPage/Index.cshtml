@@ -1,8 +1,9 @@
 ﻿@using EPiServer.Core
 @using EPiServer.Web.Mvc.Html
 @using Shangri_La.EpiServer.SL.Web.Business.Extensions;
+@using Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing;
 
-@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.PropertyPageViewModel<Shangri_La.EpiServer.SL.Web.Models.Pages.RoomListingPage>
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListingPageViewModel
 @*@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.PropertyPageViewModel*@
 
 
@@ -36,7 +37,21 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-10 hidden-sm no-gutter">
-                <div class="col-xs-12 col-md-4 hidden-sm hidden-xs no-gutter">
+
+                @if (Model.RoomCategoryListNavigatoins != null)
+                {
+                    foreach (RoomCategoryListNavigatoinModel nav in Model.RoomCategoryListNavigatoins)
+                    {
+                        <div class="col-xs-12 col-md-4 hidden-sm hidden-xs no-gutter">
+                            <div class="type-container equal-height-block">
+                                <a href="@Url.Content("#" + nav.RoomType)" class="room-title">@nav.Heading</a>
+                                <p>@nav.TeaserText</p>
+                            </div>
+                        </div>
+                    }
+                }
+
+                @*<div class="col-xs-12 col-md-4 hidden-sm hidden-xs no-gutter">
                     <div class="type-container equal-height-block">
                         <a href="#standard-rooms" class="room-title">Standard Rooms</a>
                         <p>Spacious room with incredible city views</p>
@@ -53,7 +68,7 @@
                         <a href="#suites" class="room-title">Suites</a>
                         <p>Spacious room with incredible city views</p>
                     </div>
-                </div>
+                </div>*@
             </div>
             <div class="col-sm-12 col-md-2 no-gutter">
                 <div class="col-xs-12 col-md-12">
@@ -74,6 +89,9 @@
 
 <div class="view-controller">
 
+    @*@{ 
+        Html.RenderCustomContentArea(Model.CurrentPage.MainContentArea);
+    }*@
     @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new
     {
         //CustomTag = "ul",
@@ -266,7 +284,7 @@
         </div>
     </section>
     <!-- Module Room landing - Horizon Club rooms Ends here-->
-    *@
+
 
 
 
@@ -420,6 +438,7 @@
         </div>
     </section>
     <!-- Module Room landing - Suites Ends here-->
+    *@
 </div>
 <!-- Module Room landing - Explore room by wings starts here-->
 <section class="section-row explore-by-wings-container">

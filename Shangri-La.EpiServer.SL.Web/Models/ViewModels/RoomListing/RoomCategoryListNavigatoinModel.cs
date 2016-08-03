@@ -1,18 +1,24 @@
 ﻿using EPiServer.Core;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
-using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing;
+using Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage;
 using System.Collections.Generic;
 using System.Linq;
 
+
+
 namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing
 {
-    public class RoomCategroyListViewModel
+    public class RoomCategoryListNavigatoinModel
     {
-        public RoomCategroyListViewModel(RoomCategroyListBlock block)
+        public RoomCategoryListNavigatoinModel()
+        {
+
+        }
+
+        public RoomCategoryListNavigatoinModel(RoomCategroyListBlock block)
         {
             RoomType = block.RoomType;
-
             Heading = block.Heading;
             IntroText = block.IntroText;
             TeaserText = block.TeaserText;
@@ -28,7 +34,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing
 
         public string TeaserText { get; set; }
 
-        public List<RoomDetailPageViewModel> AllRooms { get; set; }
+        public ContentReference Image { get; set; }
 
         public string LinkURL { get; set; }
     }

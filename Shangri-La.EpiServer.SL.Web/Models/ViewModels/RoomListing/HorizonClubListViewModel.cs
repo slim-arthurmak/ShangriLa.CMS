@@ -18,6 +18,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing
             Image = block.Image;
             BlockCTA = block.BlockCTA;
             BlockButtonLink = block.BlockButtonLink;
+
+            //LinkURL = string.Format("{0}_{1}", RoomType, ((IContent)block).ContentGuid);
         }
 
         public string RoomType { get; set; }
@@ -37,6 +39,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing
         public ButtonBlock BlockButtonLink { get; set; }
 
         public List<RoomDetailPageViewModel> AllRooms { get; set; }
+
+        public string LinkURL { get; set; }
 
     }
 }

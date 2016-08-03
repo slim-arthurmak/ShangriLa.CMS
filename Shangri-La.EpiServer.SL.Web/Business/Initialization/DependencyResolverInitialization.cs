@@ -6,6 +6,8 @@ using Shangri_La.EpiServer.SL.Web.Business.Data;
 using Shangri_La.EpiServer.SL.Web.Business.Rendering;
 using StructureMap;
 using System.Web.Mvc;
+using EPiServer.Web.Mvc;
+using EPiServer.Web.Mvc.Html;
 
 namespace Shangri_La.EpiServer.SL.Web.Business.Initialization
 {
@@ -24,7 +26,8 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Initialization
         {
             //Swap out the default ContentRenderer for our custom
             container.For<IContentRenderer>().Use<ErrorHandlingContentRenderer>();
-            //container.For<ContentAreaRenderer>().Use<SLContentAreaRenderer>();
+            container.For<ContentAreaRenderer>().Use<CustomContentAreaRenderer>();
+            //container.For<ContentAreaRenderer>().Use<BootstrapContentAreaRenderer>();
 
             //Implementations for custom interfaces can be registered here.
             container.For<IFileDataImporter>().Use<FileDataImporter>();

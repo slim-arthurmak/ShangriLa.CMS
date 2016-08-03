@@ -35,7 +35,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing
             base.SetDefaultValues(contentType);
             //Set up your defaults here  
 
-            RoomType = "room";
+            RoomType = "suite";
         }
     }
 }

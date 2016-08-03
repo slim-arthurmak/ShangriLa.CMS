@@ -34,7 +34,8 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Pages
             /* Implementation of action. You can create your own view model class that you pass to the view or
              * you can pass the page type for simpler templates */
             //DefaultPageViewModel<RoomSuiteListingPage> model = new DefaultPageViewModel<RoomSuiteListingPage>(currentPage);
-            PropertyPageViewModel<RoomListingPage> model = new PropertyPageViewModel<RoomListingPage>(currentPage);
+            RoomListingPageViewModel model = new RoomListingPageViewModel(currentPage);
+
             model.Hotel = this.Hotel;
             model.HeaderLogo = Hotel.Logo;
 

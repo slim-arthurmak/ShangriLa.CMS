@@ -8,14 +8,12 @@ using EPiServer.Web.Routing;
 using Shangri_La.EpiServer.SL.Web.Business;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage;
+using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage;
 using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
 {
@@ -70,7 +68,13 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
                         {
                             RoomGroupListingPage listingPage = (RoomGroupListingPage)page;
                             //string url = urlResolver.GetVirtualPath(page).VirtualPath;
+                            ContentReference image = null;
 
+                            if (listingPage.HeaderContentArea != null && listingPage.HeaderContentArea.Items != null)
+                            {
+                                RoomHeaderBannerBlock roomHeaderBannerBlock = (RoomHeaderBannerBlock)listingPage.HeaderContentArea.Items.FirstOrDefault().GetContent();
+                                image = roomHeaderBannerBlock.DesktopImage;
+                            }
 
                             if (listingPage.RoomGroupBlock != null)
                             {
@@ -80,9 +84,10 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
                                 model.RoomGroupNavigatoins.Add(
                                     new RoomGroupNavigatoinModel()
                                     {
-                                        Title = roomGroup.RoomGroupName,
-                                        Description = roomGroup.Teaser,
-                                        Url = page.LinkURL
+                                        Heading = roomGroup.RoomGroupName,
+                                        IntroText = roomGroup.Teaser,
+                                        LinkURL = listingPage.LinkURL,
+                                        Image = image
                                     });
 
                             }
