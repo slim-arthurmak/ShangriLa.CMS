@@ -5,6 +5,7 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using Shangri_La.EpiServer.Common.Business;
+using Shangri_La.EpiServer.Common.Models.Blocks;
 
 
 
@@ -16,33 +17,33 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
         GUID = "906e138f-31d9-4649-947a-5f340e97a7b7",
         Description = "")]
     [SiteImageUrl]
-    public class HotelHomepageContentBlockData : BlockData
+    public class HotelHomepageContentBlockData : SiteBlockData
     {
         [CultureSpecific]
         [Display(
-            Name = "Title",
-            Description = "Title",
+            Name = "Heading",
+            Description = "Heading",
             GroupName = SystemTabNames.Content,
             Order = 1)]
-        public virtual string Title { get; set; }
+        public virtual string Heading { get; set; }
 
         [CultureSpecific]
         [Display(
-            Name = "Short Description",
-            Description = "Short Description",
+            Name = "Intro Text",
+            Description = "Intro Text",
             GroupName = SystemTabNames.Content,
             Order = 2)]
         [UIHint(UIHint.Textarea)]
-        public virtual string ShortDescription { get; set; }
+        public virtual string IntroText { get; set; }
 
         [CultureSpecific]
         [Display(
-            Name = "Long Description",
-            Description = "Long Description",
+            Name = "Main Text",
+            Description = "Main Text",
             GroupName = SystemTabNames.Content,
             Order = 3)]
         [UIHint(UIHint.Textarea)]
-        public virtual string LongDescription { get; set; }
+        public virtual string MainText { get; set; }
 
         [Display(
             Name = "Block CTA",

@@ -21,11 +21,11 @@
             <div class="col-md-6">
                 <div class="overview-left-container">
                     <div class="section-header">
-                        <h2 class="section-heading">@Html.PropertyFor(m => m.Title)</h2>
-                        <div class="description">@Html.PropertyFor(m => m.ShortDescription)</div>
+                        <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+                        <div class="description">@Html.PropertyFor(m => m.IntroText)</div>
                     </div>
                     <div class="content-container">
-                        <p>@Html.PropertyFor(m => m.LongDescription)</p>
+                        <p>@Html.PropertyFor(m => m.MainText)</p>
                         <div class="row facilities">
                             @{
                                 if (Model.HotelHighlights != null)

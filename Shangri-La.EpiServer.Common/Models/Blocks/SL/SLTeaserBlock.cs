@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
 {
     [ContentType(
-        DisplayName = "SL Teaser Block",
+        DisplayName = "Teaser Block",
         GroupName = GroupNames.SLDefault,
         GUID = "91f82300-dcd5-4e86-81d9-aa5fdf8ba1ca",
         Description = "Used to provide a stylized entry point to a page on the site")]
@@ -53,7 +53,9 @@ namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
         [Required]
         public virtual PageReference Link { get; set; }
 
+        /*
         [Display(Name = "Campaign", GroupName = SystemTabNames.Content)]
         public virtual string Campaign { get; set; }
+        */
     }
 }

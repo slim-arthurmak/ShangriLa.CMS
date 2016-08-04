@@ -43,7 +43,9 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
             var editingHints = ViewData.GetEditHints<RoomContentModel, RoomContentBlock>();
 
             // Adds a connection between 'Heading' in view model and 'MyText' in content data.
-            editingHints.AddConnection(m => m.Description, p => p.ShortDescription);
+            editingHints.AddConnection(m => m.Heading, p => p.Heading);
+            editingHints.AddConnection(m => m.IntroText, p => p.IntroText);
+            editingHints.AddConnection(m => m.MainText, p => p.MainText);
 
             if (currentPage is HotelPage)
             {

@@ -10,8 +10,9 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
     {
         public RoomContentModel(RoomContentBlock block)
         {
-            Title = block.Title;
-            Description = block.ShortDescription;
+            Heading = block.Heading;
+            IntroText = block.IntroText;
+            MainText = block.IntroText;
 
             RoomGroups = new List<RoomGroupBlock>();
             RoomGroupNavigatoins = new List<RoomGroupNavigatoinModel>();
@@ -37,9 +38,11 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
             FeatureRoomsContentArea = block.FeatureRoomsContentArea.Copy();
         }
 
-        public string Title { get; set; }
+        public string Heading { get; set; }
 
-        public string Description { get; set; }
+        public string IntroText { get; set; }
+
+        public string MainText { get; set; }
 
         public List<RoomGroupBlock> RoomGroups { get; set; }
 

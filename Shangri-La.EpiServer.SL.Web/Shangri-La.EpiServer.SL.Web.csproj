@@ -283,6 +283,7 @@
     <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
     <Compile Include="Business\Initialization\FileBasedEventsInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
+    <Compile Include="Business\Migration\HotelHomepageContentBlockMigrationStep.cs" />
     <Compile Include="Business\Migration\RoomSuitePageMigrationStep.cs" />
     <Compile Include="Business\Migration\HotelPageMigrationStep.cs" />
     <Compile Include="Business\PageContextActionFilter.cs" />
