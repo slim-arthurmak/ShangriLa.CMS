@@ -6,7 +6,7 @@
             <div class="image-container scaled-image @(Model.IsImageRight ? " img-right" : "")">
                 <a href="@Url.ContentUrl(Model.Link)"><img src="@Url.ContentUrl(Model.Image)" alt="{CMS}"></a>
             </div>
-            <div class="content-container shadow-box mobile-equal-height-block">
+            <div class="content-container shadow-box mobile-equal-height-block @(Model.IsImageRight ? " content-left" : "")">
                 <div class="heading"><a href="@Url.ContentUrl(Model.Link)">@Html.PropertyFor(m => m.Heading)</a></div>
                 <p class="description">@Html.PropertyFor(m => m.Text)</p>
                 <div class="button-aligner"><a href="@Url.ContentUrl(Model.Link)" class="button-primary">Find Out More</a></div>
@@ -14,3 +14,4 @@
         </div>
     </div>
 </div>
+

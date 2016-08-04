@@ -1,7 +1,7 @@
 ﻿using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
-using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
+using Shangri_La.EpiServer.Common.Business.SelectionFactories;
 using System.ComponentModel.DataAnnotations;
 using Shangri_La.EpiServer.Common.Business;
 

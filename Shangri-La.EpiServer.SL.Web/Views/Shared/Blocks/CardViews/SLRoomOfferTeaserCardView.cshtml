@@ -1,0 +1,16 @@
+﻿@model Shangri_La.EpiServer.Common.Models.Blocks.SL.SLOfferTeaserBlock
+
+<div class="item">
+    <div class="col-xs-12 col-sm-6 no-gutter">
+        <div class="event-offer-container shadow-box mobile-equal-height-block">
+            <div class="image-container scaled-image">
+                <a href="@Url.ContentUrl(Model.Link)"><img src="@Url.ContentUrl(Model.Image)" alt="{CMS}"></a>
+            </div>
+            <div class="content-container">
+                <div class="heading"><a href="@Url.ContentUrl(Model.Link)">@Html.PropertyFor(m => m.Heading)</a></div>
+                <p class="description">@Html.PropertyFor(m => m.Text)</p>
+                <div class="button-aligner"><a href="@Url.ContentUrl(Model.Link)" class="common-cta">READ MORE</a></div>
+            </div>
+        </div>
+    </div>
+</div>

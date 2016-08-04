@@ -3,10 +3,13 @@
 <!-- Module Get more out of your stay starts here-->
 <section class="section-row offers-list equal-height-section">
     <div class="container carousel-container">
-        <h2 class="section-heading">Get more out of your stay</h2>
+        <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
         <div class="row">
             <div class="owl-carousel mobile-carousel">
-                <div class="item">
+
+                @Html.PropertyFor(x => x.FeaturedOffersContentArea, new { Tag = "RoomOfferTeaserCardView" })
+
+                @*<div class="item">
                     <div class="col-xs-12 col-sm-6 no-gutter">
                         <div class="event-offer-container shadow-box mobile-equal-height-block">
                             <div class="image-container scaled-image">
@@ -31,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
         <div class="view-all-button"><a href="#" class="button-secondary">VIEW ALL 10 OFFERS</a></div>

@@ -33,6 +33,9 @@
     <Reference Include="EPiServer">
       <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPiServer.Cms.Shell.UI">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.8.2\lib\net45\EPiServer.Cms.Shell.UI.dll</HintPath>
+    </Reference>
     <Reference Include="EPiServer.Configuration">
       <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.Configuration.dll</HintPath>
     </Reference>
@@ -50,6 +53,15 @@
     </Reference>
     <Reference Include="EPiServer.LinkAnalyzer">
       <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.LinkAnalyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Shell.UI">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.8.2\lib\net45\EPiServer.Shell.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.UI">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.8.2\lib\net45\EPiServer.UI.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.Web.WebControls">
       <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.Web.WebControls.dll</HintPath>
@@ -72,13 +84,18 @@
     <Compile Include="Business\Attributes\ContentImageAttribute.cs" />
     <Compile Include="Business\ContentExtensions.cs" />
     <Compile Include="Business\GroupNames.cs" />
+    <Compile Include="Business\SelectionFactories\LocationInfogramPointSelectionFactory.cs" />
+    <Compile Include="Business\SelectionFactories\PaymentModeSelectionFactory.cs" />
+    <Compile Include="Business\SelectionFactories\RoomTypeSelectionFactory.cs" />
     <Compile Include="Business\SiteUIHints.cs" />
     <Compile Include="Models\Blocks\SiteBlockData.cs" />
+    <Compile Include="Models\Blocks\SL\SLLocationInfogramBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLDineTeaserBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLEventTeaserBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLOfferTeaserBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLTeaserBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLExperienceTeaserBlock.cs" />
+    <Compile Include="Models\Blocks\SL\SLTrustYouWidgetBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

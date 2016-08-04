@@ -297,8 +297,6 @@
     <Compile Include="Business\Rendering\ICustomCssInContentArea.cs" />
     <Compile Include="Business\Rendering\SiteViewEngine.cs" />
     <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
-    <Compile Include="Business\SelectionFactories\RoomTypeSelectionFactory.cs" />
-    <Compile Include="Business\SelectionFactories\PaymentModeSelectionFactory.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\UIDescriptors\ContainerPageUIDescriptor.cs" />
     <Compile Include="Controllers\Blocks\SuiteListBlockController.cs" />
@@ -361,6 +359,7 @@
     <Compile Include="Models\Pages\ContainerPage.cs" />
     <Compile Include="Models\Pages\RoomGroupListingPage.cs" />
     <Compile Include="Models\ViewModels\FindTheRoomPanelModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\MapAndDirectionContentModel.cs" />
     <Compile Include="Models\ViewModels\HotelInformationSummaryViewModel.cs" />
     <Compile Include="Models\ViewModels\BookingPanelModel.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
@@ -1550,6 +1549,7 @@
     <Content Include="Views\Shared\Blocks\CardViews\SLExperienceTeaserCardView.cshtml" />
     <Content Include="Views\Shared\Blocks\CardViews\SLOfferTeaserCardView.cshtml" />
     <Content Include="Views\Shared\Blocks\CardViews\SLDineTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLRoomOfferTeaserCardView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

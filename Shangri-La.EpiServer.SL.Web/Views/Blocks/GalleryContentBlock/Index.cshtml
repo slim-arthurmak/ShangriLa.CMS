@@ -23,14 +23,21 @@
                 <div class="view-all-button"><a href="#" class="button-secondary">View All Gallery Images</a></div>
             </div>
             <div class="col-xs-12 col-sm-4">
+                @if (Model.TrustYouWidget != null)
+                {
                 <div class="trust-you-widget">
                     <div class="container shadow-box equal-height-block">
                         <div class="plugin">
-                            <iframe src="https://api.trustyou.com/hotels/aa951d42-1c1c-48de-aa67-a98b0a37fcde/seal.html?key=c0be95bb-5c02-4f39-adba-b1449ea0aa74&amp;size=xl" allowtransparency="true" frameborder="0" scrolling="no" height="144px" width="170px"></iframe>
+                            <iframe src="@String.Format("https://api.trustyou.com/hotels/{0}/seal.html?key=c0be95bb-5c02-4f39-adba-b1449ea0aa74&amp;size=xl", Model.TrustYouWidget.TrustYouID)" allowtransparency="true" frameborder="0" scrolling="no" height="144px" width="170px"></iframe>
                         </div>
-                        <p>Wow. I always knew Hong Kong would be an amazing place, but this was really mind-blowing. The views of the harbour are truly incredible, like a city from the future.</p><span>Yan Lee, Taiwan</span><a href="javascript:void(0)" class="reviews">See All Customer Reviews</a>
+                        <p>@Html.PropertyFor(m => m.TrustYouWidget.Review)</p>
+                        <span>@Html.PropertyFor(m => m.TrustYouWidget.Reviewer)</span>
+                        @*<p>Wow. I always knew Hong Kong would be an amazing place, but this was really mind-blowing. The views of the harbour are truly incredible, like a city from the future.</p>
+                        <span>Yan Lee, Taiwan</span>*@
+                        <a href="@Url.ContentUrl(Model.BlockCTA.ButtonLink)" class="reviews">See All Customer Reviews</a>
                     </div>
                 </div>
+                }
             </div>
         </div>
     </div>

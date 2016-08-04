@@ -1,4 +1,6 @@
-﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage.MapAndDirectionContentBlock
+﻿@using Shangri_La.EpiServer.Common.Models.Blocks.SL
+
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage.MapAndDirectionContentModel
 
 <!-- Module Map & Direction starts here-->
 <section id="location" class="section-row map-direction-container inpage-element">
@@ -9,10 +11,33 @@
             <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">@Html.Translate("/common/readmore")</a>
         </div>
         <div class="map-tracker map-equal-height-section">
-            <div class="location map-equal-height-block origin"><span class="location-icon"></span><span class="distance">Current Location</span><span class="address">Shangri-La Hotel</span></div>
+
+            @if (Model.LocationInfogramPoints != null)
+            {
+                foreach (SLLocationInfogramBlock point in Model.LocationInfogramPoints)
+                {
+                    string cssIcon = "circle-icon";
+                    string cssPoint = point.Position;
+
+                    if (point.Position == "origin")
+                    {
+                        cssIcon = "location-icon";
+               
+                    }
+     
+
+
+                    <div class="location map-equal-height-block @cssPoint"><span class="@cssIcon"></span><span class="distance">@point.Title</span><span class="address">@point.Direction</span></div>
+
+                }
+            }
+
+            @*<div class="location map-equal-height-block origin"><span class="location-icon"></span><span class="distance">Current Location</span><span class="address">Shangri-La Hotel</span></div>
             <div class="location map-equal-height-block percent-30"><span class="circle-icon"></span><span class="distance">5 minutes by foot</span><span class="address">Orchard Road</span></div>
             <div class="location map-equal-height-block percent-60"><span class="circle-icon"></span><span class="distance">10 minutes by car</span><span class="address">Singapore CBD</span></div>
-            <div class="location map-equal-height-block destination"><span class="circle-icon"></span><span class="distance">30 minutes by car</span><span class="address">Changi International Airport</span></div>
+            <div class="location map-equal-height-block destination"><span class="circle-icon"></span><span class="distance">30 minutes by car</span><span class="address">Changi International Airport</span></div>*@
+        
+        
         </div>
         <div class="view-map"><a href="#" class="common-cta">@Html.Translate("/blocks/mapanddirectioncontentblock/viewmapsanddirectoins")</a></div>
     </div>

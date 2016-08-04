@@ -1,7 +1,7 @@
 ﻿using EPiServer.Shell.ObjectEditing;
 using System.Collections.Generic;
 
-namespace Shangri_La.EpiServer.SL.Web.Business.SelectionFactories
+namespace Shangri_La.EpiServer.Common.Business.SelectionFactories
 {
     public class RoomTypeSelectionFactory : ISelectionFactory
     {

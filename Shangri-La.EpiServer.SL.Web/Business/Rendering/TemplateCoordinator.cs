@@ -170,6 +170,16 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
                 AvailableWithoutTag = true,
                 Path = BlockPath("CardViews/SLOfferTeaserCardView.cshtml")
             });
+
+            viewTemplateModelRegistrator.Add(typeof(SLOfferTeaserBlock), new TemplateModel
+            {
+                Name = "SLRoomOfferTeaserCardView",
+                //Default = true,
+                //Inherit = true,
+                Tags = new[] { "RoomOfferTeaserCardView" },
+                AvailableWithoutTag = false,
+                Path = BlockPath("CardViews/SLRoomOfferTeaserCardView.cshtml")
+            });
         }
 
         private static string BlockPath(string fileName)
