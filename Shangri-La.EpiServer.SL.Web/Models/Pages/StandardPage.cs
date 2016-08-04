@@ -7,6 +7,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using Shangri_La.EpiServer.Common.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
@@ -18,7 +19,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
     [ContentType(DisplayName = "StandardPage", 
         GUID = "8C34A6BD-45A0-4D0F-BD2F-AF6C5AC6DE25", 
         Description = "Shangri-La Standard Page",
-        GroupName = Global.GroupNames.SLPages)]
+        GroupName = GroupNames.SLPages)]
     public class StandardPage : SitePageData
     {
         [CultureSpecific]

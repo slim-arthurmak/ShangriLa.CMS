@@ -1,7 +1,7 @@
 ﻿using EPiServer.DataAnnotations;
 using System.Linq;
 
-namespace Shangri_La.EpiServer.SL.Web.Business.Attributes
+namespace Shangri_La.EpiServer.Common.Business.Attributes
 {
     public class ContentImageAttribute : ImageUrlAttribute
     {

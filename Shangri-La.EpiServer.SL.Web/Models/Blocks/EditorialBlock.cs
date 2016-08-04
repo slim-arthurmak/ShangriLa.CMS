@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using Shangri_La.EpiServer.Common.Models.Blocks;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {

@@ -4,7 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 
-namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
+namespace Shangri_La.EpiServer.Common.Models.Blocks
 {
     [ContentType(DisplayName = "SiteBlockData", GUID = "9f90732b-87b1-4674-92d5-11f4a977b678", Description = "")]
     /// <summary>

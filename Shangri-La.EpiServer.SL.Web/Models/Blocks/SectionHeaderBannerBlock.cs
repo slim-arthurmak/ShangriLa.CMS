@@ -3,11 +3,14 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Models.Blocks;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "SectionHeaderBanner", GUID = "bb4b2795-5c20-449e-8872-2916dd5104d2", 
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
         Description = "")]
     public class SectionHeaderBannerBlock : SiteBlockData
     {

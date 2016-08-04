@@ -3,11 +3,13 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
 {
     [ContentType(DisplayName = "HotelHighlightBlock", 
-        GroupName = Global.GroupNames.SLHotelHomepageSections, 
+        GroupName = GroupNames.SLHotelHomepageSections, 
         GUID = "57486ce2-33e8-4edd-b185-a4c060a09cd3", 
         Description = "")]
     public class HotelHighlightBlock : BlockData

@@ -4,7 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using Shangri_La.EpiServer.SL.Web.Business.Rendering;
-using Shangri_La.EpiServer.SL.Web.Business.Attributes;
+using Shangri_La.EpiServer.Common.Business.Attributes;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {

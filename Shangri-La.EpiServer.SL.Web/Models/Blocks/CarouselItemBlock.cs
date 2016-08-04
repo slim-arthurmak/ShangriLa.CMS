@@ -6,6 +6,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using Shangri_La.EpiServer.SL.Web.Models;
+using Shangri_La.EpiServer.Common.Models.Blocks;
 
 namespace EPiServer.Templates.Blog.Mvc.Models.Blocks
 {

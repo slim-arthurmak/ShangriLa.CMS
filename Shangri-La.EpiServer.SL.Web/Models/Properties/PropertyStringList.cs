@@ -2,6 +2,8 @@ using System;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.PlugIn;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Properties
 {
@@ -9,7 +11,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Properties
     /// Property type for storing a list of strings
     /// </summary>
     /// <remarks>For an example, see <see cref="Shangri_La.EpiServer.SL.Web.Models.Pages.SitePageData"/> where this property type is used for the MetaKeywords property</remarks>
-    [EditorHint(Global.SiteUIHints.Strings)]
+    [EditorHint(SiteUIHints.Strings)]
     [PropertyDefinitionTypePlugIn(Description = "A property for list of strings", DisplayName = "String List")]
     public class PropertyStringList : PropertyLongString
     {

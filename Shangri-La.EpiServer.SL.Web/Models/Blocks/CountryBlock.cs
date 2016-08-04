@@ -4,12 +4,14 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer;
+using Shangri_La.EpiServer.Common.Models.Blocks;
+using Shangri_La.EpiServer.Common.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "CountryBlock",
         GUID = "d98876a8-42c3-43af-86e4-418e917012d2",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
         Description = "")]
     public class CountryBlock : SiteBlockData
     {

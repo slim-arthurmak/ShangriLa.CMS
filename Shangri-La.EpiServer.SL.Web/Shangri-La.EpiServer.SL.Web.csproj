@@ -261,12 +261,10 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
-    <Compile Include="Business\Attributes\ContentImageAttribute.cs" />
     <Compile Include="Business\Channels\DisplayResolutionBase.cs" />
     <Compile Include="Business\Channels\DisplayResolutions.cs" />
     <Compile Include="Business\Channels\MobileChannel.cs" />
     <Compile Include="Business\Channels\WebChannel.cs" />
-    <Compile Include="Business\ContentExtensions.cs" />
     <Compile Include="Business\ContentLocator.cs" />
     <Compile Include="Business\Data\FileDataImporter.cs" />
     <Compile Include="Business\Data\FileReader.cs" />
@@ -383,7 +381,6 @@
     <Compile Include="Models\Blocks\HotelBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\OverviewContentBlock.cs" />
     <Compile Include="Models\Blocks\PageListBlock.cs" />
-    <Compile Include="Models\Blocks\SiteBlockData.cs" />
     <Compile Include="Models\Blocks\SiteLogotypeBlock.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
     <Compile Include="Models\Media\IFileProperties.cs" />
@@ -1552,6 +1549,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shangri-La.EpiServer.Common\Shangri-La.EpiServer.Common.csproj">
+      <Project>{09895ecd-db55-4111-826c-d28bc99d211a}</Project>
+      <Name>Shangri-La.EpiServer.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>

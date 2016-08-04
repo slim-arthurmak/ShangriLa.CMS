@@ -7,13 +7,14 @@ using System.Linq;
 using System.Collections.Generic;
 
 using Shangri_La.EpiServer.SL.Web.Models.Properties;
+using Shangri_La.EpiServer.Common.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(
         DisplayName = "SectionOverviewContentBlock",
         GUID = "ba247296-abde-42a1-b415-b3d3cf482a8e",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
         Description = "")]
     [SiteImageUrl]
     public class SectionOverviewContentBlock : SectionContentBlockData
@@ -31,7 +32,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                    Description = "Place items on separate lines",
                    GroupName = SystemTabNames.Content,
                    Order = 100)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] Highlights { get; set; }
     }

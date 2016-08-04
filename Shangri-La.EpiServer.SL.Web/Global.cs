@@ -13,6 +13,7 @@ namespace Shangri_La.EpiServer.SL.Web
         [GroupDefinitions()]
         public static class GroupNames
         {
+            /*
             // Page Groups
             public const string SLDefault = "SL";
             public const string SLPages = "SL Pages";
@@ -21,7 +22,7 @@ namespace Shangri_La.EpiServer.SL.Web
 
             public const string SLRoomListingPageSections = "SL - Room Listing Page Sections";
             public const string SLRoomDetailPageSections = "SL - Room Detail Page Sections";
-
+            */
             [Display(Name = "Contact", Order = 1)]
             public const string Contact = "Contact";
 
@@ -99,13 +100,14 @@ namespace Shangri_La.EpiServer.SL.Web
         }
 
         public static Dictionary<string, int> ContentAreaTagWidths = new Dictionary<string, int>
-            {
-                { ContentAreaTags.FullWidth, ContentAreaWidths.FullWidth },
-                { ContentAreaTags.TwoThirdsWidth, ContentAreaWidths.TwoThirdsWidth },
-                { ContentAreaTags.HalfWidth, ContentAreaWidths.HalfWidth },
-                { ContentAreaTags.OneThirdWidth, ContentAreaWidths.OneThirdWidth }
-            };
+        {
+            { ContentAreaTags.FullWidth, ContentAreaWidths.FullWidth },
+            { ContentAreaTags.TwoThirdsWidth, ContentAreaWidths.TwoThirdsWidth },
+            { ContentAreaTags.HalfWidth, ContentAreaWidths.HalfWidth },
+            { ContentAreaTags.OneThirdWidth, ContentAreaWidths.OneThirdWidth }
+        };
 
+        /*
         /// <summary>
         /// Names used for UIHint attributes to map specific rendering controls to page properties
         /// </summary>
@@ -115,7 +117,7 @@ namespace Shangri_La.EpiServer.SL.Web
             public const string Strings = "StringList";
             public const string Parking = "parking";
         }
-
+        */
         /// <summary>
         /// Virtual path to folder with static graphics, such as "~/Static/gfx/"
         /// </summary>

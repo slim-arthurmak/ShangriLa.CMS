@@ -6,12 +6,16 @@ using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
 using Shangri_La.EpiServer.SL.Web.Models.Properties;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Models.Blocks;
+using Shangri_La.EpiServer.Common.Business;
+
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "RoomSuiteBlock",
          GUID = "275712a5-21d6-4ef4-884e-cdbeb2b04250",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
         Description = "")]
     public class RoomSuiteBlock : SiteBlockData
     {
@@ -44,7 +48,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                 Description = "Place items on separate lines",
                 GroupName = SystemTabNames.Content,
                 Order = 4)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] RoomFeatures { get; set; }
 
@@ -53,7 +57,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                  Description = "Room Amenities (Media & Entertainment)",
                  GroupName = SystemTabNames.Content,
                  Order = 21)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] AmenitiesMediaEntertainment { get; set; }
 
@@ -62,7 +66,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                  Description = "Room Amenities (Media & Entertainment)",
                  GroupName = SystemTabNames.Content,
                  Order = 22)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] AmenitiesRefreshments { get; set; }
 
@@ -72,7 +76,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                  Description = "Room Amenities (Office Equipment & Stationary)",
                  GroupName = SystemTabNames.Content,
                  Order = 23)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] AmenitiesOfficeEquipmentStationary { get; set; }
 
@@ -81,7 +85,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
                  Description = "Room Amenities (Bath & Personal Care)",
                  GroupName = SystemTabNames.Content,
                  Order = 24)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] AmenitiesBathPersonalCare { get; set; }
 

@@ -3,12 +3,14 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "RoomGroupBlock",
         GUID = "a999e56e-ff7f-4848-bd16-5ce40bcad79e",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
         Description = "")]
     public class RoomGroupBlock : BlockData
     {

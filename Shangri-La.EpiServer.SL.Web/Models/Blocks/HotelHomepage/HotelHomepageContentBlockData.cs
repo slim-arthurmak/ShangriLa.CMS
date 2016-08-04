@@ -4,13 +4,15 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
+using Shangri_La.EpiServer.Common.Business;
+
 
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
 {
     [ContentType(
         DisplayName = "HotelHomepageContentBlockData",
-        GroupName = Global.GroupNames.SLHotelHomepageSections,
+        GroupName = GroupNames.SLHotelHomepageSections,
         GUID = "906e138f-31d9-4649-947a-5f340e97a7b7",
         Description = "")]
     [SiteImageUrl]
@@ -48,5 +50,6 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
             GroupName = SystemTabNames.Content,
             Order = 4)]
         public virtual ButtonBlock BlockCTA { get; set; }
+
     }
 }

@@ -5,11 +5,13 @@ using EPiServer.Web;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using System.ComponentModel.DataAnnotations;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage;
-using Shangri_La.EpiServer.SL.Web.Business.Attributes;
+using Shangri_La.EpiServer.Common.Business.Attributes;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
-    [ContentType(DisplayName = "RoomDetailPage", GUID = "22ba9772-9e1f-47f8-9ae8-2999c7193eff", Description = "", GroupName = Global.GroupNames.SLPages)]
+    [ContentType(DisplayName = "RoomDetailPage", GUID = "22ba9772-9e1f-47f8-9ae8-2999c7193eff", Description = "", GroupName = GroupNames.SLPages)]
     [ContentImage("RoomDetailPage.PNG")]
     public class RoomDetailPage : SitePageData
     {

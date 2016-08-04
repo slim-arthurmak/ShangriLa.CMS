@@ -5,13 +5,15 @@ using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
 
 using Shangri_La.EpiServer.SL.Web;
+using Shangri_La.EpiServer.Common.Models.Blocks;
+using Shangri_La.EpiServer.Common.Business;
 
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "SectionContentBlockData", 
         GUID = "b3a417fe-3337-4687-ac99-069d46d0832a",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
         Description = "")]
     public class SectionContentBlockData : SiteBlockData
     {

@@ -4,6 +4,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
 using EPiServer;
+using Shangri_La.EpiServer.Common.Models.Blocks;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {

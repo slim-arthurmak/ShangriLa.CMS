@@ -9,6 +9,7 @@ using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using System.Linq;
 using System.Collections.Generic;
 using EPiServer.Filters;
+using Shangri_La.EpiServer.Common.Models.Blocks;
 
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers

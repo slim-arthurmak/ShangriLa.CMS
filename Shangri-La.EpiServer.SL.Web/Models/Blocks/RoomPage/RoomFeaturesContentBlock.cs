@@ -3,11 +3,13 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage
 {
     [ContentType(DisplayName = "RoomFeaturesContentBlock", GUID = "920c41ee-49fa-46cf-9103-46d474b3ff6b",
-        GroupName = Global.GroupNames.SLRoomDetailPageSections,
+        GroupName = GroupNames.SLRoomDetailPageSections,
         Description = "")]
     public class RoomFeaturesContentBlock : SectionOverviewContentBlock
     {

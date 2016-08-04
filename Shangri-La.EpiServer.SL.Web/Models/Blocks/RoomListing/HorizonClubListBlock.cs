@@ -3,12 +3,15 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business;
+
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing
 {
     [ContentType(DisplayName = "HorizonClubListBlock", GUID = "b12640d0-0598-42b5-85cb-ad9dc2cc32d6",
         Description = "",
-        GroupName = Global.GroupNames.SLRoomListingPageSections)]
+        GroupName = GroupNames.SLRoomListingPageSections)]
     public class HorizonClubListBlock : RoomCategroyListBlock
     {
         /*

@@ -3,11 +3,13 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(DisplayName = "HeroBannerBlock",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
          GUID = "b1beba54-eb9c-4c59-bd33-74038ece1961", Description = "")]
     public class HeroBannerBlock : BlockData
     {

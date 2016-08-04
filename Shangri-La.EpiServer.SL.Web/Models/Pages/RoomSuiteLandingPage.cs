@@ -5,12 +5,16 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 
+
+using Shangri_La.EpiServer.Common.Business;
+
+
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
     [ContentType(DisplayName = "RoomSuiteLandingPage",
         GUID = "dc147606-779c-4c1b-af56-4f00eb131588", 
         Description = "", 
-        GroupName = Global.GroupNames.SLContainerPages)]
+        GroupName = GroupNames.SLContainerPages)]
     [AvailableContentTypes(Include = new[] { typeof(RoomDetailPage), typeof(RoomListingPage) })]
     public class RoomSuiteLandingPage : PageData
     {

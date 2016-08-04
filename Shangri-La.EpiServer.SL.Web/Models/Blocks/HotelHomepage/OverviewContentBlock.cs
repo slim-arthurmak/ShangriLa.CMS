@@ -7,12 +7,14 @@ using System.Linq;
 using System.Collections.Generic;
 
 using Shangri_La.EpiServer.SL.Web.Models.Properties;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
 {
     [ContentType(
         DisplayName = "OverviewContentBlock",
-        GroupName = Global.GroupNames.SLHotelHomepageSections,
+        GroupName = GroupNames.SLHotelHomepageSections,
         GUID = "A0AC3CBA-F13F-40C5-A60A-B1787CA2D9DE", 
         Description = "")]
     [SiteImageUrl]
@@ -31,7 +33,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
                    Description = "Place items on separate lines",
                    GroupName = SystemTabNames.Content,
                    Order = 12)]
-        [UIHint(Global.SiteUIHints.Strings)]
+        [UIHint(SiteUIHints.Strings)]
         [CultureSpecific]
         public virtual string[] HotelHighlights { get; set; }
     }

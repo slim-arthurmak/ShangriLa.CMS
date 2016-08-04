@@ -3,15 +3,10 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.ServiceLocation;
-using EPiServer.SpecializedProperties;
 using EPiServer.Web;
-
-using Shangri_La.EpiServer.SL.Web.Business.Extensions.EditorDescriptor;
-using Shangri_La.EpiServer.SL.Web.Helpers;
+using Shangri_La.EpiServer.Common.Business;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage;
-
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
@@ -19,7 +14,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
     [ContentType(DisplayName = "HotelPage", 
         GUID = "19EA638C-376D-4216-9353-9E34D4C07B05", 
         Description = "Hotel Page", 
-        GroupName = Global.GroupNames.SLPages)]
+        GroupName = GroupNames.SLPages)]
     public class HotelPage : SitePageData
     {
         /*

@@ -3,13 +3,15 @@ using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
 using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business;
+
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomListing
 {
     [ContentType(DisplayName = "RoomCategroyListBlock", 
         GUID = "b2d5c98f-c974-42e3-b44b-ba1b25a05401", 
         Description = "",  
-        GroupName = Global.GroupNames.SLRoomListingPageSections)]
+        GroupName = GroupNames.SLRoomListingPageSections)]
     public class RoomCategroyListBlock : SectionContentBlockData
     {
         /*

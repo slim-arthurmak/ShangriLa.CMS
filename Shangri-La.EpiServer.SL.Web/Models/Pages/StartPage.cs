@@ -6,13 +6,15 @@ using EPiServer.Web;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using System.ComponentModel.DataAnnotations;
 
+using Shangri_La.EpiServer.Common.Business;
+
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
     [ContentType(
         DisplayName = "StartPage", 
         GUID = "8C31185E-E32F-44E9-B95D-47FC9A02799A",
         Description = "Shangri-La Start Page",
-        GroupName = Global.GroupNames.SLPages)]
+        GroupName = GroupNames.SLPages)]
     [SiteImageUrl]
     [AvailableContentTypes(
         Availability.Specific,

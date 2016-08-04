@@ -7,13 +7,15 @@ using EPiServer.Web;
 using Shangri_La.EpiServer.SL.Web.Business.SelectionFactories;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Models.Blocks;
+using Shangri_La.EpiServer.Common.Business;
 
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
     [ContentType(
         DisplayName = "HotelBlock",
-        GroupName = Global.GroupNames.SLDefault,
+        GroupName = GroupNames.SLDefault,
 
         GUID = "4707c0e7-87b0-4f3b-b18e-b57bfdea2815",
         Description = "")]
