@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using Shangri_La.EpiServer.Common.Business;
+using Shangri_La.EpiServer.Common.Models.Blocks.SL;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
 {
@@ -14,14 +15,12 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
             Description = "")]
     public class DineContentBlock : HotelHomepageContentBlockData
     {
-        /*
-                [CultureSpecific]
-                [Display(
-                    Name = "Name",
-                    Description = "Name field's description",
-                    GroupName = SystemTabNames.Content,
-                    Order = 1)]
-                public virtual string Name { get; set; }
-         */
+        [AllowedTypes(new[] { typeof(SLDineTeaserBlock) })]
+        [Display(
+        Name = "Featured Restaurants Content Area",
+        Description = "Featured Restaurants",
+        GroupName = SystemTabNames.Content,
+        Order = 100)]
+        public virtual ContentArea FeaturedRestaurantContentArea { get; set; }
     }
 }

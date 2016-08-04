@@ -1401,8 +1401,10 @@
     <Content Include="Content\pagemodules\img\bg\dining-experiences-mothers-day-bg" />
     <Content Include="Content\img\content\SL-video.ogv" />
     <Content Include="Content\img\content\SL-video.webm" />
+    <Content Include="Resources\LanguageFiles\Common.xml" />
     <Content Include="Resources\LanguageFiles\ContentTypeNames.xml" />
     <Content Include="Resources\LanguageFiles\Display.xml" />
+    <Content Include="Resources\LanguageFiles\Content.xml" />
     <Content Include="Resources\LanguageFiles\EditorHints.xml" />
     <Content Include="Resources\LanguageFiles\GroupNames.xml" />
     <Content Include="Resources\LanguageFiles\PropertyNames.xml" />
@@ -1544,6 +1546,10 @@
     <Content Include="Views\Blocks\SuiteListBlock\Index.cshtml" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
     <Content Include="Views\Shared\FindTheRoomPanel.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLEventTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLExperienceTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLOfferTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLDineTeaserCardView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -74,6 +74,9 @@
     <Compile Include="Business\GroupNames.cs" />
     <Compile Include="Business\SiteUIHints.cs" />
     <Compile Include="Models\Blocks\SiteBlockData.cs" />
+    <Compile Include="Models\Blocks\SL\SLDineTeaserBlock.cs" />
+    <Compile Include="Models\Blocks\SL\SLEventTeaserBlock.cs" />
+    <Compile Include="Models\Blocks\SL\SLOfferTeaserBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLTeaserBlock.cs" />
     <Compile Include="Models\Blocks\SL\SLExperienceTeaserBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

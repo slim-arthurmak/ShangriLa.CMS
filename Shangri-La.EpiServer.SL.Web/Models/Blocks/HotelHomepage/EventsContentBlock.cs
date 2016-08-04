@@ -16,12 +16,12 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage
         Description = "")]
     public class EventsContentBlock : HotelHomepageContentBlockData
     {
-        [AllowedTypes(new[] { typeof(SLExperienceTeaserBlock) })]
+        [AllowedTypes(new[] { typeof(SLEventTeaserBlock) })]
         [Display(
-        Name = "Featured Experiences Content Area",
-        Description = "Featured Experiences",
+        Name = "Featured Events Content Area",
+        Description = "Special Events & Conferences Section",
         GroupName = SystemTabNames.Content,
         Order = 100)]
-        public virtual ContentArea FeaturedExperiencesContentArea { get; set; }
+        public virtual ContentArea FeaturedEventsContentArea { get; set; }
     }
 }

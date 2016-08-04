@@ -1,11 +1,11 @@
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.ServiceLocation;
-using Shangri_La.EpiServer.SL.Web.Controllers;
-using Shangri_La.EpiServer.SL.Web.Models.Blocks;
-using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
+using Shangri_La.EpiServer.SL.Web.Controllers;
+using Shangri_La.EpiServer.SL.Web.Models.Blocks;
+using Shangri_La.EpiServer.Common.Models.Blocks.SL;
 
 namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
 {
@@ -126,6 +126,49 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Rendering
                 //Tags = new[] { Global.ContentAreaTags.NoRenderer },
                 AvailableWithoutTag = true,
                 Path = BlockPath("SectionHightlightContent.cshtml")
+            });
+
+            //Hotel Homepage Section Card Views
+
+            viewTemplateModelRegistrator.Add(typeof(SLDineTeaserBlock), new TemplateModel
+            {
+                Name = "SLDineTeaserCardView",
+                Default = true,
+                //Inherit = true,
+                //Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                AvailableWithoutTag = true,
+                Path = BlockPath("CardViews/SLDineTeaserCardView.cshtml")
+            });
+
+
+            viewTemplateModelRegistrator.Add(typeof(SLExperienceTeaserBlock), new TemplateModel
+            {
+                Name = "SLExperienceTeaserCardView",
+                Default = true,
+                //Inherit = true,
+                //Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                AvailableWithoutTag = true,
+                Path = BlockPath("CardViews/SLExperienceTeaserCardView.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(SLEventTeaserBlock), new TemplateModel
+            {
+                Name = "SLEventTeaserCardView",
+                Default = true,
+                //Inherit = true,
+                //Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                AvailableWithoutTag = true,
+                Path = BlockPath("CardViews/SLEventTeaserCardView.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(SLOfferTeaserBlock), new TemplateModel
+            {
+                Name = "SLOfferTeaserCardView",
+                Default = true,
+                //Inherit = true,
+                //Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                AvailableWithoutTag = true,
+                Path = BlockPath("CardViews/SLOfferTeaserCardView.cshtml")
             });
         }
 

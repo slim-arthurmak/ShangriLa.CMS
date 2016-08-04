@@ -5,6 +5,7 @@ using EPiServer.Web;
 using Shangri_La.EpiServer.Common.Business;
 using Shangri_La.EpiServer.Common.Business.Attributes;
 using System.ComponentModel.DataAnnotations;
+using EPiServer;
 
 
 namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
@@ -23,7 +24,7 @@ namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
             GroupName = SystemTabNames.Content,
             Order = 10)]
         [CultureSpecific]
-        [Required(AllowEmptyStrings = false)]
+        //[Required(AllowEmptyStrings = false)]
         public virtual string Heading { get; set; }
 
         [Display(
@@ -32,7 +33,7 @@ namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
             GroupName = SystemTabNames.Content,
             Order = 20)]
         [CultureSpecific]
-        [Required(AllowEmptyStrings = false)]
+        //[Required(AllowEmptyStrings = false)]
         [UIHint(UIHint.LongString)]
         public virtual string Text { get; set; }
 
@@ -41,7 +42,7 @@ namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
             Description = "",
             GroupName = SystemTabNames.Content,
             Order = 30)]
-        [Required]
+        //[Required]
         [UIHint(UIHint.Image)]
         public virtual ContentReference Image { get; set; }
 
@@ -50,9 +51,9 @@ namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
             Description = "",
             GroupName = SystemTabNames.Content,
             Order = 40)]
-        [Required]
-        public virtual PageReference Link { get; set; }
-
+        //[Required]
+        public virtual Url Link { get; set; }
+        
         /*
         [Display(Name = "Campaign", GroupName = SystemTabNames.Content)]
         public virtual string Campaign { get; set; }

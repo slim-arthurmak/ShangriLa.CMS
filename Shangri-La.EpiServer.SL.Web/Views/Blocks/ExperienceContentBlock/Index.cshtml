@@ -9,7 +9,9 @@
         </div>
         <div class="row">
             <div class="owl-carousel mobile-carousel">
-                <div class="item">
+                @Html.PropertyFor(x => x.FeaturedExperiencesContentArea)
+
+                @*<div class="item">
                     <div class="clearfix col-xs-12 col-sm-6 col-md-12 no-gutter">
                         <div class="experience-container clearfix">
                             <div class="image-container scaled-image">
@@ -36,10 +38,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
-        <div class="view-all-button"><a href="#" class="button-secondary">SEE ALL EXPERIENCES</a></div>
+        <div class="view-all-button"><a href="@Url.ContentUrl(Model.BlockCTA.ButtonLink)" class="button-secondary">SEE ALL EXPERIENCES</a></div>
     </div>
 </section>
 <!-- Module Our Relax, Reboot and Refresh starts here-->

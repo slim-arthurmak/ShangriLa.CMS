@@ -3,10 +3,12 @@
  <!-- Module Hotel Offers starts here-->
 <section id="offers" class="section-row hotel-offers-list equal-height-section inpage-element">
     <div class="container carousel-container">
-        <h2 class="section-heading">Great offers at Shangri-La Hotel, Singapore</h2>
+        <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
         <div class="row">
             <div class="owl-carousel mobile-carousel">
-                <div class="item">
+                @Html.PropertyFor(x => x.FeaturedOffersContentArea)
+
+                @*<div class="item">
                     <div class="col-xs-12 col-sm-6 no-gutter">
                         <div class="great-offer-container shadow-box mobile-equal-height-block">
                             <div class="image-container scaled-image">
@@ -33,10 +35,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
-        <div class="view-all-button"><a href="#" class="button-secondary">SEE ALL OFFERS</a></div>
+        <div class="view-all-button"><a href="@Url.ContentUrl(Model.BlockCTA.ButtonLink)" class="button-secondary">SEE ALL OFFERS</a></div>
     </div>
 </section>
 <!-- Module Hotel Offers Ends here          -->

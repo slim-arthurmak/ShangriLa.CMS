@@ -12,7 +12,7 @@ namespace Shangri_La.EpiServer.SL.Web.Business.Migration
         public override void AddChanges()
         {
             //RenameContentType();
-            RenameProperty();
+            //RenameProperty();
         }
 
         private void RenameContentType()

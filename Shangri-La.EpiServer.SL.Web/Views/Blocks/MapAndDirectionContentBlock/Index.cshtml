@@ -4,8 +4,9 @@
 <section id="location" class="section-row map-direction-container inpage-element">
     <div class="container">
         <div class="section-header read-more-section-header">
-            <h2 class="section-heading">Conveniently located</h2>
-            <p class="description">Just minutes from Singapore's main shopping, dining and entertainment district, Shangri-La Hotel, Singapore, keeps the best of the city within reach.</p><a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+            <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+            <p class="description">@Html.PropertyFor(m => m.IntroText)</p>
+            <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">@Html.Translate("/common/readmore")</a>
         </div>
         <div class="map-tracker map-equal-height-section">
             <div class="location map-equal-height-block origin"><span class="location-icon"></span><span class="distance">Current Location</span><span class="address">Shangri-La Hotel</span></div>
@@ -13,7 +14,7 @@
             <div class="location map-equal-height-block percent-60"><span class="circle-icon"></span><span class="distance">10 minutes by car</span><span class="address">Singapore CBD</span></div>
             <div class="location map-equal-height-block destination"><span class="circle-icon"></span><span class="distance">30 minutes by car</span><span class="address">Changi International Airport</span></div>
         </div>
-        <div class="view-map"><a href="#" class="common-cta">VIEW MAPS &amp; DIRECTIONS</a></div>
+        <div class="view-map"><a href="#" class="common-cta">@Html.Translate("/blocks/mapanddirectioncontentblock/viewmapsanddirectoins")</a></div>
     </div>
 </section>
 <!-- Module Map & Direction Ends here-->
