@@ -3,6 +3,11 @@
 
 @model IPageViewModel<SitePageData>
 
+@{ 
+    bool showNewLetter = false;
+
+}
+
 <footer>
     <div class="section-row">
         <div class="footer-links-section">
@@ -91,7 +96,11 @@
                                 </div>
                             </div>
                             <p class="download-app"><a href="javascript:void(0);">Download the mobile App</a></p>
+
+                            @if (showNewLetter)
+                            {
                             <p class="download-app"><a href="javascript:void(0);">Sign up for our hotel newsletter</a></p>
+                            }
                         </div>
                     </div>
                 </div>

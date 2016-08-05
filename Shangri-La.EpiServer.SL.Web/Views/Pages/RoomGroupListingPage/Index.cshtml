@@ -211,7 +211,7 @@
                                         <a href="@Url.PageUrl(roomGroup.LinkURL)"><img src="@Url.ContentUrl(roomGroup.RoomHeaderBanner.Image)" alt="@roomGroup.RoomHeaderBanner.AlternateText"></a>
                                     </div>
                                     <div class="content-container shadow-box">
-                                        <div class="heading"><a href="#">@Html.Raw(roomGroup.RoomHeaderBanner.Title)</a></div>
+                                        <div class="heading"><a href="@Url.PageUrl(roomGroup.LinkURL)">@Html.Raw(roomGroup.RoomHeaderBanner.Title)</a></div>
                                         <p class="description">@Html.Raw(roomGroup.RoomHeaderBanner.TeaserText)</p>
                                         <a href="@Url.PageUrl(roomGroup.LinkURL)" class="common-cta">LEARN MORE</a>
                                     </div>
@@ -256,9 +256,9 @@
 }
 <!-- Module Room landing - Explore room by wings Ends here-->
 
-@{
+@*@{
     Html.RenderPartial("FindTheRoomPanel", new FindTheRoomPanelModel());
-}
+}*@
 
 
 
