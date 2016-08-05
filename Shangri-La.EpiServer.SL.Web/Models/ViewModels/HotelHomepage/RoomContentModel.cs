@@ -35,7 +35,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
             }
             FeatureRoomsContentArea = contentArea;
             */
-            FeatureRoomsContentArea = block.FeatureRoomsContentArea.Copy();
+            if (block.FeatureRoomsContentArea != null)
+                FeatureRoomsContentArea = block.FeatureRoomsContentArea.Copy();
         }
 
         public string Heading { get; set; }

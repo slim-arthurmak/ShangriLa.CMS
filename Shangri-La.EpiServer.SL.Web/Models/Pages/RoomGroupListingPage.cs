@@ -21,7 +21,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
                  Order = 1)]
         [AllowedTypes(typeof(RoomGroupBlock))]
         [UIHint(UIHint.Block)]
-        [Required]
+        //[Required]
         public virtual ContentReference RoomGroupBlock { get; set; }
 
     }

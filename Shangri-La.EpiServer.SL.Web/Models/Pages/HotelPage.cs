@@ -45,7 +45,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
                   Order = 1)]
         [AllowedTypes(typeof(HotelBlock))]
         [UIHint(UIHint.Block)]
-        [Required]
+        //[Required]
         public virtual ContentReference HotelBlock { get; set; }
 
         [Display(Name = "Hero Banner Block",

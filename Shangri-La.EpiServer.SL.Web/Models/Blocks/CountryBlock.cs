@@ -21,7 +21,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
             Description = "* Required",
             GroupName = SystemTabNames.Content,
             Order = 1)]
-        [Required(ErrorMessage = "Country Name is required.")]
+        //[Required(ErrorMessage = "Country Name is required.")]
         public virtual string CountryName { get; set; }
 
         [Display(
@@ -30,7 +30,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
             Prompt = "Enter 3 character code",
             GroupName = SystemTabNames.Content,
             Order = 2)]
-        [Required(ErrorMessage = "Country Code is required.")]
+        //[Required(ErrorMessage = "Country Code is required.")]
         public virtual string CountryCode { get; set; }
     }
 }

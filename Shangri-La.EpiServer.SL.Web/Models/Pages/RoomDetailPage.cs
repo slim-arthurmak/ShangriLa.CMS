@@ -21,7 +21,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
                   GroupName = SystemTabNames.Content,
                   Order = 10)]
         [AllowedTypes(typeof(RoomSuiteBlock))]
-        [Required(ErrorMessage = "Room Suite Block is required")]
+        //[Required(ErrorMessage = "Room Suite Block is required")]
         [UIHint(UIHint.Block)]
         public virtual ContentReference RoomSuiteBlock { get; set; }
 

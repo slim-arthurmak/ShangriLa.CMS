@@ -65,7 +65,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         public virtual string Nor1HotelCode { get; set; }
 
         [CultureSpecific]
-        [Required(ErrorMessage = "[Hotel Alias] is required.")]
+        //[Required(ErrorMessage = "[Hotel Alias] is required.")]
         [Display(
             Name = "Hotel Alias",
             Description = "Hotel Alias (for Old SL Site Mapping)",
