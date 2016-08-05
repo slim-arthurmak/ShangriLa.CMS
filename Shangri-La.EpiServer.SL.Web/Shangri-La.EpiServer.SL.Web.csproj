@@ -283,6 +283,7 @@
     <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
     <Compile Include="Business\Initialization\FileBasedEventsInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
+    <Compile Include="Business\Migration\HeroHeaderBannerBlockMigrationStep.cs" />
     <Compile Include="Business\Migration\HotelHomepageContentBlockMigrationStep.cs" />
     <Compile Include="Business\Migration\RoomSuitePageMigrationStep.cs" />
     <Compile Include="Business\Migration\HotelPageMigrationStep.cs" />
@@ -377,7 +378,7 @@
     <Compile Include="Helpers\UrlHelpers.cs" />
     <Compile Include="Models\Blocks\ButtonBlock.cs" />
     <Compile Include="Models\Blocks\EditorialBlock.cs" />
-    <Compile Include="Models\Blocks\HeroBannerBlock.cs" />
+    <Compile Include="Models\Blocks\HeroHeaderBannerBlock.cs" />
     <Compile Include="Models\Blocks\HotelBlock.cs" />
     <Compile Include="Models\Blocks\HotelHomepage\OverviewContentBlock.cs" />
     <Compile Include="Models\Blocks\PageListBlock.cs" />
@@ -418,6 +419,7 @@
     <Compile Include="Models\ViewModels\RoomListing\RoomCategroyListViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\ExploreOtherRoomsListViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\RoomFeaturesContentViewModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\HeroHeaderBannerViewModel.cs" />
     <Compile Include="Models\ViewModels\RoomPage\RoomHeaderBannerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ServiceBase.cs" />
@@ -1515,7 +1517,7 @@
     <Content Include="Views\Preview\Index.cshtml" />
     <Content Include="Views\Shared\BookingPanel.cshtml" />
     <Content Include="Views\Blocks\RoomContentBlock\Index.cshtml" />
-    <Content Include="Views\Blocks\HeroBannerBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\HeroHeaderBannerBlock\Index.cshtml" />
     <Content Include="Views\Blocks\DineContentBlock\Index.cshtml" />
     <Content Include="Views\Blocks\EventsContentBlock\Index.cshtml" />
     <Content Include="Views\Blocks\ExperienceContentBlock\Index.cshtml" />

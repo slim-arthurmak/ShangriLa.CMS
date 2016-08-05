@@ -3,20 +3,21 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
-using Shangri_La.EpiServer.Common.Models.Blocks;
 using Shangri_La.EpiServer.Common.Business;
+using Shangri_La.EpiServer.Common.Models.Blocks;
 
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
 {
-    [ContentType(DisplayName = "SectionHeaderBanner", GUID = "bb4b2795-5c20-449e-8872-2916dd5104d2", 
-        GroupName = GroupNames.SLDefault,
-        Description = "")]
-    public class SectionHeaderBannerBlock : SiteBlockData
+    [ContentType(DisplayName = "Hero Header Banner Block",
+                GroupName = GroupNames.SLDefault,
+                GUID = "b1beba54-eb9c-4c59-bd33-74038ece1961", 
+                Description = "")]
+    public class HeroHeaderBannerBlock : SiteBlockData
     {
         [Display(
                     Name = "Image (Desktop)",
-                    Description = "* Required. Must be 1400px width, 467px height (3:1)",
+                    Description = "* Required. Must be 1500px width, 750px height (2:1)",
                     GroupName = SystemTabNames.Content,
                     Order = 10)]
         [UIHint(UIHint.Image)]
@@ -45,9 +46,9 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Blocks
         public virtual ContentReference MobileImage { get; set; }
 
         [Display(
-            Name = "Alternate Text", 
-            Description = "Alternate Text", 
-            GroupName = SystemTabNames.Content, 
+            Name = "Alternate Text",
+            Description = "Alternate Text",
+            GroupName = SystemTabNames.Content,
             Order = 40)]
         public virtual string AlternateText { get; set; }
 

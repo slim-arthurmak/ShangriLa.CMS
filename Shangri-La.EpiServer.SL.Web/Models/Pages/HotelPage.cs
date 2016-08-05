@@ -54,7 +54,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         //[CultureSpecific]
         //[MaxItemCount(1)]
         //[AllowedTypes(typeof(MainCarouselBlock))]
-        public virtual HeroBannerBlock HeroBanner { get; set; }
+        public virtual HeroHeaderBannerBlock HeroHeaderBanner { get; set; }
 
         [AllowedTypes(new[] { typeof(OverviewContentBlock),
             typeof(RoomContentBlock),
@@ -83,7 +83,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
                 var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
 
                 HotelBlock hotelBlock = contentRepository.Get<HotelBlock>(this.HotelBlock);
-                HeroBanner.Title = hotelBlock.HotelShortName;
+                HeroHeaderBanner.Title = hotelBlock.HotelShortName;
             }
                 
         }

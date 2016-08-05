@@ -1,11 +1,11 @@
-﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.HeroBannerBlock
+﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.HeroHeaderBannerBlock
 
 <section id="main-banner" class="viewport-element main-banner-hotel-landing lighter-text">
     <div class="caption-container-hotel-landing">
         @*<h1 class="heading">Shangri-La Hotel, Singapore</h1>
             <p class="description">A lush, green sanctuary of calm in one of Asia's most dynamic modern cities, and the place where the legendary Shangri-La story first began.</p>*@
         <h1 class="heading">@Html.PropertyFor(m => m.Title)</h1>
-        <p class="description">@Html.PropertyFor(m => m.ShortDescription)</p>
+        <p class="description">@Html.PropertyFor(m => m.Introduction)</p>
         <!-- climate temp and time include starts-->        
         @*<div data-lat="1.3113355055433844" data-lon="103.82673382759094" data-hotelCode="SLS" data-lang="en" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"></span></div>*@
         <div data-hotelCode="SLS" data-lang="en" class="climate-time-control"><span class="cloud"> </span><span class="temp"> </span><span class="time"></span></div>
@@ -13,7 +13,7 @@
     </div>
     <div class="image-container">
         @*<img src="@Url.ContentUrl(Model.DesktopImage)?width=1500&height=750&mode=crop&scale=canvas" alt="@Model.AlternateText">*@
-        <img src="@Url.ContentUrl(Model.DesktopImage)" alt="@Model.AlternateText">
+        <img src="@Url.ContentUrl(Model.DesktopImage)?width=1500&height=750&mode=crop&scale=canvas" alt="@Model.AlternateText">
         @*<img src="img/content/main-banner-hotel-landing.jpg" alt="{CMS}">*@
     </div>
     <a href="#overview" class="explore-button icon-ios-arrow-down"><span></span></a>
