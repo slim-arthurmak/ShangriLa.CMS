@@ -313,7 +313,7 @@
     <Compile Include="Controllers\Blocks\GalleryContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\DineContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\EventsContentBlockController.cs" />
-    <Compile Include="Controllers\Blocks\HeroBannerBlockController.cs" />
+    <Compile Include="Controllers\Blocks\HeroHeaderBannerBlockController.cs" />
     <Compile Include="Controllers\Blocks\ExperienceContentBlockController.cs" />
     <Compile Include="Controllers\Blocks\RoomContentBlockController.cs" />
     <Compile Include="Controllers\BlockControllerBase.cs" />
