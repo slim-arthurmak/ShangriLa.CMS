@@ -49,5 +49,12 @@ namespace Shangri_La.EpiServer.Common.Models.Blocks.SL
                     Order = 1)]
                 public virtual string Name { get; set; }
          */
+        //Sets the default property values
+        public override void SetDefaultValues(ContentType contentType)
+        {
+            TrustYouID = "aa951d42-1c1c-48de-aa67-a98b0a37fcde";
+            base.SetDefaultValues(contentType);
+            //Set up your defaults here  
+        }
     }
 }
