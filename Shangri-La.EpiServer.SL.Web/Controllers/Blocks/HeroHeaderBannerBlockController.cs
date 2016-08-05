@@ -10,15 +10,16 @@ using EPiServer.Web.Mvc;
 
 using Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
+using Shangri_La.EpiServer.SL.Web.Models.Pages;
 using Shangri_La.EpiServer.SL.Web.Business;
 
 namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
 {
-    public class HeroHeaderBannerBlockController : BlockController<HeroHeaderBannerBlock>
+    public class HeroHeaderBannerBlockController : BlockControllerBase<HeroHeaderBannerBlock>
     {
         private ContentLocator contentLocator;
         private IContentLoader contentLoader;
-        public HeroHeaderBannerBlockController(ContentLocator contentLocator, IContentLoader contentLoader)
+        public HeroHeaderBannerBlockController(ContentLocator contentLocator, IContentLoader contentLoader) : base(contentLocator, contentLoader)
         {
             this.contentLocator = contentLocator;
             this.contentLoader = contentLoader;
@@ -28,6 +29,16 @@ namespace Shangri_La.EpiServer.SL.Web.Controllers.Blocks
         {
 
             HeroHeaderBannerViewModel model = new HeroHeaderBannerViewModel(currentBlock);
+
+
+            if (CurrentPage is HotelPage)
+            {
+                HotelBlock hotelBlock = contentLoader.Get<HotelBlock>(((HotelPage)CurrentPage).HotelBlock);
+                if (hotelBlock != null)
+                {
+                    model.HotelCode = hotelBlock.HotelCode;
+                }
+            }
 
             SetEditingHints();
 

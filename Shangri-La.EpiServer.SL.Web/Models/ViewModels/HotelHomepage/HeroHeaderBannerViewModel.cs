@@ -35,5 +35,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
         public string AlternateText { get; set; }
 
         public string TeaserText { get; set; }
+
+        public string HotelCode { get; set; }
     }
 }
