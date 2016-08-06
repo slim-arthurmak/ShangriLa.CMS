@@ -219,8 +219,8 @@ namespace Shangri_La.EpiServer.SL.Web.Services
 
     public class Main
     {
-        public int humudity { get; set; }
-        public int pressure { get; set; }
+        public string humudity { get; set; }
+        public string pressure { get; set; }
         public string temp { get; set; }
         public string temp_max { get; set; }
         public string temp_min { get; set; }
