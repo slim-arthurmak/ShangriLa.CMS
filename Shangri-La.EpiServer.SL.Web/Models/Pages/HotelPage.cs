@@ -8,6 +8,7 @@ using Shangri_La.EpiServer.Common.Business;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks;
 using Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage;
 using System.ComponentModel.DataAnnotations;
+using Shangri_La.EpiServer.Common.Business.Attributes;
 
 namespace Shangri_La.EpiServer.SL.Web.Models.Pages
 {
@@ -15,6 +16,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.Pages
         GUID = "19EA638C-376D-4216-9353-9E34D4C07B05", 
         Description = "Hotel Page", 
         GroupName = GroupNames.SLPages)]
+    [ContentImage("HotelHomepage.PNG")]
     public class HotelPage : SitePageData
     {
         /*

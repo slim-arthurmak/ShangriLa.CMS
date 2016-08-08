@@ -428,7 +428,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\ContentIcons\" />
     <Folder Include="Content\img\icons\" />
     <Folder Include="Content\pagemodules\img\icons\" />
     <Folder Include="Content\pagemodules\services\" />
@@ -942,6 +941,8 @@
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="Content\all-room-landing.html" />
     <Content Include="Content\all-room-wings.html" />
+    <Content Include="Content\ContentIcons\HotelHomepage.png" />
+    <Content Include="Content\ContentIcons\RoomDetailPage.png" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\modules.css" />
     <Content Include="Content\css\vendors.css" />
