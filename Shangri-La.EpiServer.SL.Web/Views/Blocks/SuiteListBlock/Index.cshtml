@@ -12,7 +12,7 @@
     {
         int numMore = (Model.AllRooms.Count - maxRoomNum);
 
-        showMoreCTAText = string.Format("VIEW {0} MORE SUITES", numMore);
+        showMoreCTAText = string.Format("VIEW {0} MORE {1}", numMore, Model.RoomType.ToUpperInvariant());
         showMoreRooms = true;
     }
 }
