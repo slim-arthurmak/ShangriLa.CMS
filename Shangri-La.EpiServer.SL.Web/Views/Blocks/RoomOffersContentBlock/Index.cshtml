@@ -1,0 +1,45 @@
+﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.RoomPage.RoomOffersContentBlock
+
+<!-- Module Get more out of your stay starts here-->
+<section class="section-row offers-list equal-height-section">
+    <div class="container carousel-container">
+        <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+        <div class="row">
+            <div class="owl-carousel mobile-carousel">
+
+                @Html.PropertyFor(x => x.FeaturedOffersContentArea, new { Tag = "RoomOfferTeaserCardView" })
+
+                @*<div class="item">
+                    <div class="col-xs-12 col-sm-6 no-gutter">
+                        <div class="event-offer-container shadow-box mobile-equal-height-block">
+                            <div class="image-container scaled-image">
+                                <a href="#"><img src="@Url.Content("~/Content/img/content/get-more-get-ahead.jpg")" alt="{CMS}"></a>
+                            </div>
+                            <div class="content-container">
+                                <div class="heading"><a href="#">Get ahead</a></div>
+                                <p class="description">Early birds get the best savings. Make your room booking 30 days in advance, and you will receive a 15% discount on your rate.</p><a href="#" class="common-cta">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-xs-12 col-sm-6 no-gutter">
+                        <div class="event-offer-container shadow-box mobile-equal-height-block">
+                            <div class="image-container scaled-image">
+                                <a href="#"><img src="@Url.Content("~/Content/img/content/get-more-fresh-start.jpg")" alt="{CMS}"></a>
+                            </div>
+                            <div class="content-container">
+                                <div class="heading"><a href="#">Fresh start</a></div>
+                                <p class="description">Make healthy and hearty start to the day with a complimentary breakfast buffet. Enjoy everything from local delights to continental favourites.</p><a href="#" class="common-cta">SEE MORE      </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+
+
+        <div class="view-all-button"><a href="@Url.ContentUrl(Model.BlockButtonLink.ButtonLink)" class="button-secondary">@Model.BlockButtonLink.ButtonText</a></div>
+    </div>
+</section>
+<!-- Module Get more out of your stay Ends here -->

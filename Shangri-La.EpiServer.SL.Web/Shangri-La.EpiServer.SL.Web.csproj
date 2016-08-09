@@ -1,0 +1,1585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4624664-5E0B-489B-9FB1-46EF91899C42}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shangri_La.EpiServer.SL.Web</RootNamespace>
+    <AssemblyName>Shangri-La.EpiServer.SL.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.ApplicationModules, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.ApplicationModules.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cms.Shell.UI, Version=9.8.2.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.8.2\lib\net45\EPiServer.Cms.Shell.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Configuration, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Data, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Data.Cache, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Data.Cache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Enterprise, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.Enterprise.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Events, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Events.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Framework, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.ImageLibrary, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.ImageLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Licensing, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.LinkAnalyzer, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.LinkAnalyzer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Logging.Log4Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Logging.Log4Net.2.0.0\lib\net45\EPiServer.Logging.Log4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Packaging, Version=3.2.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Packaging.3.2.4\lib\net45\EPiServer.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Packaging.CmdAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Packaging.3.2.4\lib\net45\EPiServer.Packaging.CmdAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Packaging.UI, Version=3.2.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Packaging.UI.3.2.4\lib\net45\EPiServer.Packaging.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Shell, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.0\lib\net45\EPiServer.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Shell.UI, Version=9.8.2.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.8.2\lib\net45\EPiServer.Shell.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.UI, Version=9.8.2.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.8.2\lib\net45\EPiServer.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Web.WebControls, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.Web.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.XForms, Version=9.12.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.0\lib\net45\EPiServer.XForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageResizer.Plugins.DiskCache, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.Plugins.DiskCache.4.0.5\lib\net45\ImageResizer.Plugins.DiskCache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageResizer.Plugins.EPiServerBlobReader, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.Plugins.EPiServerBlobReader.4.0.3\lib\net45\ImageResizer.Plugins.EPiServerBlobReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageResizer.Plugins.PrettyGifs, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.Plugins.PrettyGifs.4.0.5\lib\net45\ImageResizer.Plugins.PrettyGifs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.5.40416.9020, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Core.2.5.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=3.1.6.186, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap-signed.3.1.6.186\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap-signed.3.1.6.186\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web-signed.3.1.6.186\lib\net40\StructureMap.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ItemGroup>
+    <Compile Include="Business\Channels\DisplayResolutionBase.cs" />
+    <Compile Include="Business\Channels\DisplayResolutions.cs" />
+    <Compile Include="Business\Channels\MobileChannel.cs" />
+    <Compile Include="Business\Channels\WebChannel.cs" />
+    <Compile Include="Business\ContentLocator.cs" />
+    <Compile Include="Business\Data\FileDataImporter.cs" />
+    <Compile Include="Business\Data\FileReader.cs" />
+    <Compile Include="Business\Data\IFileDataImporter.cs" />
+    <Compile Include="Business\EditorDescriptors\StringListEditorDescriptor.cs" />
+    <Compile Include="Business\EmailAddressAttribute.cs" />
+    <Compile Include="Business\ExtensionMethods.cs" />
+    <Compile Include="Business\Extensions\ContentAreaExtensions.cs" />
+    <Compile Include="Business\Extensions\EditorDescriptors\CountryBlockSelectionFactory.cs" />
+    <Compile Include="Business\IModifyLayout.cs" />
+    <Compile Include="Business\Initialization\BundleConfig.cs" />
+    <Compile Include="Business\Initialization\RestrictedContentFolderInitializationModule.cs" />
+    <Compile Include="Business\Initialization\CustomizedRenderingInitialization.cs" />
+    <Compile Include="Business\Initialization\DependencyResolverInitialization.cs" />
+    <Compile Include="Business\Initialization\DisplayModesInitialization.cs" />
+    <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
+    <Compile Include="Business\Initialization\FileBasedEventsInitialization.cs" />
+    <Compile Include="Business\Initialization\FilterConfig.cs" />
+    <Compile Include="Business\Migration\HeroHeaderBannerBlockMigrationStep.cs" />
+    <Compile Include="Business\Migration\HotelHomepageContentBlockMigrationStep.cs" />
+    <Compile Include="Business\Migration\RoomSuitePageMigrationStep.cs" />
+    <Compile Include="Business\Migration\HotelPageMigrationStep.cs" />
+    <Compile Include="Business\PageContextActionFilter.cs" />
+    <Compile Include="Business\PageTypeExtensions.cs" />
+    <Compile Include="Business\PageViewContextFactory.cs" />
+    <Compile Include="Business\Rendering\BootstrapContentAreaRenderer.cs" />
+    <Compile Include="Business\Rendering\CustomContentAreaRenderer.cs" />
+    <Compile Include="Business\Rendering\SLContentAreaRenderer.cs" />
+    <Compile Include="Business\Rendering\ErrorHandlingContentRenderer.cs" />
+    <Compile Include="Business\Rendering\IContainerPage.cs" />
+    <Compile Include="Business\Rendering\ICustomCssInContentArea.cs" />
+    <Compile Include="Business\Rendering\SiteViewEngine.cs" />
+    <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
+    <Compile Include="Business\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\UIDescriptors\ContainerPageUIDescriptor.cs" />
+    <Compile Include="Controllers\Blocks\SuiteListBlockController.cs" />
+    <Compile Include="Controllers\Blocks\HorizonClubListBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomCategroyListBlockController.cs" />
+    <Compile Include="Controllers\Blocks\ExploreOtherRoomsListBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomFeaturesContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomOffersContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomHeaderBannerBlockController.cs" />
+    <Compile Include="Controllers\Blocks\SectionHeaderBannerBlockController.cs" />
+    <Compile Include="Controllers\Blocks\OffersContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\MapAndDirectionContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\GalleryContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\DineContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\EventsContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\HeroHeaderBannerBlockController.cs" />
+    <Compile Include="Controllers\Blocks\ExperienceContentBlockController.cs" />
+    <Compile Include="Controllers\Blocks\RoomContentBlockController.cs" />
+    <Compile Include="Controllers\BlockControllerBase.cs" />
+    <Compile Include="Controllers\Pages\RoomDetailPagePartialController.cs" />
+    <Compile Include="Controllers\Pages\RoomGroupListingPageController.cs" />
+    <Compile Include="Controllers\PreviewController.cs" />
+    <Compile Include="Controllers\Pages\RoomListingPageController.cs" />
+    <Compile Include="Controllers\Pages\RoomDetailPageController.cs" />
+    <Compile Include="Business\Extensions\EditorDescriptors\HotelBlockReferenceEditorDescriptor.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ImageResizer\EPiServerBlobFile.cs" />
+    <Compile Include="ImageResizer\EPiServerBlobPlugin.cs" />
+    <Compile Include="Models\Blocks\CarouselBlock.cs" />
+    <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
+    <Compile Include="Models\Blocks\CityBlock.cs" />
+    <Compile Include="Models\Blocks\CountryBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\DineContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\EventsContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\ExperienceContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\GalleryContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\HotelHighlightBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\HotelHomepageContentBlockData.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\MapAndDirectionContentBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\OffersContentBlock.cs" />
+    <Compile Include="Models\Blocks\MosaicBannerCarouselBlock.cs" />
+    <Compile Include="Models\Blocks\RestaurantBlock.cs" />
+    <Compile Include="Models\Blocks\RoomCategoryBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\RoomContentBlock.cs" />
+    <Compile Include="Models\Blocks\RoomListing\HorizonClubListBlock.cs" />
+    <Compile Include="Models\Blocks\RoomListing\RoomCategroyListBlock.cs" />
+    <Compile Include="Models\Blocks\RoomListing\SuiteListBlock.cs" />
+    <Compile Include="Models\Blocks\RoomPage\ExploreOtherRoomsListBlock.cs" />
+    <Compile Include="Models\Blocks\RoomGroupBlock.cs" />
+    <Compile Include="Models\Blocks\RoomPage\RoomFeaturesContentBlock.cs" />
+    <Compile Include="Models\Blocks\RoomPage\RoomHeaderBannerBlock.cs" />
+    <Compile Include="Models\Blocks\RoomSuiteBlock.cs" />
+    <Compile Include="Models\Blocks\SectionContentBlockData.cs" />
+    <Compile Include="Models\Blocks\SectionHeaderBannerBlock.cs" />
+    <Compile Include="Models\Blocks\SectionHightlightContentBlock.cs" />
+    <Compile Include="Models\Blocks\SectionOverviewContentBlock.cs" />
+    <Compile Include="Models\Folders\CityBlockContentFolder.cs" />
+    <Compile Include="Models\Folders\CountryBlockContentFolder.cs" />
+    <Compile Include="Models\Blocks\RoomPage\RoomOffersContentBlock.cs" />
+    <Compile Include="Models\Pages\ContainerPage.cs" />
+    <Compile Include="Models\Pages\RoomGroupListingPage.cs" />
+    <Compile Include="Models\ViewModels\FindTheRoomPanelModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\MapAndDirectionContentModel.cs" />
+    <Compile Include="Models\ViewModels\HotelInformationSummaryViewModel.cs" />
+    <Compile Include="Models\ViewModels\BookingPanelModel.cs" />
+    <Compile Include="Controllers\DefaultPageController.cs" />
+    <Compile Include="Controllers\Blocks\OverviewContentBlockController.cs" />
+    <Compile Include="Controllers\PageControllerBase.cs" />
+    <Compile Include="Controllers\PagePartialController.cs" />
+    <Compile Include="Controllers\StandardPageController.cs" />
+    <Compile Include="Controllers\Pages\HotelPageController.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CategorizableExtensions.cs" />
+    <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Helpers\UrlHelpers.cs" />
+    <Compile Include="Models\Blocks\ButtonBlock.cs" />
+    <Compile Include="Models\Blocks\EditorialBlock.cs" />
+    <Compile Include="Models\Blocks\HeroHeaderBannerBlock.cs" />
+    <Compile Include="Models\Blocks\HotelBlock.cs" />
+    <Compile Include="Models\Blocks\HotelHomepage\OverviewContentBlock.cs" />
+    <Compile Include="Models\Blocks\PageListBlock.cs" />
+    <Compile Include="Models\Blocks\SiteLogotypeBlock.cs" />
+    <Compile Include="Models\Media\GenericMedia.cs" />
+    <Compile Include="Models\Media\IFileProperties.cs" />
+    <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Media\VideoFile.cs" />
+    <Compile Include="Models\Pages\DestinationPage.cs" />
+    <Compile Include="Models\Pages\DestinationLandingPage.cs" />
+    <Compile Include="Models\Pages\HotelLandingPage.cs" />
+    <Compile Include="Models\Pages\HotelPage.cs" />
+    <Compile Include="Models\Pages\RoomSuiteLandingPage.cs" />
+    <Compile Include="Models\Pages\RoomListingPage.cs" />
+    <Compile Include="Models\Pages\RoomDetailPage.cs" />
+    <Compile Include="Models\Pages\SitePageData.cs" />
+    <Compile Include="Models\Pages\StandardPage.cs" />
+    <Compile Include="Models\Pages\StartPage.cs" />
+    <Compile Include="Models\Properties\PropertyStringList.cs" />
+    <Compile Include="Models\SiteContentType.cs" />
+    <Compile Include="Models\SiteImageUrl.cs" />
+    <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\RoomGroupNavigatoinModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\RoomContentModel.cs" />
+    <Compile Include="Models\ViewModels\RoomGroupListingPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListingPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomDetailPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\PropertyPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\DefaultPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\LayoutModel.cs" />
+    <Compile Include="Models\ViewModels\PageListModel.cs" />
+    <Compile Include="Models\ViewModels\PageViewModel.cs" />
+    <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\PreviewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListing\RoomCategoryListNavigatoinModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListing\SuiteListViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListing\HorizonClubListViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomListing\RoomCategroyListViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomPage\ExploreOtherRoomsListViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomPage\RoomFeaturesContentViewModel.cs" />
+    <Compile Include="Models\ViewModels\HotelHomepage\HeroHeaderBannerViewModel.cs" />
+    <Compile Include="Models\ViewModels\RoomPage\RoomHeaderBannerViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\WeatherService.svc.cs">
+      <DependentUpon>WeatherService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\img\icons\" />
+    <Folder Include="Content\pagemodules\img\icons\" />
+    <Folder Include="Content\pagemodules\services\" />
+    <Folder Include="Content\services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientResources\googlemaps\async.js" />
+    <Content Include="ClientResources\googlemaps\Editor.js" />
+    <Content Include="ClientResources\googlemaps\nls\Labels.js" />
+    <Content Include="ClientResources\googlemaps\nls\sv\Labels.js" />
+    <Content Include="ClientResources\googlemaps\WidgetTemplate.css" />
+    <Content Include="ClientResources\googlemaps\WidgetTemplate.html" />
+    <Content Include="ClientResources\Images\icons\16px\0001-home.png" />
+    <Content Include="ClientResources\Images\icons\16px\0002-home2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0003-home3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0004-office.png" />
+    <Content Include="ClientResources\Images\icons\16px\0005-newspaper.png" />
+    <Content Include="ClientResources\Images\icons\16px\0006-pencil.png" />
+    <Content Include="ClientResources\Images\icons\16px\0007-pencil2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0008-quill.png" />
+    <Content Include="ClientResources\Images\icons\16px\0009-pen.png" />
+    <Content Include="ClientResources\Images\icons\16px\0010-blog.png" />
+    <Content Include="ClientResources\Images\icons\16px\0011-eyedropper.png" />
+    <Content Include="ClientResources\Images\icons\16px\0012-droplet.png" />
+    <Content Include="ClientResources\Images\icons\16px\0013-paint-format.png" />
+    <Content Include="ClientResources\Images\icons\16px\0014-image.png" />
+    <Content Include="ClientResources\Images\icons\16px\0015-images.png" />
+    <Content Include="ClientResources\Images\icons\16px\0016-camera.png" />
+    <Content Include="ClientResources\Images\icons\16px\0017-headphones.png" />
+    <Content Include="ClientResources\Images\icons\16px\0018-music.png" />
+    <Content Include="ClientResources\Images\icons\16px\0019-play.png" />
+    <Content Include="ClientResources\Images\icons\16px\0020-film.png" />
+    <Content Include="ClientResources\Images\icons\16px\0021-video-camera.png" />
+    <Content Include="ClientResources\Images\icons\16px\0022-dice.png" />
+    <Content Include="ClientResources\Images\icons\16px\0023-pacman.png" />
+    <Content Include="ClientResources\Images\icons\16px\0024-spades.png" />
+    <Content Include="ClientResources\Images\icons\16px\0025-clubs.png" />
+    <Content Include="ClientResources\Images\icons\16px\0026-diamonds.png" />
+    <Content Include="ClientResources\Images\icons\16px\0027-bullhorn.png" />
+    <Content Include="ClientResources\Images\icons\16px\0028-connection.png" />
+    <Content Include="ClientResources\Images\icons\16px\0029-podcast.png" />
+    <Content Include="ClientResources\Images\icons\16px\0030-feed.png" />
+    <Content Include="ClientResources\Images\icons\16px\0031-mic.png" />
+    <Content Include="ClientResources\Images\icons\16px\0032-book.png" />
+    <Content Include="ClientResources\Images\icons\16px\0033-books.png" />
+    <Content Include="ClientResources\Images\icons\16px\0034-library.png" />
+    <Content Include="ClientResources\Images\icons\16px\0035-file-text.png" />
+    <Content Include="ClientResources\Images\icons\16px\0036-profile.png" />
+    <Content Include="ClientResources\Images\icons\16px\0037-file-empty.png" />
+    <Content Include="ClientResources\Images\icons\16px\0038-files-empty.png" />
+    <Content Include="ClientResources\Images\icons\16px\0039-file-text2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0040-file-picture.png" />
+    <Content Include="ClientResources\Images\icons\16px\0041-file-music.png" />
+    <Content Include="ClientResources\Images\icons\16px\0042-file-play.png" />
+    <Content Include="ClientResources\Images\icons\16px\0043-file-video.png" />
+    <Content Include="ClientResources\Images\icons\16px\0044-file-zip.png" />
+    <Content Include="ClientResources\Images\icons\16px\0045-copy.png" />
+    <Content Include="ClientResources\Images\icons\16px\0046-paste.png" />
+    <Content Include="ClientResources\Images\icons\16px\0047-stack.png" />
+    <Content Include="ClientResources\Images\icons\16px\0048-folder.png" />
+    <Content Include="ClientResources\Images\icons\16px\0049-folder-open.png" />
+    <Content Include="ClientResources\Images\icons\16px\0050-folder-plus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0051-folder-minus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0052-folder-download.png" />
+    <Content Include="ClientResources\Images\icons\16px\0053-folder-upload.png" />
+    <Content Include="ClientResources\Images\icons\16px\0054-price-tag.png" />
+    <Content Include="ClientResources\Images\icons\16px\0055-price-tags.png" />
+    <Content Include="ClientResources\Images\icons\16px\0056-barcode.png" />
+    <Content Include="ClientResources\Images\icons\16px\0057-qrcode.png" />
+    <Content Include="ClientResources\Images\icons\16px\0058-ticket.png" />
+    <Content Include="ClientResources\Images\icons\16px\0059-cart.png" />
+    <Content Include="ClientResources\Images\icons\16px\0060-coin-dollar.png" />
+    <Content Include="ClientResources\Images\icons\16px\0061-coin-euro.png" />
+    <Content Include="ClientResources\Images\icons\16px\0062-coin-pound.png" />
+    <Content Include="ClientResources\Images\icons\16px\0063-coin-yen.png" />
+    <Content Include="ClientResources\Images\icons\16px\0064-credit-card.png" />
+    <Content Include="ClientResources\Images\icons\16px\0065-calculator.png" />
+    <Content Include="ClientResources\Images\icons\16px\0066-lifebuoy.png" />
+    <Content Include="ClientResources\Images\icons\16px\0067-phone.png" />
+    <Content Include="ClientResources\Images\icons\16px\0068-phone-hang-up.png" />
+    <Content Include="ClientResources\Images\icons\16px\0069-address-book.png" />
+    <Content Include="ClientResources\Images\icons\16px\0070-envelop.png" />
+    <Content Include="ClientResources\Images\icons\16px\0071-pushpin.png" />
+    <Content Include="ClientResources\Images\icons\16px\0072-location.png" />
+    <Content Include="ClientResources\Images\icons\16px\0073-location2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0074-compass.png" />
+    <Content Include="ClientResources\Images\icons\16px\0075-compass2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0076-map.png" />
+    <Content Include="ClientResources\Images\icons\16px\0077-map2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0078-history.png" />
+    <Content Include="ClientResources\Images\icons\16px\0079-clock.png" />
+    <Content Include="ClientResources\Images\icons\16px\0080-clock2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0081-alarm.png" />
+    <Content Include="ClientResources\Images\icons\16px\0082-bell.png" />
+    <Content Include="ClientResources\Images\icons\16px\0083-stopwatch.png" />
+    <Content Include="ClientResources\Images\icons\16px\0084-calendar.png" />
+    <Content Include="ClientResources\Images\icons\16px\0085-printer.png" />
+    <Content Include="ClientResources\Images\icons\16px\0086-keyboard.png" />
+    <Content Include="ClientResources\Images\icons\16px\0087-display.png" />
+    <Content Include="ClientResources\Images\icons\16px\0088-laptop.png" />
+    <Content Include="ClientResources\Images\icons\16px\0089-mobile.png" />
+    <Content Include="ClientResources\Images\icons\16px\0090-mobile2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0091-tablet.png" />
+    <Content Include="ClientResources\Images\icons\16px\0092-tv.png" />
+    <Content Include="ClientResources\Images\icons\16px\0093-drawer.png" />
+    <Content Include="ClientResources\Images\icons\16px\0094-drawer2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0095-box-add.png" />
+    <Content Include="ClientResources\Images\icons\16px\0096-box-remove.png" />
+    <Content Include="ClientResources\Images\icons\16px\0097-download.png" />
+    <Content Include="ClientResources\Images\icons\16px\0098-upload.png" />
+    <Content Include="ClientResources\Images\icons\16px\0099-floppy-disk.png" />
+    <Content Include="ClientResources\Images\icons\16px\0100-drive.png" />
+    <Content Include="ClientResources\Images\icons\16px\0101-database.png" />
+    <Content Include="ClientResources\Images\icons\16px\0102-undo.png" />
+    <Content Include="ClientResources\Images\icons\16px\0103-redo.png" />
+    <Content Include="ClientResources\Images\icons\16px\0104-undo2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0105-redo2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0106-forward.png" />
+    <Content Include="ClientResources\Images\icons\16px\0107-reply.png" />
+    <Content Include="ClientResources\Images\icons\16px\0108-bubble.png" />
+    <Content Include="ClientResources\Images\icons\16px\0109-bubbles.png" />
+    <Content Include="ClientResources\Images\icons\16px\0110-bubbles2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0111-bubble2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0112-bubbles3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0113-bubbles4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0114-user.png" />
+    <Content Include="ClientResources\Images\icons\16px\0115-users.png" />
+    <Content Include="ClientResources\Images\icons\16px\0116-user-plus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0117-user-minus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0118-user-check.png" />
+    <Content Include="ClientResources\Images\icons\16px\0119-user-tie.png" />
+    <Content Include="ClientResources\Images\icons\16px\0120-quotes-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0121-quotes-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0122-hour-glass.png" />
+    <Content Include="ClientResources\Images\icons\16px\0123-spinner.png" />
+    <Content Include="ClientResources\Images\icons\16px\0124-spinner2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0125-spinner3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0126-spinner4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0127-spinner5.png" />
+    <Content Include="ClientResources\Images\icons\16px\0128-spinner6.png" />
+    <Content Include="ClientResources\Images\icons\16px\0129-spinner7.png" />
+    <Content Include="ClientResources\Images\icons\16px\0130-spinner8.png" />
+    <Content Include="ClientResources\Images\icons\16px\0131-spinner9.png" />
+    <Content Include="ClientResources\Images\icons\16px\0132-spinner10.png" />
+    <Content Include="ClientResources\Images\icons\16px\0133-spinner11.png" />
+    <Content Include="ClientResources\Images\icons\16px\0134-binoculars.png" />
+    <Content Include="ClientResources\Images\icons\16px\0135-search.png" />
+    <Content Include="ClientResources\Images\icons\16px\0136-zoom-in.png" />
+    <Content Include="ClientResources\Images\icons\16px\0137-zoom-out.png" />
+    <Content Include="ClientResources\Images\icons\16px\0138-enlarge.png" />
+    <Content Include="ClientResources\Images\icons\16px\0139-shrink.png" />
+    <Content Include="ClientResources\Images\icons\16px\0140-enlarge2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0141-shrink2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0142-key.png" />
+    <Content Include="ClientResources\Images\icons\16px\0143-key2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0144-lock.png" />
+    <Content Include="ClientResources\Images\icons\16px\0145-unlocked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0146-wrench.png" />
+    <Content Include="ClientResources\Images\icons\16px\0147-equalizer.png" />
+    <Content Include="ClientResources\Images\icons\16px\0148-equalizer2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0149-cog.png" />
+    <Content Include="ClientResources\Images\icons\16px\0150-cogs.png" />
+    <Content Include="ClientResources\Images\icons\16px\0151-hammer.png" />
+    <Content Include="ClientResources\Images\icons\16px\0152-magic-wand.png" />
+    <Content Include="ClientResources\Images\icons\16px\0153-aid-kit.png" />
+    <Content Include="ClientResources\Images\icons\16px\0154-bug.png" />
+    <Content Include="ClientResources\Images\icons\16px\0155-pie-chart.png" />
+    <Content Include="ClientResources\Images\icons\16px\0156-stats-dots.png" />
+    <Content Include="ClientResources\Images\icons\16px\0157-stats-bars.png" />
+    <Content Include="ClientResources\Images\icons\16px\0158-stats-bars2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0159-trophy.png" />
+    <Content Include="ClientResources\Images\icons\16px\0160-gift.png" />
+    <Content Include="ClientResources\Images\icons\16px\0161-glass.png" />
+    <Content Include="ClientResources\Images\icons\16px\0162-glass2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0163-mug.png" />
+    <Content Include="ClientResources\Images\icons\16px\0164-spoon-knife.png" />
+    <Content Include="ClientResources\Images\icons\16px\0165-leaf.png" />
+    <Content Include="ClientResources\Images\icons\16px\0166-rocket.png" />
+    <Content Include="ClientResources\Images\icons\16px\0167-meter.png" />
+    <Content Include="ClientResources\Images\icons\16px\0168-meter2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0169-hammer2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0170-fire.png" />
+    <Content Include="ClientResources\Images\icons\16px\0171-lab.png" />
+    <Content Include="ClientResources\Images\icons\16px\0172-magnet.png" />
+    <Content Include="ClientResources\Images\icons\16px\0173-bin.png" />
+    <Content Include="ClientResources\Images\icons\16px\0174-bin2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0175-briefcase.png" />
+    <Content Include="ClientResources\Images\icons\16px\0176-airplane.png" />
+    <Content Include="ClientResources\Images\icons\16px\0177-truck.png" />
+    <Content Include="ClientResources\Images\icons\16px\0178-road.png" />
+    <Content Include="ClientResources\Images\icons\16px\0179-accessibility.png" />
+    <Content Include="ClientResources\Images\icons\16px\0180-target.png" />
+    <Content Include="ClientResources\Images\icons\16px\0181-shield.png" />
+    <Content Include="ClientResources\Images\icons\16px\0182-power.png" />
+    <Content Include="ClientResources\Images\icons\16px\0183-switch.png" />
+    <Content Include="ClientResources\Images\icons\16px\0184-power-cord.png" />
+    <Content Include="ClientResources\Images\icons\16px\0185-clipboard.png" />
+    <Content Include="ClientResources\Images\icons\16px\0186-list-numbered.png" />
+    <Content Include="ClientResources\Images\icons\16px\0187-list.png" />
+    <Content Include="ClientResources\Images\icons\16px\0188-list2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0189-tree.png" />
+    <Content Include="ClientResources\Images\icons\16px\0190-menu.png" />
+    <Content Include="ClientResources\Images\icons\16px\0191-menu2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0192-menu3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0193-menu4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0194-cloud.png" />
+    <Content Include="ClientResources\Images\icons\16px\0195-cloud-download.png" />
+    <Content Include="ClientResources\Images\icons\16px\0196-cloud-upload.png" />
+    <Content Include="ClientResources\Images\icons\16px\0197-cloud-check.png" />
+    <Content Include="ClientResources\Images\icons\16px\0198-download2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0199-upload2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0200-download3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0201-upload3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0202-sphere.png" />
+    <Content Include="ClientResources\Images\icons\16px\0203-earth.png" />
+    <Content Include="ClientResources\Images\icons\16px\0204-link.png" />
+    <Content Include="ClientResources\Images\icons\16px\0205-flag.png" />
+    <Content Include="ClientResources\Images\icons\16px\0206-attachment.png" />
+    <Content Include="ClientResources\Images\icons\16px\0207-eye.png" />
+    <Content Include="ClientResources\Images\icons\16px\0208-eye-plus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0209-eye-minus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0210-eye-blocked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0211-bookmark.png" />
+    <Content Include="ClientResources\Images\icons\16px\0212-bookmarks.png" />
+    <Content Include="ClientResources\Images\icons\16px\0213-sun.png" />
+    <Content Include="ClientResources\Images\icons\16px\0214-contrast.png" />
+    <Content Include="ClientResources\Images\icons\16px\0215-brightness-contrast.png" />
+    <Content Include="ClientResources\Images\icons\16px\0216-star-empty.png" />
+    <Content Include="ClientResources\Images\icons\16px\0217-star-half.png" />
+    <Content Include="ClientResources\Images\icons\16px\0218-star-full.png" />
+    <Content Include="ClientResources\Images\icons\16px\0219-heart.png" />
+    <Content Include="ClientResources\Images\icons\16px\0220-heart-broken.png" />
+    <Content Include="ClientResources\Images\icons\16px\0221-man.png" />
+    <Content Include="ClientResources\Images\icons\16px\0222-woman.png" />
+    <Content Include="ClientResources\Images\icons\16px\0223-man-woman.png" />
+    <Content Include="ClientResources\Images\icons\16px\0224-happy.png" />
+    <Content Include="ClientResources\Images\icons\16px\0225-happy2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0226-smile.png" />
+    <Content Include="ClientResources\Images\icons\16px\0227-smile2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0228-tongue.png" />
+    <Content Include="ClientResources\Images\icons\16px\0229-tongue2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0230-sad.png" />
+    <Content Include="ClientResources\Images\icons\16px\0231-sad2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0232-wink.png" />
+    <Content Include="ClientResources\Images\icons\16px\0233-wink2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0234-grin.png" />
+    <Content Include="ClientResources\Images\icons\16px\0235-grin2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0236-cool.png" />
+    <Content Include="ClientResources\Images\icons\16px\0237-cool2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0238-angry.png" />
+    <Content Include="ClientResources\Images\icons\16px\0239-angry2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0240-evil.png" />
+    <Content Include="ClientResources\Images\icons\16px\0241-evil2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0242-shocked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0243-shocked2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0244-baffled.png" />
+    <Content Include="ClientResources\Images\icons\16px\0245-baffled2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0246-confused.png" />
+    <Content Include="ClientResources\Images\icons\16px\0247-confused2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0248-neutral.png" />
+    <Content Include="ClientResources\Images\icons\16px\0249-neutral2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0250-hipster.png" />
+    <Content Include="ClientResources\Images\icons\16px\0251-hipster2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0252-wondering.png" />
+    <Content Include="ClientResources\Images\icons\16px\0253-wondering2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0254-sleepy.png" />
+    <Content Include="ClientResources\Images\icons\16px\0255-sleepy2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0256-frustrated.png" />
+    <Content Include="ClientResources\Images\icons\16px\0257-frustrated2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0258-crying.png" />
+    <Content Include="ClientResources\Images\icons\16px\0259-crying2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0260-point-up.png" />
+    <Content Include="ClientResources\Images\icons\16px\0261-point-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0262-point-down.png" />
+    <Content Include="ClientResources\Images\icons\16px\0263-point-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0264-warning.png" />
+    <Content Include="ClientResources\Images\icons\16px\0265-notification.png" />
+    <Content Include="ClientResources\Images\icons\16px\0266-question.png" />
+    <Content Include="ClientResources\Images\icons\16px\0267-plus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0268-minus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0269-info.png" />
+    <Content Include="ClientResources\Images\icons\16px\0270-cancel-circle.png" />
+    <Content Include="ClientResources\Images\icons\16px\0271-blocked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0272-cross.png" />
+    <Content Include="ClientResources\Images\icons\16px\0273-checkmark.png" />
+    <Content Include="ClientResources\Images\icons\16px\0274-checkmark2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0275-spell-check.png" />
+    <Content Include="ClientResources\Images\icons\16px\0276-enter.png" />
+    <Content Include="ClientResources\Images\icons\16px\0277-exit.png" />
+    <Content Include="ClientResources\Images\icons\16px\0278-play2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0279-pause.png" />
+    <Content Include="ClientResources\Images\icons\16px\0280-stop.png" />
+    <Content Include="ClientResources\Images\icons\16px\0281-previous.png" />
+    <Content Include="ClientResources\Images\icons\16px\0282-next.png" />
+    <Content Include="ClientResources\Images\icons\16px\0283-backward.png" />
+    <Content Include="ClientResources\Images\icons\16px\0284-forward2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0285-play3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0286-pause2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0287-stop2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0288-backward2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0289-forward3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0290-first.png" />
+    <Content Include="ClientResources\Images\icons\16px\0291-last.png" />
+    <Content Include="ClientResources\Images\icons\16px\0292-previous2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0293-next2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0294-eject.png" />
+    <Content Include="ClientResources\Images\icons\16px\0295-volume-high.png" />
+    <Content Include="ClientResources\Images\icons\16px\0296-volume-medium.png" />
+    <Content Include="ClientResources\Images\icons\16px\0297-volume-low.png" />
+    <Content Include="ClientResources\Images\icons\16px\0298-volume-mute.png" />
+    <Content Include="ClientResources\Images\icons\16px\0299-volume-mute2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0300-volume-increase.png" />
+    <Content Include="ClientResources\Images\icons\16px\0301-volume-decrease.png" />
+    <Content Include="ClientResources\Images\icons\16px\0302-loop.png" />
+    <Content Include="ClientResources\Images\icons\16px\0303-loop2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0304-infinite.png" />
+    <Content Include="ClientResources\Images\icons\16px\0305-shuffle.png" />
+    <Content Include="ClientResources\Images\icons\16px\0306-arrow-up-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0307-arrow-up.png" />
+    <Content Include="ClientResources\Images\icons\16px\0308-arrow-up-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0309-arrow-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0310-arrow-down-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0311-arrow-down.png" />
+    <Content Include="ClientResources\Images\icons\16px\0312-arrow-down-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0313-arrow-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0314-arrow-up-left2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0315-arrow-up2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0316-arrow-up-right2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0317-arrow-right2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0318-arrow-down-right2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0319-arrow-down2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0320-arrow-down-left2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0321-arrow-left2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0322-circle-up.png" />
+    <Content Include="ClientResources\Images\icons\16px\0323-circle-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0324-circle-down.png" />
+    <Content Include="ClientResources\Images\icons\16px\0325-circle-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0326-tab.png" />
+    <Content Include="ClientResources\Images\icons\16px\0327-move-up.png" />
+    <Content Include="ClientResources\Images\icons\16px\0328-move-down.png" />
+    <Content Include="ClientResources\Images\icons\16px\0329-sort-alpha-asc.png" />
+    <Content Include="ClientResources\Images\icons\16px\0330-sort-alpha-desc.png" />
+    <Content Include="ClientResources\Images\icons\16px\0331-sort-numeric-asc.png" />
+    <Content Include="ClientResources\Images\icons\16px\0332-sort-numberic-desc.png" />
+    <Content Include="ClientResources\Images\icons\16px\0333-sort-amount-asc.png" />
+    <Content Include="ClientResources\Images\icons\16px\0334-sort-amount-desc.png" />
+    <Content Include="ClientResources\Images\icons\16px\0335-command.png" />
+    <Content Include="ClientResources\Images\icons\16px\0336-shift.png" />
+    <Content Include="ClientResources\Images\icons\16px\0337-ctrl.png" />
+    <Content Include="ClientResources\Images\icons\16px\0338-opt.png" />
+    <Content Include="ClientResources\Images\icons\16px\0339-checkbox-checked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0340-checkbox-unchecked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0341-radio-checked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0342-radio-checked2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0343-radio-unchecked.png" />
+    <Content Include="ClientResources\Images\icons\16px\0344-crop.png" />
+    <Content Include="ClientResources\Images\icons\16px\0345-make-group.png" />
+    <Content Include="ClientResources\Images\icons\16px\0346-ungroup.png" />
+    <Content Include="ClientResources\Images\icons\16px\0347-scissors.png" />
+    <Content Include="ClientResources\Images\icons\16px\0348-filter.png" />
+    <Content Include="ClientResources\Images\icons\16px\0349-font.png" />
+    <Content Include="ClientResources\Images\icons\16px\0350-ligature.png" />
+    <Content Include="ClientResources\Images\icons\16px\0351-ligature2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0352-text-height.png" />
+    <Content Include="ClientResources\Images\icons\16px\0353-text-width.png" />
+    <Content Include="ClientResources\Images\icons\16px\0354-font-size.png" />
+    <Content Include="ClientResources\Images\icons\16px\0355-bold.png" />
+    <Content Include="ClientResources\Images\icons\16px\0356-underline.png" />
+    <Content Include="ClientResources\Images\icons\16px\0357-italic.png" />
+    <Content Include="ClientResources\Images\icons\16px\0358-strikethrough.png" />
+    <Content Include="ClientResources\Images\icons\16px\0359-omega.png" />
+    <Content Include="ClientResources\Images\icons\16px\0360-sigma.png" />
+    <Content Include="ClientResources\Images\icons\16px\0361-page-break.png" />
+    <Content Include="ClientResources\Images\icons\16px\0362-superscript.png" />
+    <Content Include="ClientResources\Images\icons\16px\0363-subscript.png" />
+    <Content Include="ClientResources\Images\icons\16px\0364-superscript2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0365-subscript2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0366-text-color.png" />
+    <Content Include="ClientResources\Images\icons\16px\0367-pagebreak.png" />
+    <Content Include="ClientResources\Images\icons\16px\0368-clear-formatting.png" />
+    <Content Include="ClientResources\Images\icons\16px\0369-table.png" />
+    <Content Include="ClientResources\Images\icons\16px\0370-table2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0371-insert-template.png" />
+    <Content Include="ClientResources\Images\icons\16px\0372-pilcrow.png" />
+    <Content Include="ClientResources\Images\icons\16px\0373-ltr.png" />
+    <Content Include="ClientResources\Images\icons\16px\0374-rtl.png" />
+    <Content Include="ClientResources\Images\icons\16px\0375-section.png" />
+    <Content Include="ClientResources\Images\icons\16px\0376-paragraph-left.png" />
+    <Content Include="ClientResources\Images\icons\16px\0377-paragraph-center.png" />
+    <Content Include="ClientResources\Images\icons\16px\0378-paragraph-right.png" />
+    <Content Include="ClientResources\Images\icons\16px\0379-paragraph-justify.png" />
+    <Content Include="ClientResources\Images\icons\16px\0380-indent-increase.png" />
+    <Content Include="ClientResources\Images\icons\16px\0381-indent-decrease.png" />
+    <Content Include="ClientResources\Images\icons\16px\0382-share.png" />
+    <Content Include="ClientResources\Images\icons\16px\0383-new-tab.png" />
+    <Content Include="ClientResources\Images\icons\16px\0384-embed.png" />
+    <Content Include="ClientResources\Images\icons\16px\0385-embed2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0386-terminal.png" />
+    <Content Include="ClientResources\Images\icons\16px\0387-share2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0388-mail.png" />
+    <Content Include="ClientResources\Images\icons\16px\0389-mail2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0390-mail3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0391-mail4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0392-google.png" />
+    <Content Include="ClientResources\Images\icons\16px\0393-google-plus.png" />
+    <Content Include="ClientResources\Images\icons\16px\0394-google-plus2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0395-google-plus3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0396-google-drive.png" />
+    <Content Include="ClientResources\Images\icons\16px\0397-facebook.png" />
+    <Content Include="ClientResources\Images\icons\16px\0398-facebook2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0399-facebook3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0400-ello.png" />
+    <Content Include="ClientResources\Images\icons\16px\0401-instagram.png" />
+    <Content Include="ClientResources\Images\icons\16px\0402-twitter.png" />
+    <Content Include="ClientResources\Images\icons\16px\0403-twitter2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0404-twitter3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0405-feed2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0406-feed3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0407-feed4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0408-youtube.png" />
+    <Content Include="ClientResources\Images\icons\16px\0409-youtube2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0410-youtube3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0411-youtube4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0412-twitch.png" />
+    <Content Include="ClientResources\Images\icons\16px\0413-vimeo.png" />
+    <Content Include="ClientResources\Images\icons\16px\0414-vimeo2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0415-vimeo3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0416-lanyrd.png" />
+    <Content Include="ClientResources\Images\icons\16px\0417-flickr.png" />
+    <Content Include="ClientResources\Images\icons\16px\0418-flickr2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0419-flickr3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0420-flickr4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0421-picassa.png" />
+    <Content Include="ClientResources\Images\icons\16px\0422-picassa2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0423-dribbble.png" />
+    <Content Include="ClientResources\Images\icons\16px\0424-dribbble2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0425-dribbble3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0426-forrst.png" />
+    <Content Include="ClientResources\Images\icons\16px\0427-forrst2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0428-deviantart.png" />
+    <Content Include="ClientResources\Images\icons\16px\0429-deviantart2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0430-steam.png" />
+    <Content Include="ClientResources\Images\icons\16px\0431-steam2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0432-dropbox.png" />
+    <Content Include="ClientResources\Images\icons\16px\0433-onedrive.png" />
+    <Content Include="ClientResources\Images\icons\16px\0434-github.png" />
+    <Content Include="ClientResources\Images\icons\16px\0435-github2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0436-github3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0437-github4.png" />
+    <Content Include="ClientResources\Images\icons\16px\0438-github5.png" />
+    <Content Include="ClientResources\Images\icons\16px\0439-wordpress.png" />
+    <Content Include="ClientResources\Images\icons\16px\0440-wordpress2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0441-joomla.png" />
+    <Content Include="ClientResources\Images\icons\16px\0442-blogger.png" />
+    <Content Include="ClientResources\Images\icons\16px\0443-blogger2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0444-tumblr.png" />
+    <Content Include="ClientResources\Images\icons\16px\0445-tumblr2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0446-yahoo.png" />
+    <Content Include="ClientResources\Images\icons\16px\0447-tux.png" />
+    <Content Include="ClientResources\Images\icons\16px\0448-apple.png" />
+    <Content Include="ClientResources\Images\icons\16px\0449-finder.png" />
+    <Content Include="ClientResources\Images\icons\16px\0450-android.png" />
+    <Content Include="ClientResources\Images\icons\16px\0451-windows.png" />
+    <Content Include="ClientResources\Images\icons\16px\0452-windows8.png" />
+    <Content Include="ClientResources\Images\icons\16px\0453-soundcloud.png" />
+    <Content Include="ClientResources\Images\icons\16px\0454-soundcloud2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0455-skype.png" />
+    <Content Include="ClientResources\Images\icons\16px\0456-reddit.png" />
+    <Content Include="ClientResources\Images\icons\16px\0457-linkedin.png" />
+    <Content Include="ClientResources\Images\icons\16px\0458-linkedin2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0459-lastfm.png" />
+    <Content Include="ClientResources\Images\icons\16px\0460-lastfm2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0461-delicious.png" />
+    <Content Include="ClientResources\Images\icons\16px\0462-stumbleupon.png" />
+    <Content Include="ClientResources\Images\icons\16px\0463-stumbleupon2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0464-stackoverflow.png" />
+    <Content Include="ClientResources\Images\icons\16px\0465-pinterest.png" />
+    <Content Include="ClientResources\Images\icons\16px\0466-pinterest2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0467-xing.png" />
+    <Content Include="ClientResources\Images\icons\16px\0468-xing2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0469-flattr.png" />
+    <Content Include="ClientResources\Images\icons\16px\0470-foursquare.png" />
+    <Content Include="ClientResources\Images\icons\16px\0471-paypal.png" />
+    <Content Include="ClientResources\Images\icons\16px\0472-paypal2.png" />
+    <Content Include="ClientResources\Images\icons\16px\0473-paypal3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0474-yelp.png" />
+    <Content Include="ClientResources\Images\icons\16px\0475-file-pdf.png" />
+    <Content Include="ClientResources\Images\icons\16px\0476-file-openoffice.png" />
+    <Content Include="ClientResources\Images\icons\16px\0477-file-word.png" />
+    <Content Include="ClientResources\Images\icons\16px\0478-file-excel.png" />
+    <Content Include="ClientResources\Images\icons\16px\0479-libreoffice.png" />
+    <Content Include="ClientResources\Images\icons\16px\0480-html5.png" />
+    <Content Include="ClientResources\Images\icons\16px\0481-html52.png" />
+    <Content Include="ClientResources\Images\icons\16px\0482-css3.png" />
+    <Content Include="ClientResources\Images\icons\16px\0483-git.png" />
+    <Content Include="ClientResources\Images\icons\16px\0484-svg.png" />
+    <Content Include="ClientResources\Images\icons\16px\0485-codepen.png" />
+    <Content Include="ClientResources\Images\icons\16px\0486-chrome.png" />
+    <Content Include="ClientResources\Images\icons\16px\0487-firefox.png" />
+    <Content Include="ClientResources\Images\icons\16px\0488-IE.png" />
+    <Content Include="ClientResources\Images\icons\16px\0489-opera.png" />
+    <Content Include="ClientResources\Images\icons\16px\0490-safari.png" />
+    <Content Include="ClientResources\Images\icons\16px\0491-IcoMoon.png" />
+    <Content Include="ClientResources\Images\icons\layoutIcons24x24.png" />
+    <Content Include="ClientResources\Scripts\Editors\StringList.js" />
+    <Content Include="ClientResources\Scripts\MenuPin\MenuPinInit.js" />
+    <Content Include="ClientResources\Scripts\visitorgroupusage\viewer.js" />
+    <Content Include="ClientResources\Styles\ContentColabFix.css" />
+    <Content Include="ClientResources\Styles\ContentIcons.css" />
+    <Content Include="ClientResources\Styles\LayoutIcons.css" />
+    <Content Include="ClientResources\Styles\Styles.css" />
+    <Content Include="Content\all-room-landing.html" />
+    <Content Include="Content\all-room-wings.html" />
+    <Content Include="Content\ContentIcons\HotelHomepage.png" />
+    <Content Include="Content\ContentIcons\RoomDetailPage.png" />
+    <Content Include="Content\css\base.css" />
+    <Content Include="Content\css\modules.css" />
+    <Content Include="Content\css\vendors.css" />
+    <Content Include="Content\destination-landing.html" />
+    <Content Include="Content\dining-landing.html" />
+    <Content Include="Content\experience-landing.html" />
+    <Content Include="Content\font\icon-fonts\shangrila-sl.svg" />
+    <Content Include="Content\font\playfair-display-black\playfairdisplay-black-webfont.svg" />
+    <Content Include="Content\font\playfair-display-bold\playfairdisplay-bold-webfont.svg" />
+    <Content Include="Content\font\playfair-display-regular\playfairdisplay-regular-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-black\plutosansblack1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-bold\plutosansbold1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-ex-light\plutosansextralight1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-heavy\plutosansheavy1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-light\plutosanslight1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-medium\plutosansmedium1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-regular\plutosansregular1-webfont.svg" />
+    <Content Include="Content\font\pluto-sans-thin\plutosansthin1-webfont.svg" />
+    <Content Include="Content\hotel-landing-banner-varient.html" />
+    <Content Include="Content\hotel-landing-video-hero.html" />
+    <Content Include="Content\hotel-landing.html" />
+    <Content Include="Content\img\bg\bg-horizon-club-mobile.png" />
+    <Content Include="Content\img\bg\bg-horizon-club.png" />
+    <Content Include="Content\img\bg\bg-restaurant-section.jpg" />
+    <Content Include="Content\img\bg\bg-room-advisor.png" />
+    <Content Include="Content\img\bg\bg-suites-tablet.png" />
+    <Content Include="Content\img\bg\bg.png" />
+    <Content Include="Content\img\bg\destination-dining-left-bg.png" />
+    <Content Include="Content\img\bg\destination-dining-right-bg.png" />
+    <Content Include="Content\img\bg\dining-experiences-mothers-day-bg-tablet.jpg" />
+    <Content Include="Content\img\bg\dining-experiences-mothers-day-bg.jpg" />
+    <Content Include="Content\img\bg\dining-experiences-mothers-day-bg.png" />
+    <Content Include="Content\img\bg\dining-experiences-rice-dumpling-bg-tablet.jpg" />
+    <Content Include="Content\img\bg\dining-experiences-rice-dumpling-bg.jpg" />
+    <Content Include="Content\img\bg\loader.gif" />
+    <Content Include="Content\img\bg\placeholder.png" />
+    <Content Include="Content\img\bg\room-landing-found-room-bg.jpg" />
+    <Content Include="Content\img\bg\room-landing-horizon-bg.jpg" />
+    <Content Include="Content\img\bg\room-landing-suites-bg.jpg" />
+    <Content Include="Content\img\bg\table-bg-marble-table.jpg" />
+    <Content Include="Content\img\bg\table-left-top-bg.png" />
+    <Content Include="Content\img\bg\table-right-bootm-bg.png" />
+    <Content Include="Content\img\content\368x368-gallery-photo-1.jpg" />
+    <Content Include="Content\img\content\368x368-gallery-photo-2.jpg" />
+    <Content Include="Content\img\content\amex-logo.png" />
+    <Content Include="Content\img\content\banner-room-details.jpg" />
+    <Content Include="Content\img\content\carousel-left-image.jpg" />
+    <Content Include="Content\img\content\circle-icon.png" />
+    <Content Include="Content\img\content\destination-experience-1.jpg" />
+    <Content Include="Content\img\content\destination-experience-2.jpg" />
+    <Content Include="Content\img\content\destination-hero-banner.jpg" />
+    <Content Include="Content\img\content\destinations-to-explore-1.jpg" />
+    <Content Include="Content\img\content\destinations-to-explore-2.jpg" />
+    <Content Include="Content\img\content\destinations-to-explore-3.jpg" />
+    <Content Include="Content\img\content\diners-club-logo.png" />
+    <Content Include="Content\img\content\dining-blu-bar.jpg" />
+    <Content Include="Content\img\content\dining-destination-1.jpg" />
+    <Content Include="Content\img\content\dining-destination-2.jpg" />
+    <Content Include="Content\img\content\dining-experence-mother-day.jpg" />
+    <Content Include="Content\img\content\dining-experence-rice-dumpling.jpg" />
+    <Content Include="Content\img\content\dining-landing-hero.jpg" />
+    <Content Include="Content\img\content\dining-line-shop.jpg" />
+    <Content Include="Content\img\content\dining-lobby-court.jpg" />
+    <Content Include="Content\img\content\dining-nadaman.jpg" />
+    <Content Include="Content\img\content\dining-rose-veranda.jpg" />
+    <Content Include="Content\img\content\dining-shang-palace.jpg" />
+    <Content Include="Content\img\content\dining-special-offer-1.jpg" />
+    <Content Include="Content\img\content\dining-special-offer-2.jpg" />
+    <Content Include="Content\img\content\dining-the-line.jpg" />
+    <Content Include="Content\img\content\dining-the-waterfall.jpg" />
+    <Content Include="Content\img\content\DLBi-logo.jpg" />
+    <Content Include="Content\img\content\experience-landing-hero.jpg" />
+    <Content Include="Content\img\content\experience-special-offer.png" />
+    <Content Include="Content\img\content\experience-type-2.jpg" />
+    <Content Include="Content\img\content\experience-type-3.jpg" />
+    <Content Include="Content\img\content\experience-type-4.jpg" />
+    <Content Include="Content\img\content\experience-type-5.jpg" />
+    <Content Include="Content\img\content\experience-type-6.jpg" />
+    <Content Include="Content\img\content\experience1.jpg" />
+    <Content Include="Content\img\content\experience2.jpg" />
+    <Content Include="Content\img\content\explore-room1.jpg" />
+    <Content Include="Content\img\content\explore-room2-new.jpg" />
+    <Content Include="Content\img\content\explore-room2.jpg" />
+    <Content Include="Content\img\content\flyout-header-logo.png" />
+    <Content Include="Content\img\content\fresh-start.jpg" />
+    <Content Include="Content\img\content\gallery-photo-1.jpg" />
+    <Content Include="Content\img\content\gallery-photo-2.jpg" />
+    <Content Include="Content\img\content\gallery-photo-3.jpg" />
+    <Content Include="Content\img\content\gallery-photo-4.jpg" />
+    <Content Include="Content\img\content\get-more-fresh-start.jpg" />
+    <Content Include="Content\img\content\get-more-get-ahead.jpg" />
+    <Content Include="Content\img\content\golden-circle-logo.png" />
+    <Content Include="Content\img\content\golden-circle.png" />
+    <Content Include="Content\img\content\great-offers-1.jpg" />
+    <Content Include="Content\img\content\great-offers-2.jpg" />
+    <Content Include="Content\img\content\Hero_Deluxe_Harbour.jpg" />
+    <Content Include="Content\img\content\horizon-club.jpg" />
+    <Content Include="Content\img\content\hotel-jen-logo-small.jpg" />
+    <Content Include="Content\img\content\hotel-jen-logo.png" />
+    <Content Include="Content\img\content\hotel-kerry-logo-small.jpg" />
+    <Content Include="Content\img\content\hotel-landing-room-sml1.jpg" />
+    <Content Include="Content\img\content\hotel-landing-room-sml2.jpg" />
+    <Content Include="Content\img\content\hotel-logo.png" />
+    <Content Include="Content\img\content\hotel-singapore-flyout-logo.png" />
+    <Content Include="Content\img\content\hotel-traders-logo-small.jpg" />
+    <Content Include="Content\img\content\icon-circle.png" />
+    <Content Include="Content\img\content\icon-location.png" />
+    <Content Include="Content\img\content\jcb-logo.png" />
+    <Content Include="Content\img\content\kerry-hotel-logo.png" />
+    <Content Include="Content\img\content\left-carousel.jpg" />
+    <Content Include="Content\img\content\left-side-carousel.jpg" />
+    <Content Include="Content\img\content\list-view-persons.jpg" />
+    <Content Include="Content\img\content\main-banner-hotel-landing-1.png" />
+    <Content Include="Content\img\content\main-banner-hotel-landing-2.png" />
+    <Content Include="Content\img\content\main-banner-hotel-landing-3.png" />
+    <Content Include="Content\img\content\main-banner-hotel-landing-4.png" />
+    <Content Include="Content\img\content\main-banner-hotel-landing-mobile.jpg" />
+    <Content Include="Content\img\content\main-banner-hotel-landing-tablet.jpg" />
+    <Content Include="Content\img\content\main-banner-hotel-landing.jpg" />
+    <Content Include="Content\img\content\mastercard-logo.png" />
+    <Content Include="Content\img\content\meeting-conference-space.jpg" />
+    <Content Include="Content\img\content\nadaman.jpg" />
+    <Content Include="Content\img\content\nav-hero-1.jpg" />
+    <Content Include="Content\img\content\nav-hero-dummy.jpg" />
+    <Content Include="Content\img\content\nav-hero.jpg" />
+    <Content Include="Content\img\content\nav-logo-events.jpg" />
+    <Content Include="Content\img\content\offer-1.jpg" />
+    <Content Include="Content\img\content\offer-2.jpg" />
+    <Content Include="Content\img\content\paradise-found.jpg" />
+    <Content Include="Content\img\content\pin-icon.png" />
+    <Content Include="Content\img\content\right-side-bottom.jpg" />
+    <Content Include="Content\img\content\right-side-top.jpg" />
+    <Content Include="Content\img\content\romantic-getaway.jpg" />
+    <Content Include="Content\img\content\room-grid-full-panel.jpg" />
+    <Content Include="Content\img\content\room-landing-garden-wing.jpg" />
+    <Content Include="Content\img\content\room-landing-hero.jpg" />
+    <Content Include="Content\img\content\room-landing-horion-club.jpg" />
+    <Content Include="Content\img\content\room-landing-suites.jpg" />
+    <Content Include="Content\img\content\room-landing-tower-wing.jpg" />
+    <Content Include="Content\img\content\room-landing-valley-wing.jpg" />
+    <Content Include="Content\img\content\room-listing-dummy-1.jpg" />
+    <Content Include="Content\img\content\room-listing-dummy-2.jpg" />
+    <Content Include="Content\img\content\room-listing-dummy-3.jpg" />
+    <Content Include="Content\img\content\room-listing-dummy-4.jpg" />
+    <Content Include="Content\img\content\room-listing-dummy-5.jpg" />
+    <Content Include="Content\img\content\room-listing-dummy-6.jpg" />
+    <Content Include="Content\img\content\shangrila-logo.png" />
+    <Content Include="Content\img\content\shangrila-staging.jpg" />
+    <Content Include="Content\img\content\share-icon.png" />
+    <Content Include="Content\img\content\singapore-hotel-1.jpg" />
+    <Content Include="Content\img\content\singapore-hotel-2.jpg" />
+    <Content Include="Content\img\content\singapore-hotel-3.jpg" />
+    <Content Include="Content\img\content\singapore-hotel-4.jpg" />
+    <Content Include="Content\img\content\singapore-hotel-5.jpg" />
+    <Content Include="Content\img\content\SL-video.mp4" />
+    <Content Include="Content\img\content\standard-rooms-1.jpg" />
+    <Content Include="Content\img\content\standard-rooms-2.jpg" />
+    <Content Include="Content\img\content\standard-rooms-3.jpg" />
+    <Content Include="Content\img\content\standard-rooms-4.jpg" />
+    <Content Include="Content\img\content\standard-rooms-5.jpg" />
+    <Content Include="Content\img\content\suites-1.jpg" />
+    <Content Include="Content\img\content\suites-2.jpg" />
+    <Content Include="Content\img\content\suites-3.jpg" />
+    <Content Include="Content\img\content\suites-4.jpg" />
+    <Content Include="Content\img\content\Test-Hero.png" />
+    <Content Include="Content\img\content\the-table-logo.png" />
+    <Content Include="Content\img\content\the-waterfall.jpg" />
+    <Content Include="Content\img\content\traders-hotel-logo.png" />
+    <Content Include="Content\img\content\tripadvisor-placeholder.png" />
+    <Content Include="Content\img\content\trust-you-widget.png" />
+    <Content Include="Content\img\content\union-pay-logo.png" />
+    <Content Include="Content\img\content\visa-logo.png" />
+    <Content Include="Content\img\content\weather-detail-graph.jpg" />
+    <Content Include="Content\img\content\wedding-special-events.jpg" />
+    <Content Include="Content\index.html" />
+    <Content Include="Content\js\common.js" />
+    <Content Include="Content\js\html5shiv.min.js" />
+    <Content Include="Content\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\js\modernizr-2.8.2.min.js" />
+    <Content Include="Content\js\modules.js" />
+    <Content Include="Content\js\moment-timezone.js" />
+    <Content Include="Content\js\moment.js" />
+    <Content Include="Content\js\rem.min.js" />
+    <Content Include="Content\js\respond.min.js" />
+    <Content Include="Content\js\vendors.js" />
+    <Content Include="Content\js\waypoint.min.js" />
+    <Content Include="Content\pagemodules\all-room-main-banner.html" />
+    <Content Include="Content\pagemodules\all-room-wings-banner.html" />
+    <Content Include="Content\pagemodules\booking-panel-without-search.html" />
+    <Content Include="Content\pagemodules\booking-panel.html" />
+    <Content Include="Content\pagemodules\citywide-celebrations-events-odd.html" />
+    <Content Include="Content\pagemodules\citywide-celebrations-events.html" />
+    <Content Include="Content\pagemodules\currency-language-popup.html" />
+    <Content Include="Content\pagemodules\currency-language.html" />
+    <Content Include="Content\pagemodules\destination-experiences.html" />
+    <Content Include="Content\pagemodules\destination-main-banner.html" />
+    <Content Include="Content\pagemodules\destination-the-table.html" />
+    <Content Include="Content\pagemodules\destinations-to-explore.html" />
+    <Content Include="Content\pagemodules\dining-experiences.html" />
+    <Content Include="Content\pagemodules\dining-landing-main-banner.html" />
+    <Content Include="Content\pagemodules\dining-restaurants-bars.html" />
+    <Content Include="Content\pagemodules\dining-special-offers.html" />
+    <Content Include="Content\pagemodules\events-listing.html" />
+    <Content Include="Content\pagemodules\everything-you-need.html" />
+    <Content Include="Content\pagemodules\experience-landing-special-offers.html" />
+    <Content Include="Content\pagemodules\experience-types.html" />
+    <Content Include="Content\pagemodules\explore-other-rooms.html" />
+    <Content Include="Content\pagemodules\flyout-common-links.html" />
+    <Content Include="Content\pagemodules\flyout-header.html" />
+    <Content Include="Content\pagemodules\flyout-module-about.html" />
+    <Content Include="Content\pagemodules\flyout-module-events.html" />
+    <Content Include="Content\pagemodules\flyout-module-experience.html" />
+    <Content Include="Content\pagemodules\flyout-module-more.html" />
+    <Content Include="Content\pagemodules\flyout-module-stay.html" />
+    <Content Include="Content\pagemodules\footer.html" />
+    <Content Include="Content\pagemodules\get-more-carousel.html" />
+    <Content Include="Content\pagemodules\get-more-with-swipe.html" />
+    <Content Include="Content\pagemodules\get-more.html" />
+    <Content Include="Content\pagemodules\google-map-search-directions.html" />
+    <Content Include="Content\pagemodules\great-offers.html" />
+    <Content Include="Content\pagemodules\header-local-nav.html" />
+    <Content Include="Content\pagemodules\header.html" />
+    <Content Include="Content\pagemodules\horizon-club-section.html" />
+    <Content Include="Content\pagemodules\hotel-gallery-with-four-image.html" />
+    <Content Include="Content\pagemodules\hotel-gallery-with-two-image.html" />
+    <Content Include="Content\pagemodules\hotel-gallery.html" />
+    <Content Include="Content\pagemodules\hotel-offers-with-swipe.html" />
+    <Content Include="Content\pagemodules\hotel-offers.html" />
+    <Content Include="Content\pagemodules\hotel-popup.html" />
+    <Content Include="Content\pagemodules\img\bg\bg-horizon-club-mobile.png" />
+    <Content Include="Content\pagemodules\img\bg\bg-horizon-club.png" />
+    <Content Include="Content\pagemodules\img\bg\bg-restaurant-section.jpg" />
+    <Content Include="Content\pagemodules\img\bg\bg-room-advisor.png" />
+    <Content Include="Content\pagemodules\img\bg\bg-suites-tablet.png" />
+    <Content Include="Content\pagemodules\img\bg\bg.png" />
+    <Content Include="Content\pagemodules\img\bg\destination-dining-left-bg.png" />
+    <Content Include="Content\pagemodules\img\bg\destination-dining-right-bg.png" />
+    <Content Include="Content\pagemodules\img\bg\dining-experiences-mothers-day-bg-tablet.jpg" />
+    <Content Include="Content\pagemodules\img\bg\dining-experiences-mothers-day-bg.jpg" />
+    <Content Include="Content\pagemodules\img\bg\dining-experiences-mothers-day-bg.png" />
+    <Content Include="Content\pagemodules\img\bg\dining-experiences-rice-dumpling-bg-tablet.jpg" />
+    <Content Include="Content\pagemodules\img\bg\dining-experiences-rice-dumpling-bg.jpg" />
+    <Content Include="Content\pagemodules\img\bg\loader.gif" />
+    <Content Include="Content\pagemodules\img\bg\placeholder.png" />
+    <Content Include="Content\pagemodules\img\bg\room-landing-found-room-bg.jpg" />
+    <Content Include="Content\pagemodules\img\bg\room-landing-horizon-bg.jpg" />
+    <Content Include="Content\pagemodules\img\bg\room-landing-suites-bg.jpg" />
+    <Content Include="Content\pagemodules\img\bg\table-bg-marble-table.jpg" />
+    <Content Include="Content\pagemodules\img\bg\table-left-top-bg.png" />
+    <Content Include="Content\pagemodules\img\bg\table-right-bootm-bg.png" />
+    <Content Include="Content\pagemodules\img\content\368x368-gallery-photo-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\368x368-gallery-photo-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\amex-logo.png" />
+    <Content Include="Content\pagemodules\img\content\banner-room-details.jpg" />
+    <Content Include="Content\pagemodules\img\content\carousel-left-image.jpg" />
+    <Content Include="Content\pagemodules\img\content\circle-icon.png" />
+    <Content Include="Content\pagemodules\img\content\destination-experience-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\destination-experience-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\destination-hero-banner.jpg" />
+    <Content Include="Content\pagemodules\img\content\destinations-to-explore-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\destinations-to-explore-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\destinations-to-explore-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\diners-club-logo.png" />
+    <Content Include="Content\pagemodules\img\content\dining-blu-bar.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-destination-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-destination-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-experence-mother-day.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-experence-rice-dumpling.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-landing-hero.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-line-shop.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-lobby-court.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-nadaman.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-rose-veranda.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-shang-palace.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-special-offer-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-special-offer-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-the-line.jpg" />
+    <Content Include="Content\pagemodules\img\content\dining-the-waterfall.jpg" />
+    <Content Include="Content\pagemodules\img\content\DLBi-logo.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience-landing-hero.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience-special-offer.png" />
+    <Content Include="Content\pagemodules\img\content\experience-type-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience-type-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience-type-4.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience-type-5.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience-type-6.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience1.jpg" />
+    <Content Include="Content\pagemodules\img\content\experience2.jpg" />
+    <Content Include="Content\pagemodules\img\content\explore-room1.jpg" />
+    <Content Include="Content\pagemodules\img\content\explore-room2-new.jpg" />
+    <Content Include="Content\pagemodules\img\content\explore-room2.jpg" />
+    <Content Include="Content\pagemodules\img\content\flyout-header-logo.png" />
+    <Content Include="Content\pagemodules\img\content\fresh-start.jpg" />
+    <Content Include="Content\pagemodules\img\content\gallery-photo-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\gallery-photo-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\gallery-photo-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\gallery-photo-4.jpg" />
+    <Content Include="Content\pagemodules\img\content\get-more-fresh-start.jpg" />
+    <Content Include="Content\pagemodules\img\content\get-more-get-ahead.jpg" />
+    <Content Include="Content\pagemodules\img\content\golden-circle-logo.png" />
+    <Content Include="Content\pagemodules\img\content\golden-circle.png" />
+    <Content Include="Content\pagemodules\img\content\great-offers-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\great-offers-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\Hero_Deluxe_Harbour.jpg" />
+    <Content Include="Content\pagemodules\img\content\horizon-club.jpg" />
+    <Content Include="Content\pagemodules\img\content\hotel-jen-logo-small.jpg" />
+    <Content Include="Content\pagemodules\img\content\hotel-jen-logo.png" />
+    <Content Include="Content\pagemodules\img\content\hotel-kerry-logo-small.jpg" />
+    <Content Include="Content\pagemodules\img\content\hotel-landing-room-sml1.jpg" />
+    <Content Include="Content\pagemodules\img\content\hotel-landing-room-sml2.jpg" />
+    <Content Include="Content\pagemodules\img\content\hotel-logo.png" />
+    <Content Include="Content\pagemodules\img\content\hotel-singapore-flyout-logo.png" />
+    <Content Include="Content\pagemodules\img\content\hotel-traders-logo-small.jpg" />
+    <Content Include="Content\pagemodules\img\content\icon-circle.png" />
+    <Content Include="Content\pagemodules\img\content\icon-location.png" />
+    <Content Include="Content\pagemodules\img\content\jcb-logo.png" />
+    <Content Include="Content\pagemodules\img\content\kerry-hotel-logo.png" />
+    <Content Include="Content\pagemodules\img\content\left-carousel.jpg" />
+    <Content Include="Content\pagemodules\img\content\left-side-carousel.jpg" />
+    <Content Include="Content\pagemodules\img\content\list-view-persons.jpg" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing-1.png" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing-2.png" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing-3.png" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing-4.png" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing-mobile.jpg" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing-tablet.jpg" />
+    <Content Include="Content\pagemodules\img\content\main-banner-hotel-landing.jpg" />
+    <Content Include="Content\pagemodules\img\content\mastercard-logo.png" />
+    <Content Include="Content\pagemodules\img\content\meeting-conference-space.jpg" />
+    <Content Include="Content\pagemodules\img\content\nadaman.jpg" />
+    <Content Include="Content\pagemodules\img\content\nav-hero-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\nav-hero-dummy.jpg" />
+    <Content Include="Content\pagemodules\img\content\nav-hero.jpg" />
+    <Content Include="Content\pagemodules\img\content\nav-logo-events.jpg" />
+    <Content Include="Content\pagemodules\img\content\offer-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\offer-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\paradise-found.jpg" />
+    <Content Include="Content\pagemodules\img\content\pin-icon.png" />
+    <Content Include="Content\pagemodules\img\content\right-side-bottom.jpg" />
+    <Content Include="Content\pagemodules\img\content\right-side-top.jpg" />
+    <Content Include="Content\pagemodules\img\content\romantic-getaway.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-grid-full-panel.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-landing-garden-wing.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-landing-hero.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-landing-horion-club.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-landing-suites.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-landing-tower-wing.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-landing-valley-wing.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-listing-dummy-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-listing-dummy-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-listing-dummy-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-listing-dummy-4.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-listing-dummy-5.jpg" />
+    <Content Include="Content\pagemodules\img\content\room-listing-dummy-6.jpg" />
+    <Content Include="Content\pagemodules\img\content\shangrila-logo.png" />
+    <Content Include="Content\pagemodules\img\content\shangrila-staging.jpg" />
+    <Content Include="Content\pagemodules\img\content\share-icon.png" />
+    <Content Include="Content\pagemodules\img\content\singapore-hotel-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\singapore-hotel-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\singapore-hotel-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\singapore-hotel-4.jpg" />
+    <Content Include="Content\pagemodules\img\content\singapore-hotel-5.jpg" />
+    <Content Include="Content\pagemodules\img\content\SL-video.mp4" />
+    <Content Include="Content\pagemodules\img\content\standard-rooms-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\standard-rooms-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\standard-rooms-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\standard-rooms-4.jpg" />
+    <Content Include="Content\pagemodules\img\content\standard-rooms-5.jpg" />
+    <Content Include="Content\pagemodules\img\content\suites-1.jpg" />
+    <Content Include="Content\pagemodules\img\content\suites-2.jpg" />
+    <Content Include="Content\pagemodules\img\content\suites-3.jpg" />
+    <Content Include="Content\pagemodules\img\content\suites-4.jpg" />
+    <Content Include="Content\pagemodules\img\content\Test-Hero.png" />
+    <Content Include="Content\pagemodules\img\content\the-table-logo.png" />
+    <Content Include="Content\pagemodules\img\content\the-waterfall.jpg" />
+    <Content Include="Content\pagemodules\img\content\traders-hotel-logo.png" />
+    <Content Include="Content\pagemodules\img\content\tripadvisor-placeholder.png" />
+    <Content Include="Content\pagemodules\img\content\trust-you-widget.png" />
+    <Content Include="Content\pagemodules\img\content\union-pay-logo.png" />
+    <Content Include="Content\pagemodules\img\content\visa-logo.png" />
+    <Content Include="Content\pagemodules\img\content\weather-detail-graph.jpg" />
+    <Content Include="Content\pagemodules\img\content\wedding-special-events.jpg" />
+    <Content Include="Content\pagemodules\in-page-navigation.html" />
+    <Content Include="Content\pagemodules\in-page-sections-hotel-landing-with-swipe.html" />
+    <Content Include="Content\pagemodules\in-page-sections-hotel-landing.html" />
+    <Content Include="Content\pagemodules\local-navigation.html" />
+    <Content Include="Content\pagemodules\login-booking-popup.html" />
+    <Content Include="Content\pagemodules\main-banner-experience-landing.html" />
+    <Content Include="Content\pagemodules\main-banner-hotel-landing-darker-image.html" />
+    <Content Include="Content\pagemodules\main-banner-hotel-landing.html" />
+    <Content Include="Content\pagemodules\main-banner-video-background.html" />
+    <Content Include="Content\pagemodules\main-banner-with-video.html" />
+    <Content Include="Content\pagemodules\main-banner.html" />
+    <Content Include="Content\pagemodules\map-direction.html" />
+    <Content Include="Content\pagemodules\mosaic-banner-carousel.html" />
+    <Content Include="Content\pagemodules\nav-around-the-world-old.html" />
+    <Content Include="Content\pagemodules\nav-around-the-world.html" />
+    <Content Include="Content\pagemodules\nav-login-booking.html" />
+    <Content Include="Content\pagemodules\navigation-hotel.html" />
+    <Content Include="Content\pagemodules\our-family-hotels.html" />
+    <Content Include="Content\pagemodules\our-hotel-rooms-with-swipe.html" />
+    <Content Include="Content\pagemodules\our-hotel-rooms.html" />
+    <Content Include="Content\pagemodules\paradise-found.html" />
+    <Content Include="Content\pagemodules\relax-reboot-refresh-with-swipe.html" />
+    <Content Include="Content\pagemodules\relax-reboot-refresh.html" />
+    <Content Include="Content\pagemodules\room-by-wings.html" />
+    <Content Include="Content\pagemodules\room-contact-details.html" />
+    <Content Include="Content\pagemodules\room-landing-explore-by-wings-with-swipe.html" />
+    <Content Include="Content\pagemodules\room-landing-explore-by-wings.html" />
+    <Content Include="Content\pagemodules\room-landing-found-the-room.html" />
+    <Content Include="Content\pagemodules\room-landing-horizon-club-rooms-with-swipe.html" />
+    <Content Include="Content\pagemodules\room-landing-horizon-club-rooms.html" />
+    <Content Include="Content\pagemodules\room-landing-horizon-club.html" />
+    <Content Include="Content\pagemodules\room-landing-list-view-container.html" />
+    <Content Include="Content\pagemodules\room-landing-main-banner.html" />
+    <Content Include="Content\pagemodules\room-landing-standard-rooms-variations.html" />
+    <Content Include="Content\pagemodules\room-landing-standard-rooms-with-swipe.html" />
+    <Content Include="Content\pagemodules\room-landing-standard-rooms.html" />
+    <Content Include="Content\pagemodules\room-landing-suites-variations.html" />
+    <Content Include="Content\pagemodules\room-landing-suites-with-swipe.html" />
+    <Content Include="Content\pagemodules\room-landing-suites.html" />
+    <Content Include="Content\pagemodules\room-landing-view-container-swipe.html" />
+    <Content Include="Content\pagemodules\room-landing-view-container.html" />
+    <Content Include="Content\pagemodules\room-landing-wings-explore-by-wings.html" />
+    <Content Include="Content\pagemodules\room-landing-wings-standard-rooms.html" />
+    <Content Include="Content\pagemodules\room-landing-wings-suites.html" />
+    <Content Include="Content\pagemodules\room-landing-wings-view-container-swipe.html" />
+    <Content Include="Content\pagemodules\room-landing-wings-view-container.html" />
+    <Content Include="Content\pagemodules\room-type-hotel-landing.html" />
+    <Content Include="Content\pagemodules\room-type-variations.html" />
+    <Content Include="Content\pagemodules\room-type-wings.html" />
+    <Content Include="Content\pagemodules\room-type.html" />
+    <Content Include="Content\pagemodules\standard-rooms.html" />
+    <Content Include="Content\pagemodules\suites.html" />
+    <Content Include="Content\pagemodules\the-table-with-swipe.html" />
+    <Content Include="Content\pagemodules\the-table.html" />
+    <Content Include="Content\pagemodules\travel-preparation-with-graph.html" />
+    <Content Include="Content\pagemodules\travel-preparation.html" />
+    <Content Include="Content\pagemodules\trustyou-widget.html" />
+    <Content Include="Content\pagemodules\video-popup-background-fragment.html" />
+    <Content Include="Content\pagemodules\whats-in-the-room.html" />
+    <Content Include="Content\room-details.html" />
+    <Content Include="Content\video-popup-with-background-fragment.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Content\img\bg\video-background" />
+    <Content Include="Content\js\module-animation.json" />
+    <Content Include="Content\pagemodules\img\bg\video-background" />
+    <Content Include="Content\pagemodules\img\content\SL-video.ogv" />
+    <Content Include="Content\pagemodules\img\content\SL-video.webm" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="module.config" />
+    <Content Include="modules\_protected\Shell\web.config" />
+    <Content Include="modules\_protected\Shell\Shell.zip" />
+    <Content Include="modules\_protected\CMS\web.config" />
+    <Content Include="modules\_protected\CMS\CMS.zip" />
+    <Content Include="App_Data\GeoLiteCity.dat" />
+    <Content Include="Content\img\bg\dining-experiences-mothers-day-bg" />
+    <Content Include="Content\pagemodules\img\bg\dining-experiences-mothers-day-bg" />
+    <Content Include="Content\img\content\SL-video.ogv" />
+    <Content Include="Content\img\content\SL-video.webm" />
+    <Content Include="Resources\LanguageFiles\Common.xml" />
+    <Content Include="Resources\LanguageFiles\ContentTypeNames.xml" />
+    <Content Include="Resources\LanguageFiles\Display.xml" />
+    <Content Include="Resources\LanguageFiles\Content.xml" />
+    <Content Include="Resources\LanguageFiles\EditorHints.xml" />
+    <Content Include="Resources\LanguageFiles\GroupNames.xml" />
+    <Content Include="Resources\LanguageFiles\PropertyNames.xml" />
+    <Content Include="Resources\LanguageFiles\Views.xml" />
+    <Content Include="Resources\LanguageFiles\_ReadMe.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Services\WeatherService.svc" />
+    <Content Include="Static\css\bootstrap-collapse.js" />
+    <Content Include="Static\css\bootstrap-responsive.css" />
+    <Content Include="Static\css\bootstrap.css" />
+    <Content Include="Static\css\editmode.css" />
+    <Content Include="Static\css\editor.css" />
+    <Content Include="Static\css\media.css" />
+    <Content Include="Static\css\style.css" />
+    <Content Include="Static\gfx\carouselbackground.png" />
+    <Content Include="Static\gfx\contact.jpg" />
+    <Content Include="Static\gfx\exampelspan4.png" />
+    <Content Include="Static\gfx\experts.png" />
+    <Content Include="Static\gfx\fallows-media-wide.jpg" />
+    <Content Include="Static\gfx\leader.png" />
+    <Content Include="Static\gfx\leader2.png" />
+    <Content Include="Static\gfx\logotype.png" />
+    <Content Include="Static\gfx\meet.jpg" />
+    <Content Include="Static\gfx\New_FDT_Press_Contact_.JPG" />
+    <Content Include="Static\gfx\page-type-thumbnail-article.png" />
+    <Content Include="Static\gfx\page-type-thumbnail-contact.png" />
+    <Content Include="Static\gfx\page-type-thumbnail-product.png" />
+    <Content Include="Static\gfx\page-type-thumbnail-standard.png" />
+    <Content Include="Static\gfx\page-type-thumbnail.png" />
+    <Content Include="Static\gfx\person.png" />
+    <Content Include="Static\gfx\plan.jpg" />
+    <Content Include="Static\gfx\play.png" />
+    <Content Include="Static\gfx\playInactive.png" />
+    <Content Include="Static\gfx\productLandingv2.png" />
+    <Content Include="Static\gfx\searchbutton.png" />
+    <Content Include="Static\gfx\searchbuttonsmall.png" />
+    <Content Include="Static\gfx\track.jpg" />
+    <Content Include="Static\js\bootstrap.js" />
+    <Content Include="Static\js\jquery.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\font\icon-fonts\shangrila-sl.eot" />
+    <Content Include="Content\font\icon-fonts\shangrila-sl.ttf" />
+    <Content Include="Content\font\icon-fonts\shangrila-sl.woff" />
+    <Content Include="Content\font\playfair-display-black\playfairdisplay-black-webfont.eot" />
+    <Content Include="Content\font\playfair-display-black\playfairdisplay-black-webfont.ttf" />
+    <Content Include="Content\font\playfair-display-black\playfairdisplay-black-webfont.woff" />
+    <Content Include="Content\font\playfair-display-bold\playfairdisplay-bold-webfont.eot" />
+    <Content Include="Content\font\playfair-display-bold\playfairdisplay-bold-webfont.ttf" />
+    <Content Include="Content\font\playfair-display-bold\playfairdisplay-bold-webfont.woff" />
+    <Content Include="Content\font\playfair-display-regular\playfairdisplay-regular-webfont.eot" />
+    <Content Include="Content\font\playfair-display-regular\playfairdisplay-regular-webfont.ttf" />
+    <Content Include="Content\font\playfair-display-regular\playfairdisplay-regular-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-black\plutosansblack1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-black\plutosansblack1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-black\plutosansblack1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-bold\plutosansbold1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-bold\plutosansbold1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-bold\plutosansbold1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-ex-light\plutosansextralight1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-ex-light\plutosansextralight1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-ex-light\plutosansextralight1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-heavy\plutosansheavy1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-heavy\plutosansheavy1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-heavy\plutosansheavy1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-light\plutosanslight1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-light\plutosanslight1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-light\plutosanslight1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-medium\plutosansmedium1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-medium\plutosansmedium1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-medium\plutosansmedium1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-regular\plutosansregular1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-regular\plutosansregular1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-regular\plutosansregular1-webfont.woff" />
+    <Content Include="Content\font\pluto-sans-thin\plutosansthin1-webfont.eot" />
+    <Content Include="Content\font\pluto-sans-thin\plutosansthin1-webfont.ttf" />
+    <Content Include="Content\font\pluto-sans-thin\plutosansthin1-webfont.woff" />
+    <Content Include="Content\json\modules.json" />
+    <Content Include="Content\json\pages.json" />
+    <None Include="EPiServerLog.config" />
+    <Content Include="packages.config" />
+    <Content Include="modules\_protected\EPiServer.Packaging.UI\web.config" />
+    <Content Include="modules\_protected\EPiServer.Packaging.UI\EPiServer.Packaging.UI.zip" />
+    <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\Pages\HotelPage\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Layouts\_Root.cshtml" />
+    <Content Include="Views\Shared\Layouts\_LeftNavigation.cshtml" />
+    <Content Include="Views\StandardPage\Index.cshtml" />
+    <Content Include="Views\Shared\PagePartials\PagePartial.cshtml" />
+    <Content Include="Views\Blocks\OverviewContentBlock\Index.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\TemplateError.cshtml" />
+    <Content Include="Views\Shared\TemplateHint.cshtml" />
+    <Content Include="Views\Pages\RoomListingPage\Index.cshtml" />
+    <Content Include="Views\Pages\RoomDetailPage\Index.cshtml" />
+    <Content Include="Views\Preview\Index.cshtml" />
+    <Content Include="Views\Shared\BookingPanel.cshtml" />
+    <Content Include="Views\Blocks\RoomContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\HeroHeaderBannerBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\DineContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\EventsContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\ExperienceContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\GalleryContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\MapAndDirectionContentBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\OffersContentBlock\Index.cshtml" />
+    <Content Include="Views\Shared\Blocks\TrustYouWidget.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ContactPage.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Image.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\StringList.cshtml" />
+    <Content Include="Views\Shared\PagePartials\RoomDetailPage.cshtml" />
+    <Content Include="Views\Shared\PagePartials\RoomDetailPageFullWidth.cshtml" />
+    <Content Include="Views\Blocks\SectionHeaderBannerBlock\Index.cshtml" />
+    <Content Include="Views\Shared\Blocks\MosaicBannerCarousel.cshtml" />
+    <Content Include="Views\Shared\Blocks\SectionHightlightContent.cshtml" />
+    <Content Include="Views\Shared\Blocks\NoRenderer.cshtml" />
+    <Content Include="Views\Blocks\ExploreOtherRoomsListBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\RoomOffersContentBlock\Index.cshtml" />
+    <Content Include="Views\Shared\Blocks\HotelInformationSummary.cshtml" />
+    <Content Include="Views\Blocks\RoomHeaderBannerBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\RoomFeaturesContentBlock\Index.cshtml" />
+    <Content Include="Views\Shared\PagePartials\RoomDetailPageExploreOtherRooms.cshtml" />
+    <Content Include="Views\Pages\RoomGroupListingPage\Index.cshtml" />
+    <Content Include="Views\Blocks\RoomCategroyListBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\HorizonClubListBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\SuiteListBlock\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <Content Include="Views\Shared\FindTheRoomPanel.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLEventTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLExperienceTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLOfferTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLDineTeaserCardView.cshtml" />
+    <Content Include="Views\Shared\Blocks\CardViews\SLRoomOfferTeaserCardView.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shangri-La.EpiServer.Common\Shangri-La.EpiServer.Common.csproj">
+      <Project>{09895ecd-db55-4111-826c-d28bc99d211a}</Project>
+      <Name>Shangri-La.EpiServer.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,60 @@
+﻿@using Shangri_La.EpiServer.SL.Web.Models.ViewModels
+
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelInformationSummaryViewModel
+
+<!-- Module - Room Contact Details - Starts-->
+<div class="room-contact-details">
+    <div class="container">
+        <ul class="room-contact-container row">
+            <li class="col-xs-12 col-sm-12 col-md-4">
+                <div class="heading">@Html.PropertyFor(m => m.Title)</div>
+                <p>
+                    <strong>Address: </strong>@Html.PropertyFor(m => m.Address)
+                    <br><strong>Phone: </strong><span>@Html.PropertyFor(m => m.Phone)</span>
+                    <br><strong>Fax: </strong><span>@Html.PropertyFor(m => m.Fax)</span>
+                    <br><strong>Email: </strong><a href="mailto:@Html.PropertyFor(m => m.Email);">@Html.PropertyFor(m => m.Email)</a>
+                </p>
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4">
+                <div class="heading accordion-header icon-accordian-plus">Check-In/Out</div>
+                <div class="description">
+                    <p>
+                        Please note the check-in / out times below:
+                        <br><strong>Check-in: </strong>@Html.PropertyFor(m => m.CheckInTime)
+                        <br><strong>Check-out: </strong>@Html.PropertyFor(m => m.CheckOutTime)
+                    </p>
+                </div>
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-4">
+                <div class="heading accordion-header icon-accordian-plus">Payments</div>
+                <div class="description">
+                    <p>We accept the following payment methods:</p>
+                    <div class="payment-methods">
+                        <ul class="list-unstyled clearfix">
+
+                            @if (Model.PaymentModelModels != null)
+                            {
+                                foreach (PaymentModelModel payment in Model.PaymentModelModels)
+                                {
+                                    <li><img width="@payment.Logo.Width" height="@payment.Logo.Height" src="@Url.Content(payment.Logo.ImageUrl)" alt="@payment.Name" class="retina-image"></li>
+                                }
+
+                            }
+
+
+                            @*<li><img width="24" height="24" src="@Url.Content("~/Content/img/content/amex-logo.png")" alt="{CMS}" class="retina-image"></li>
+                                <li><img width="30" height="22" src="@Url.Content("~/Content/img/content/diners-club-logo.png")" alt="{CMS}" class="retina-image"></li>
+                                <li><img width="28" height="22" src="@Url.Content("~/Content/img/content/jcb-logo.png")" alt="{CMS}" class="retina-image"></li>
+                                <li><img width="33" height="20" src="@Url.Content("~/Content/img/content/mastercard-logo.png")" alt="{CMS}" class="retina-image"></li>
+                                <li><img width="39" height="14" src="@Url.Content("~/Content/img/content/visa-logo.png")" alt="{CMS}" class="retina-image"></li>
+                                <li><img width="33" height="21" src="@Url.Content("~/Content/img/content/union-pay-logo.png")" alt="{CMS}" class="retina-image"></li>*@
+
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Module - Room Contact Details - Ends-->

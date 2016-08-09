@@ -1,0 +1,43 @@
+﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage.EventsContentBlock
+
+<!-- Module Events Listing starts here-->
+<section id="events" class="section-row events-list equal-height-section inpage-element">
+    <div class="container">
+        <div class="section-header read-more-section-header">
+            <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+            <p class="description">@Html.PropertyFor(m => m.IntroText)</p>
+            <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+        </div>
+        <div class="row">
+            @Html.PropertyFor(x => x.FeaturedEventsContentArea)
+
+            @*
+            <div class="col-xs-12 col-sm-6">
+                <div class="event-list-container shadow-box equal-height-block">
+                    <div class="image-container scaled-image">
+                        <a href="#"><img src="@Url.Content("~/Content/img/content/wedding-special-events.jpg")" alt="{CMS}"></a>
+                    </div>
+                    <div class="content-container">
+                        <div class="heading"><a href="#">Weddings &amp; celebrations</a></div>
+                        <p class="description">As one of the city's finest banquet venues, Shangri-La Hotel, Singapore offers multiple event spaces to host lavish romantic weddings, grand gatherings and more.</p>
+                        <div class="button-aligner"><a href="#" class="button-primary">Find Out More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="event-list-container shadow-box equal-height-block">
+                    <div class="image-container scaled-image">
+                        <a href="#"><img src="@Url.Content("~/Content/img/content/meeting-conference-space.jpg")" alt="{CMS}"></a>
+                    </div>
+                    <div class="content-container">
+                        <div class="heading"><a href="#">Meetings &amp; conferences</a></div>
+                        <p class="description">Equipped to handle the highest levels of business, diplomatic and social events, our versatile function spaces provide state-of-the-art audiovisual conference facilities.</p>
+                        <div class="button-aligner"><a href="#" class="button-primary">Find Out More</a></div>
+                    </div>
+                </div>
+            </div>
+            *@
+        </div>
+    </div>
+</section>
+<!-- Module Events Listing Ends here          -->

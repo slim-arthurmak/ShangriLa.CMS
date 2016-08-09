@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <common>
+      <readmore>Read more</readmore>
+      <more>More »</more>
+      <search>Search</search>
+      <yes>Yes</yes>
+      <no>No</no>
+      <submit>Submit</submit>
+      <cancel>Cancel</cancel>
+    </common>
+  </language>
+</languages>

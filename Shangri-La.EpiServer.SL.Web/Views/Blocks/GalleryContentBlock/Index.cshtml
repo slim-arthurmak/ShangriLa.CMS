@@ -1,0 +1,46 @@
+﻿@model Shangri_La.EpiServer.SL.Web.Models.Blocks.HotelHomepage.GalleryContentBlock
+
+<!-- Module Hotel Gallery starts here-->
+<section id="gallery" class="section-row gallery-section inpage-element">
+    <div class="container">
+        <div class="section-header read-more-section-header">
+            <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+            <p class="description">@Html.PropertyFor(m => m.IntroText)</p>
+            <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+        </div>
+        <div class="row equal-height-section">
+            <div class="col-xs-12 col-sm-8">
+                <div class="image-gallery equal-height-block clearfix">
+                    <!-- Start of Candid io plugin-->
+                    <script type="text/x-jsrender" id="mediaTemplate">
+                        <div class="candid-wall-cell col-sm-6">
+                            <div class="image-container scaled-image"><img src="{{> Media.Images.LowResolution.Url }}" alt="{{> Title }}" style="display:inline-block;"></div>
+                        </div>
+                    </script>
+                    <div id="img-2-container" data-candidguid="@Model.CandidGUID"></div>
+                    <!-- End of Candid io plugin-->
+                </div>
+                <div class="view-all-button"><a href="@Url.ContentUrl(Model.BlockCTA.ButtonLink)" class="button-secondary">View All Gallery Images</a></div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                @if (Model.TrustYouWidget != null)
+                {
+                <div class="trust-you-widget">
+                    <div class="container shadow-box equal-height-block">
+                        <div class="plugin">
+                            <iframe src="@String.Format("https://api.trustyou.com/hotels/{0}/seal.html?key=c0be95bb-5c02-4f39-adba-b1449ea0aa74&amp;size=xl", Model.TrustYouWidget.TrustYouID)" allowtransparency="true" frameborder="0" scrolling="no" height="144px" width="170px"></iframe>
+                        </div>
+                        <p>@Html.PropertyFor(m => m.TrustYouWidget.Review)</p>
+                        <span>@Html.PropertyFor(m => m.TrustYouWidget.Reviewer)</span>
+                        @*<p>Wow. I always knew Hong Kong would be an amazing place, but this was really mind-blowing. The views of the harbour are truly incredible, like a city from the future.</p>
+                        <span>Yan Lee, Taiwan</span>*@
+                        <a href="#" class="reviews">See All Customer Reviews</a>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Module Hotel Gallery Ends here-->
+

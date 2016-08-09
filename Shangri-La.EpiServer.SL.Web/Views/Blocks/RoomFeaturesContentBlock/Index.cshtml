@@ -1,0 +1,40 @@
+﻿@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomPage.RoomFeaturesContentViewModel
+
+<!--What's in the room starts here-->
+<section class="section-row whats-in-the-room">
+    <div class="container">
+        <div class="section-header read-more-section-header">
+            <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+            <p class="description">@Html.PropertyFor(m => m.IntroText)</p>
+            <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+        </div>
+        <div class="row">
+
+            @if (Model.Highlights != null)
+            {
+                foreach (string features in Model.Highlights)
+                {
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="room-details icon-view">@Html.Raw(features)</p>
+                    </div>
+                }
+            }
+
+            @*<div class="col-xs-12 col-sm-4">
+                    <p class="room-details icon-view">Incredible views of Asia's most spectacular skyline</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <p class="room-details icon-view">Handcrafted Italian marble inlayed bathroom</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <p class="room-details icon-view">Bright, spacious, open flowing 484sqft room</p>
+                </div>*@
+        </div>
+        @if (Model.BlockCTA != null)
+        {
+            <a href="@Model.BlockCTA.ButtonLink" target="_blank" class="view-floorplan">@Model.BlockCTA.ButtonText</a>
+        }
+        <!--a.view-floorplan(href="//players.brightcove.net/4554542031001/default_default/index.html?videoId=4898716212001" class="video-link") VIEW FLOORPLAN-->
+
+</section>
+<!--What's in the room Ends here-->

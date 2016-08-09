@@ -1,0 +1,95 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@using Shangri_La.EpiServer.SL.Web.Business.Extensions;
+
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.PropertyPageViewModel<Shangri_La.EpiServer.SL.Web.Models.Pages.HotelPage>
+
+@*<h1>
+        @Html.PropertyFor(x => x.CurrentPage.PageName)
+    </h1>
+    <div class="row">
+        <div class="span8 clearfix">
+            @Html.PropertyFor(x => x.CurrentPage.MainBody)
+        </div>
+    </div>*@
+
+@Html.PropertyFor(m => m.CurrentPage.HeroHeaderBanner)
+
+@*<section id="main-banner" class="viewport-element main-banner-hotel-landing lighter-text">
+        <div class="caption-container-hotel-landing">
+           <h1 class="heading">@Html.PropertyFor(m => m.CurrentPage.HeroBanner.Title)</h1>
+            <p class="description">@Html.PropertyFor(m => m.CurrentPage.HeroBanner.ShortDescription)</p>
+            <div data-city="kowloon" data-lang="" class="climate-time-control">
+                <span class="cloud"> </span><span class="temp"> </span><span class="time"> </span>
+            </div>
+        </div>
+        <div class="image-container">
+            @Html.PropertyFor(m => m.CurrentPage.HeroBanner.DesktopImage)
+        </div>
+        <a href="#overview" class="explore-button icon-ios-arrow-down"><span></span></a>
+    </section>*@
+
+@{
+    Html.RenderPartial("BookingPanel", Model.BookingPanel);
+}
+
+<sections class="in-page-navigation">
+    <div class="container">
+        <div class="share-link">
+            <a class="share-icon"><span>Share</span></a>
+            <div class="share-icon-container shadow-box">
+                <span>share page</span>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="icon-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.twitter.com/" target="_blank" class="icon-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/" target="_blank" class="icon-google-plus"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.weibo.com/login.php" target="_blank" class="icon-weibo"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" target="_blank" class="icon-chat"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" target="_blank" class="icon-email"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="selected-item"><span class="icon-ios-arrow-down">Overview</span></div>
+        <ul class="horizontal-scroll">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#rooms">Our rooms</a></li>
+            <li><a href="#dining">Dining</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#offers">Offers</a></li>
+        </ul>
+    </div>
+</sections>
+
+<div class="inpage-container">
+
+    @{
+        Html.RenderCustomContentArea(Model.CurrentPage.SectionContentArea);
+    }
+
+    @*@Html.PropertyFor(x => x.CurrentPage.SectionContentArea, new
+       {
+           //CustomTag = "ul",
+           //CssClass = "list",
+           //ChildrenCustomTagName = "li",
+           //ChildrenCssClass = "list_item",
+           //Tag = string.Empty,
+           HasContainer = false
+       })*@
+</div>
+
+@Html.Partial("HotelInformationSummary", Model.HotelInformationSummary)

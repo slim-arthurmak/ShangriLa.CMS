@@ -1,0 +1,14 @@
+﻿@model Shangri_La.EpiServer.Common.Models.Blocks.SL.SLEventTeaserBlock
+
+<div class="col-xs-12 col-sm-6">
+    <div class="event-list-container shadow-box equal-height-block">
+        <div class="image-container scaled-image">
+            <a href="@Url.ContentUrl(Model.Link)"><img src="@Url.ContentUrl(Model.Image)?width=562&height=281&mode=crop&scale=canvas" alt="{CMS}"></a>
+        </div>
+        <div class="content-container">
+            <div class="heading"><a href="@Url.ContentUrl(Model.Link)">@Html.PropertyFor(m => m.Heading)</a></div>
+            <p class="description">@Html.PropertyFor(m => m.Text)</p>
+            <div class="button-aligner"><a href="@Url.ContentUrl(Model.Link)" class="button-primary">Find Out More</a></div>
+        </div>
+    </div>
+</div>

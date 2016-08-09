@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <blocks>
+      <mapanddirectioncontentblock>
+        <viewmapsanddirectoins>VIEW MAPS &amp; DIRECTIONS</viewmapsanddirectoins>
+        <!--<destination>To</destination>
+        <date>Departure date</date>
+        <withtransfers>With transfers</withtransfers>
+        <withouttransfers>Direct flights only</withouttransfers>-->
+      </mapanddirectioncontentblock>
+    </blocks>
+    <pages>
+
+    </pages>
+  </language>
+</languages>

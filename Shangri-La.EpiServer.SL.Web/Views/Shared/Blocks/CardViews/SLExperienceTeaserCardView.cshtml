@@ -1,0 +1,17 @@
+﻿@model Shangri_La.EpiServer.Common.Models.Blocks.SL.SLExperienceTeaserBlock
+
+<div class="item">
+    <div class="clearfix col-xs-12 col-sm-6 col-md-12 no-gutter">
+        <div class="experience-container clearfix">
+            <div class="image-container scaled-image @(Model.IsImageRight ? " img-right" : "")">
+                <a href="@Url.ContentUrl(Model.Link)"><img src="@Url.ContentUrl(Model.Image)?width=853&height=427&mode=crop&scale=canvas" alt="{CMS}"></a>
+            </div>
+            <div class="content-container shadow-box mobile-equal-height-block @(Model.IsImageRight ? " content-left" : "")">
+                <div class="heading"><a href="@Url.ContentUrl(Model.Link)">@Html.PropertyFor(m => m.Heading)</a></div>
+                <p class="description">@Html.PropertyFor(m => m.Text)</p>
+                <div class="button-aligner"><a href="@Url.ContentUrl(Model.Link)" class="button-primary">Find Out More</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+

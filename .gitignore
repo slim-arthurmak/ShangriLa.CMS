@@ -250,3 +250,4 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Shangri-La.EpiServer.SL.Web/imagecache

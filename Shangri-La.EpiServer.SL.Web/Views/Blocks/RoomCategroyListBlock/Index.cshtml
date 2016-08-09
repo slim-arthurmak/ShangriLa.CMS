@@ -1,0 +1,177 @@
+﻿@using Shangri_La.EpiServer.SL.Web.Models.ViewModels;
+
+@model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing.RoomCategroyListViewModel
+
+@{
+    bool showMoreRooms = false;
+    int maxRoomNum = 4;
+
+    string showMoreCTAText = "VIEW MORE ROOMS";
+
+    if (Model.AllRooms != null && Model.AllRooms.Count > maxRoomNum)
+    {
+        int numMore = (Model.AllRooms.Count - maxRoomNum);
+
+        showMoreCTAText = string.Format("VIEW {0} MORE {1}", numMore, Model.RoomType.ToUpperInvariant());
+        showMoreRooms = true;
+    }
+}
+
+
+@if(Model.AllRooms != null && Model.AllRooms.Count() > 0)
+{
+<!-- Module Room landing - Standard rooms starts here-->
+<section id="@Model.RoomType" class="section-row all-statndard-rooms-container">
+    <div class="container carousel-container">
+        <div class="section-header read-more-section-header">
+            <h2 class="section-heading">@Html.PropertyFor(m => m.Heading)</h2>
+            <p class="description">@Html.PropertyFor(m => m.IntroText)</p>
+            <a href="javascript:void(0)" class="read-more-droplink icon-ios-arrow-down">READ MORE</a>
+        </div>
+        <div class="row list-view-row">
+            @*@Model.AllRooms.Count.ToString();*@
+            <div class="owl-carousel mobile-carousel">
+
+                @if (Model.AllRooms != null)
+                {
+                    foreach (RoomDetailPageViewModel room in Model.AllRooms)
+                    {
+                        <div class="item">
+                            <div class="col-xs-12 col-md-4 col-sm-4 no-gutter">
+                                <div class="all-standard-rooms row-list-item">
+                                    <div class="image-container scaled-image">
+                                        <a href="@Url.PageUrl(room.LinkURL)"><img src="@Url.ContentUrl(room.RoomHeaderBanner.Image)?width=368&height=184&mode=crop&scale=canvas" alt="@room.RoomHeaderBanner.AlternateText"></a>
+                                    </div>
+                                    <div class="content-container mobile-equal-height-block">
+                                        @if (room.RoomSuiteBlock.IsFeatured)
+                                        {
+                                            <div class="featured">Featured</div>
+                                        }
+                                        <div class="heading"><a href="@Url.PageUrl(room.LinkURL)">@room.RoomSuiteBlock.RoomName</a></div>
+                                        <div class="persons">
+                                            @for (int i = 0; i < room.RoomSuiteBlock.MaxOccupancy; i++)
+                                            {
+                                                <i class="icon-person-01"></i>
+                                            }
+
+                                            @*<i class="icon-person-01"></i>
+                                                <i class="icon-person-01"></i>
+                                                <i class="icon-person-01"></i>
+                                            *@
+                                        </div>
+
+                                        <p class="description">@room.RoomSuiteBlock.RoomSize</p>
+                                        <p class="view-of-room">@room.RoomSuiteBlock.RoomView</p>
+                                        <a href="@Url.PageUrl(room.LinkURL)" class="common-cta">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+
+
+                @*<div class="item">
+                        <div class="col-xs-12 col-md-4 col-sm-4 no-gutter">
+                            <div class="all-standard-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-1.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="heading"><a href="#">Tower Wing Deluxe Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">38 sqm / 409 sqf</p>
+                                    <p class="view-of-room">Stunning city view</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-12 col-md-4 col-sm-4 no-gutter">
+                            <div class="all-standard-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-2.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="featured">Featured</div>
+                                    <div class="heading"><a href="#">Tower Wing Executive Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">60 sqm / 645 sqf</p>
+                                    <p class="view-of-room">City view on spacious comfort</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-12 col-md-4 col-sm-4 no-gutter">
+                            <div class="all-standard-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-3.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="heading"><a href="#">Garden Wing Delux City View Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">50 sqm / 538 sqf</p>
+                                    <p class="view-of-room">Garden View</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-12 col-md-4 col-sm-4 no-gutter">
+                            <div class="all-standard-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-4.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="heading"><a href="#">Garden Wing Pool View Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">50 sqm / 538 sqf</p>
+                                    <p class="view-of-room">Garden view</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-12 col-md-4 col-sm-4 no-gutter">
+                            <div class="all-standard-rooms row-list-item">
+                                <div class="image-container scaled-image">
+                                    <a href="#"><img src="@Url.Content("~/Content/img/content/standard-rooms-5.jpg")" alt="{CMS}"></a>
+                                </div>
+                                <div class="content-container mobile-equal-height-block">
+                                    <div class="heading"><a href="#">Valley Wing Deluxe Room</a></div>
+                                    <div class="persons">
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                        <i class="icon-person-01"></i>
+                                    </div>
+                                    <p class="description">57 sqm / 613 sqf</p>
+                                    <p class="view-of-room">Sweeping City Skyline View</p><a href="#" class="common-cta">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                *@
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Module Room landing - Standard rooms Ends here-->
+}
