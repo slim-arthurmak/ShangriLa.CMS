@@ -20,7 +20,7 @@
                     <div id="img-2-container" data-candidguid="@Model.CandidGUID"></div>
                     <!-- End of Candid io plugin-->
                 </div>
-                <div class="view-all-button"><a href="#" class="button-secondary">View All Gallery Images</a></div>
+                <div class="view-all-button"><a href="@Url.ContentUrl(Model.BlockCTA.ButtonLink)" class="button-secondary">View All Gallery Images</a></div>
             </div>
             <div class="col-xs-12 col-sm-4">
                 @if (Model.TrustYouWidget != null)
@@ -34,7 +34,7 @@
                         <span>@Html.PropertyFor(m => m.TrustYouWidget.Reviewer)</span>
                         @*<p>Wow. I always knew Hong Kong would be an amazing place, but this was really mind-blowing. The views of the harbour are truly incredible, like a city from the future.</p>
                         <span>Yan Lee, Taiwan</span>*@
-                        <a href="@Url.ContentUrl(Model.BlockCTA.ButtonLink)" class="reviews">See All Customer Reviews</a>
+                        <a href="#" class="reviews">See All Customer Reviews</a>
                     </div>
                 </div>
                 }
