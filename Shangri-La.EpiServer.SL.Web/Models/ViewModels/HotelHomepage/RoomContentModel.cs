@@ -13,6 +13,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
             Heading = block.Heading;
             IntroText = block.IntroText;
             MainText = block.IntroText;
+            BlockCTA = block.BlockCTA;
 
             RoomGroups = new List<RoomGroupBlock>();
             RoomGroupNavigatoins = new List<RoomGroupNavigatoinModel>();
@@ -50,5 +51,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
         public List<RoomGroupNavigatoinModel> RoomGroupNavigatoins { get; set; }
 
         public ContentArea FeatureRoomsContentArea { get; set; }
+
+        public ButtonBlock BlockCTA { get; set; }
     }
 }

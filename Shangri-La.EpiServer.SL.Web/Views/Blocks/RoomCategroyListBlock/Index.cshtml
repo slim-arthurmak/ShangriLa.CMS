@@ -2,6 +2,22 @@
 
 @model Shangri_La.EpiServer.SL.Web.Models.ViewModels.RoomListing.RoomCategroyListViewModel
 
+@{
+    bool showMoreRooms = false;
+    int maxRoomNum = 4;
+
+    string showMoreCTAText = "VIEW MORE ROOMS";
+
+    if (Model.AllRooms != null && Model.AllRooms.Count > maxRoomNum)
+    {
+        int numMore = (Model.AllRooms.Count - maxRoomNum);
+
+        showMoreCTAText = string.Format("VIEW {0} MORE {1}", numMore, Model.RoomType.ToUpperInvariant());
+        showMoreRooms = true;
+    }
+}
+
+
 @if(Model.AllRooms != null && Model.AllRooms.Count() > 0)
 {
 <!-- Module Room landing - Standard rooms starts here-->

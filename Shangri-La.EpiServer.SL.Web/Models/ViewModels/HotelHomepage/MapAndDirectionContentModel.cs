@@ -14,6 +14,7 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
             Heading = block.Heading;
             IntroText = block.IntroText;
             MainText = block.IntroText;
+            BlockCTA = block.BlockCTA;
 
             LocationInfogramPoints = new List<SLLocationInfogramBlock>();
 
@@ -38,6 +39,8 @@ namespace Shangri_La.EpiServer.SL.Web.Models.ViewModels.HotelHomepage
         public List<RoomGroupBlock> RoomGroups { get; set; }
 
         public List<SLLocationInfogramBlock> LocationInfogramPoints { get; set; }
+
+        public ButtonBlock BlockCTA { get; set; }
 
     }
 }
